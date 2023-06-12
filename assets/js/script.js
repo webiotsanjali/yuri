@@ -273,13 +273,13 @@ function translate(tnum) {
 
 var trans = [
   {
-    en: "General",
-    pt: "Geral",
-    es: "Generalo",
-    fr: "GÃ©nÃ©rale",
-    de: "Generel",
-    cn: "ä¸€èˆ¬",
-    ae: "Ø­Ø¬Ù†Ø±Ø§Ù„ Ù„ÙˆØ§Ø¡",
+    en: "- General",
+    pt: "- Geral",
+    es: "- Generalo",
+    fr: "- GÃ©nÃ©rale",
+    de: "- Generel",
+    cn: "- ä¸€èˆ¬",
+    ae: "- Ø­Ø¬Ù†Ø±Ø§Ù„ Ù„ÙˆØ§Ø¡",
   },
   {
     en: "Dashboards,widgets & layout.",
@@ -336,13 +336,13 @@ var trans = [
     ae: "ÙˆØªØ®Ø·ÙŠØ· Ø§Ù„ØµÙØ­Ø©",
   },
   {
-    en: "Applications",
-    pt: "FormulÃ¡rios",
-    es: "Aplikoj",
-    fr: "Applications",
-    de: "Toepassingen",
-    cn: "æ‡‰ç”¨é ˜åŸŸ",
-    ae: "ÙˆØ§Ù„ØªØ·Ø¨ÙŠÙ‚Ø§Øª",
+    en: "- Applications",
+    pt: "- FormulÃ¡rios",
+    es: "- Aplikoj",
+    fr: "- Applications",
+    de: "- Toepassingen",
+    cn: "- æ‡‰ç”¨é ˜åŸŸ",
+    ae: "- ÙˆØ§Ù„ØªØ·Ø¨ÙŠÙ‚Ø§Øª",
   },
   {
     en: "Ready to use Apps",

@@ -5,7 +5,7 @@
 body {
     font-size: $body-font-size;
     overflow-x: hidden;
-    font-family: $font-rubik, $font-serif;
+    font-family: $font-inter, $font-serif;
     color: $theme-body-font-color;
 }
 
@@ -16,6 +16,25 @@ h4,
 h5,
 h6 {
     margin: 0;
+}
+
+h1 {
+    font-size: 22px;
+}
+h2 {
+    font-size: 20px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 15px;
+}
+h6 {
+    font-size: 14px;
 }
 
 ul {

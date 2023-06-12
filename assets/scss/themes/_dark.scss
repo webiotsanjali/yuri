@@ -648,22 +648,12 @@ body {
 														&.stroke-icon {
 															stroke: $white;
 														}
-
-														&.fill-icon {
-															fill: rgba($white, 0.5);
-															stroke: transparent;
-														}
 													}
 
 													&.active {
 														svg {
 															&.stroke-icon {
 																stroke: var(--theme-deafult);
-															}
-
-															&.fill-icon {
-																fill: var(--theme-deafult);
-																stroke: transparent;
 															}
 														}
 													}
@@ -6901,20 +6891,6 @@ body {
 					}
 				}
 			}
-		}
-	}
-
-	.for-dark {
-		display: none;
-	}
-
-	&[class*='dark-'] {
-		.for-dark {
-			display: block;
-		}
-
-		.for-light {
-			display: none;
 		}
 	}
 

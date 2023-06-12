@@ -135,7 +135,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
   background: rgba(49, 49, 49, 0.70);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
   color: $white;
-  font: 10px $font-rubik, $font-serif;
+  font: 10px $font-inter, $font-serif;
   text-align: left;
   white-space: nowrap;
   padding: 5px;
@@ -147,7 +147,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
 
   .jqsfield {
     color: $white;
-    font: 10px $font-rubik, $font-serif;
+    font: 10px $font-inter, $font-serif;
     text-align: left;
   }
 }

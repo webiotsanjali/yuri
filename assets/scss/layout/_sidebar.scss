@@ -2,11 +2,14 @@
   5.7 Sidebar CSS Start
 ==========================**/
 %sidebar-after {
-  position: absolute;
-  content: "";
-  top: 48%;
-  width: 8px;
-  border-top: 1px solid rgba($theme-body-sub-title-color, 0.4);
+  position: absolute; 
+  content: ""; 
+  top: 8%; 
+  width: 13px; 
+  height: 15px; 
+  border-bottom-left-radius: 12px;
+  border-bottom: 2px solid rgba($white, 0.4);
+  transform: rotate(357deg);
 }
 
 // default dashboard
@@ -22,38 +25,19 @@
   }
 }
 
-%sidebar-active-dot {
-  position: absolute;
-  content: '';
-  width: 5px;
-  height: 5px;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 25px;
-  border-radius: 100%;
-  background: var(--theme-deafult);
-  opacity: 0;
-  visibility: hidden;
-
-  [dir="rtl"] & {
-    left: unset;
-    right: 25px;
-  }
-}
-
 %sidebar-before {
   position: absolute;
   content: '';
   width: 1px;
   height: 0;
-  background: rgba($theme-body-sub-title-color, 0.4);
+  background: var(--body-light-font-color);
   top: -10px;
-  left: 27px;
+  left: 10px;
   transition: height 0.5s;
 
   [dir="rtl"] & {
     left: unset;
-    right: 27px;
+    right: 10px;
   }
 }
 
@@ -830,11 +814,7 @@
                     a {
                       svg {
                         &.stroke-icon {
-                          stroke: $dark-color;
-                        }
-
-                        &.fill-icon {
-                          fill: $sidebar-fill-icon-color;
+                          stroke: var(--white);
                         }
                       }
 
@@ -844,10 +824,6 @@
 
                           &.stroke-icon {
                             stroke: var(--theme-deafult);
-                          }
-
-                          &.fill-icon {
-                            fill: var(--theme-deafult);
                           }
                         }
                       }
@@ -870,25 +846,8 @@
   }
 
   .sidebar-wrapper {
-    &[sidebar-layout="stroke-svg"] {
-      .stroke-icon {
-        display: inline-block;
-      }
-
-      .fill-icon {
-        display: none;
-      }
-    }
-
-    &[sidebar-layout="fill-svg"] {
-      .stroke-icon {
-        display: none;
-      }
-
-      .fill-icon {
-        display: inline-block;
-      }
-    }
+    background-color: var(--sidebar-background);
+    color: var(--white);
   }
 
   &.horizontal-wrapper {
@@ -936,7 +895,6 @@
         height: 54px;
         line-height: inherit;
         top: 79px;
-        background: $white;
         box-shadow: 0px 9px 24px rgba($semi-dark, 0.05);
         overflow-x: hidden;
         z-index: 1;
@@ -1081,10 +1039,6 @@
                               transition: all 0.3s ease;
                             }
 
-                            &.fill-icon {
-                              fill: var(--theme-deafult);
-                              transition: all 0.3s ease;
-                            }
                           }
                         }
                       }
@@ -1370,10 +1324,15 @@
     h6 {
       font-size: 14px;
       font-weight: 600;
-      color: $theme-body-sub-title-color;
       text-transform: uppercase;
       margin-bottom: 0;
       letter-spacing: 0.40px;
+      padding: 10px 10px 9px;
+      background-color: rgba($warning-color, 0.2);
+      color: $warning-color;
+      display: inline-block;
+      border-radius: 5px;
+      line-height: 1;
     }
   }
 
@@ -1405,6 +1364,29 @@
 
       &.pined {
         order: -1;
+      }
+    }
+
+    .sidebar-profile {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      border-bottom: 1px solid var(--sidebar-border-color);
+      gap: 10px;
+      .f-12 {
+        color: var(--body-light-font-color);
+      }
+      .sidebar-image {
+        position: relative;
+      }
+      .status {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border: 2px solid var(--sidebar-background);
       }
     }
 
@@ -1440,16 +1422,23 @@
           z-index: 9;
           height: auto;
           line-height: inherit;
-          background: $white;
           width: $sidebar-compact-width;
           text-align: left;
           transition: 0.3s;
           box-shadow: 0 0 21px 0 rgba($semi-dark, 0.1);
 
+          .logo-wrapper {
+            a {
+              img {
+                height: 30px;
+              }
+            }
+          }
+
           .logo-wrapper,
           .logo-icon-wrapper {
-            padding: 22px 30px;
-            box-shadow: -9px 0 20px rgba($semi-dark, 0.1);
+            padding: 12px;
+            border: 1px solid var(--sidebar-border-color);
           }
 
           .logo-icon-wrapper {
@@ -1690,10 +1679,10 @@
                   font-weight: 500;
 
                   svg {
-                    width: 18px;
-                    height: 18px;
+                    width: 20px;
+                    height: 20px;
                     margin-right: 10px;
-                    vertical-align: -2px;
+                    vertical-align: -4px;
                     float: none;
                     transition: all 0.3s ease;
                   }
@@ -1701,7 +1690,7 @@
                   span {
                     letter-spacing: 0.7px;
                     text-transform: capitalize;
-                    color: rgba($theme-body-sub-title-color, 0.8);
+                    color: var(--sidebar-link-text-color);
                   }
 
                   &.link-nav {
@@ -1748,8 +1737,8 @@
                         position: relative;
 
                         &.sidebar-main-title {
-                          padding: 25px 0 6px 20px;
-                          margin-top: 10px;
+                          padding: 0;
+                          margin-top: 20px;
 
                           &.pin-title {
                             display: none;
@@ -1800,7 +1789,6 @@
                           &:hover {
                             >a {
                               &:hover {
-                                background-color: rgba($primary-color, 0.07);
                                 transition: all 0.3s ease;
                               }
                             }
@@ -1814,11 +1802,6 @@
                                 fill: rgba($primary-color, 0.10%);
                                 stroke: var(--theme-deafult);
                                 transition: all 0.3s ease;
-
-                                &.fill-icon {
-                                  fill: var(--theme-deafult);
-                                  stroke: none;
-                                }
                               }
 
                               span {
@@ -1837,7 +1820,7 @@
                         }
 
                         a {
-                          padding: 12px 20px;
+                          padding: 12px 0;
                           position: relative;
                           color: #222222;
                           transition: all 0.3s ease;
@@ -1872,7 +1855,7 @@
 
                           >li {
                             a {
-                              padding-left: 48px !important;
+                              padding-left: 36px !important;
                               font-weight: 400;
                             }
                           }
@@ -1921,7 +1904,7 @@
                             a {
                               padding: 7px 25px;
                               font-size: 14px;
-                              color: rgba($theme-body-font-color, 0.6);
+                              color: var(--body-light-font-color);
                               display: block;
                               position: relative;
                               letter-spacing: 0.06em;
@@ -1931,21 +1914,14 @@
                               overflow: hidden;
                               text-overflow: ellipsis;
 
-                              &::before {
-                                @extend %sidebar-active-dot;
-                              }
 
                               &.active {
                                 color: var(--theme-deafult);
 
-                                &::before {
-                                  opacity: 1;
-                                  visibility: visible;
-                                }
                               }
 
                               &:after {
-                                left: 27px;
+                                left: 9px;
                                 @extend %sidebar-after;
                               }
 
@@ -1989,11 +1965,11 @@
                                   padding: 6px 25px 6px 45px;
                                   font-size: 14px;
                                   position: relative;
-                                  color: rgba(43, 43, 43, 0.6);
+                                  color: var(--body-light-font-color);
                                   display: block;
                                   letter-spacing: 0.06em;
                                   font-weight: 500;
-                                  font-family: Roboto;
+                                  font-family: $font-inter, $font-serif;
                                   cursor: pointer;
 
                                   &:after {
@@ -2001,19 +1977,11 @@
                                     @extend %sidebar-after;
                                   }
 
-                                  &::before {
-                                    @extend %sidebar-active-dot;
-                                  }
                                 }
 
                                 &.active {
                                   h5 {
                                     color: var(--theme-deafult);
-
-                                    &::before {
-                                      opacity: 1;
-                                      visibility: visible;
-                                    }
                                   }
                                 }
 
@@ -2031,11 +1999,11 @@
                                       padding: 6px 25px 6px 45px;
                                       font-size: 14px;
                                       position: relative;
-                                      color: rgba(43, 43, 43, 0.6);
+                                      color: var(--body-light-font-color);
                                       display: block;
                                       letter-spacing: 0.06em;
                                       font-weight: 500;
-                                      font-family: Roboto;
+                                      font-family: $font-inter, $font-serif;
 
                                       &:after {
                                         display: none;
@@ -2083,39 +2051,15 @@
                           transition: all 0.5s ease;
                           display: block;
 
-                          &::after {
-                            position: absolute;
-                            content: '';
-                            width: 4px;
-                            height: 35px;
-                            right: 0;
-                            top: 50%;
-                            transform: translateY(-50%);
-                            background-color: $primary-color;
-                            border-radius: 5px 0px 0px 5px;
-                            opacity: 0;
-                            visibility: hidden;
-
-                            [dir="rtl"] & {
-                              right: unset;
-                              left: 0;
-                            }
-                          }
 
                           &.active {
                             transition: all 0.5s ease;
                             position: relative;
                             margin-bottom: 10px;
-                            background-color: lighten($primary-color, 27%);
-
-                            &::after {
-                              opacity: 1;
-                              visibility: visible;
-                            }
 
                             ~.sidebar-submenu {
                               &::before {
-                                height: calc(100% - 8px);
+                                height: calc(100% - 13px);
                                 transition: height 0.5s;
                               }
                             }
@@ -2144,6 +2088,7 @@
           .simplebar-content {
             display: flex;
             flex-direction: column;
+            padding: 0 12px !important;
           }
         }
       }
@@ -2156,9 +2101,12 @@
 
       .according-menu {
         position: absolute;
-        right: 20px;
+        right: 0;
         top: 11px;
         display: block;
+        svg {
+          margin: 0;
+        }
 
         i {
           vertical-align: middle;
@@ -2225,20 +2173,12 @@
                             &.stroke-icon {
                               stroke: $dark-all-font-color;
                             }
-
-                            &.fill-icon {
-                              fill: $dark-all-font-color;
-                            }
                           }
 
                           &.active {
                             svg {
                               &.stroke-icon {
                                 stroke: var(--theme-deafult);
-                              }
-
-                              &.fill-icon {
-                                fill: var(--theme-deafult);
                               }
                             }
                           }
@@ -2273,10 +2213,6 @@
                 svg {
                   &.stroke-icon {
                     stroke: $dark-all-font-color;
-                  }
-
-                  &.fill-icon {
-                    fill: $dark-all-font-color;
                   }
                 }
               }
@@ -2353,16 +2289,6 @@
                 }
               }
             }
-          }
-        }
-
-        .logo-wrapper {
-          .for-light {
-            display: none;
-          }
-
-          .for-dark {
-            display: block;
           }
         }
       }
@@ -2734,40 +2660,6 @@
                 position: absolute;
                 right: 20px;
                 top: 13px;
-              }
-            }
-          }
-        }
-
-        &[sidebar-layout="stroke-svg"] {
-          .sidebar-links {
-            .mega-menu {
-              svg {
-                &.stroke-icon {
-                  display: block;
-                  margin: 0 auto 6px;
-                }
-
-                &.fill-icon {
-                  display: none;
-                }
-              }
-            }
-          }
-        }
-
-        &[sidebar-layout="fill-svg"] {
-          .sidebar-links {
-            .mega-menu {
-              svg {
-                &.stroke-icon {
-                  display: none;
-                }
-
-                &.fill-icon {
-                  display: block;
-                  margin: 0 auto 6px;
-                }
               }
             }
           }

@@ -118,9 +118,10 @@
 @import "utils/variables";
 
 :root {
-    --theme-deafult: #7366ff;
-    --theme-secondary: #f73164;
+    --theme-deafult: #009DB5;
+    --theme-secondary: #F94C8E;
     --light-background: rgba(242, 243, 247, 0.7);
+    --body-light-font-color: #7B8298;
     --body-font-color: #2F2F3B;
     --chart-border: #ECF3FA;
     --recent-chart-bg: #FCFCFD;
@@ -143,6 +144,11 @@
     --text-gray: rgba(82, 82, 108, 0.8);
     --product-shadow: 0px 1px 0px rgba(82, 82, 108, 0.15);
     --light-shade-primary: rgba(245, 244, 255);
+
+    // sidebar settings
+    --sidebar-background: #1E1E2D;
+    --sidebar-link-text-color: #9FA8C1;
+    --sidebar-border-color: rgba(106, 113, 133, 0.2);
 
     --fc-button-bg-color: var(--theme-deafult);
     --fc-button-active-bg-color: var(--theme-deafult);
