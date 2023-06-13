@@ -354,7 +354,7 @@
             .children("a")
             .find("div")
             .replaceWith(
-              '<div class="according-menu"><i class="fa fa-angle-down"></i></div>'
+              '<div class="according-menu"><svg class="stroke-icon"> <use href = "../assets/svg/icon-sprite.svg#arrow-down"> </use> </svg></div>'
             );
           $(this)
             .parent()
@@ -365,7 +365,7 @@
             .children("a")
             .find("div")
             .replaceWith(
-              '<div class="according-menu"><i class="fa fa-angle-down"></i></div>'
+              '<div class="according-menu"><svg class="stroke-icon"> <use href = "../assets/svg/icon-sprite.svg#arrow-down"> </use> </svg></div>'
             );
           return false;
         }

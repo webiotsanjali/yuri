@@ -1,4 +1,4 @@
-- var status_toggle = (sidebar_open ? undefined : 'checked');
+
 // Page Sidebar Start
 .sidebar-wrapper(sidebar-layout="stroke-svg")
   div
@@ -7,18 +7,15 @@
         img.img-fluid(src='../assets/images/logo/logo_dark.png', alt='logo')
       .back-btn
         i.fa.fa-angle-left
-      .toggle-sidebar
-        i.status_toggle.middle(data-feather='grid').sidebar-toggle 
     .logo-icon-wrapper
       a(href="index.html")
         img.img-fluid(src='../assets/images/logo/logo-icon.png', alt='')
-    .sidebar-profile 
-      .sidebar-image 
-        img(src="../assets/images/user.png", alt="profile")
-        span.status.status-online
-      div 
-        h4 Wade Warren
-        span.f-12.f-w-600 UI Designer
+    .sidebar-search 
+      .input-group
+        span#sidebar-search.input-group-text
+          svg
+            use(href='../assets/svg/icon-sprite.svg#search')
+        input.form-control(type='text' placeholder='Quick search' aria-label='Username' aria-describedby='sidebar-search')
     nav.sidebar-main
       .left-arrow#left-arrow
         i(data-feather='arrow-left')

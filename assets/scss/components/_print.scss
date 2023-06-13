@@ -13,15 +13,6 @@
   }
 
   .page-wrapper {
-    .page-title {
-      visibility: hidden;
-    }
-
-    .page-body-wrapper {
-      .page-title {
-        display: none;
-      }
-    }
 
     &.compact-wrapper {
       .page-body-wrapper {

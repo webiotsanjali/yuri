@@ -1,5 +1,5 @@
 // General variables
-$theme-font-color: #242934;
+$theme-font-color: #151521;
 $theme-body-font-color: #2F2F3B;
 $theme-body-sub-title-color: #52526c;
 $body-color: #f8f8f8;
@@ -241,17 +241,6 @@ $sidebar-z-index: 9;
 $sidebar-transition: 0.5s;
 $sidebar-fill-icon-color: #757589;
 
-//sidebar profile settings
-$sidebar-profile-edit-icon-size: 14px;
-$sidebar-profile-name-txt-color : var(--theme-deafult);
-$sidebar-profile-name-txt-transfer : uppercase;
-$sidebar-profile-name-txt-weight : 600;
-$sidebar-profile-name-letter-specing : 1.5px;
-$sidebar-profile-name-marging : 3px;
-$sidebar-profile-sub-title-font-size: 10px;
-$sidebar-profile-sub-title-margin: 0px;
-$sidebar-profile-img-shadow: 0 0 15px rgba(68, 102, 242, 0.3);
-
 //Sidebar main menu setting
 $sidebar-menu-padding: 15px;
 $sidebar-menu-list-style: none;
@@ -276,7 +265,7 @@ $sidebar-arrow-color: $theme-body-font-color;
 $sidebar-open-icon: "\f107";
 $sidebar-close-icon: "\f105";
 $sidebar-icon-font-family: $font-awesome;
-$sidebar-height: calc(100vh - 115px);
+$sidebar-height: calc(100vh - 180px);
 $sidebar-compact-width: 265px;
 
 //Header settings
@@ -286,28 +275,18 @@ $main-header-shadow: 0 0 20px rgba($semi-dark, 0.1);
 $main-header-shadow-1: 0px 4px 40px rgba(39, 32, 120, 0.1);
 
 //page settings
-$page-body-padding : 0 15px 0 15px;
-$page-body-bg-color: $light-color;
-$page-body-margin-bottom: 0px;
-$page-title-padding : 15px 30px;
+$page-body-padding : 25px 13px 0 13px;
 $common-box-shadow: 2px 3.464px 8px 0px rgba(22, 145, 248, 0.18);
-$page-title-font-size: 24px;
-$page-title-margin-bottom: 0;
-$page-title-text-tranform: capitalize;
-$page-small-title-display: block;
-$page-small-title-font-size: 12px;
-$page-small-title-margin-bottom: 5px;
-$page-small-title-text-transform: capitalize;
-$page-small-title-text-color: $theme-body-sub-title-color;
-$breadcrumb-size: 16px;
-$breadcrumb-content: "/";
-
+$breadcrumb-size: 13px;
+$breadcrumb-line-height: 1.35;
+$breadcrumb-weight: 500;
 
 //main header left settings
+$header-height: 73px;
 $header-left-bg-color : $white;
 $main-header-padding : 27px 22px;
 $main-header-z-index : 8;
-$header-wrapper-padding: 22px 30px;
+$header-wrapper-padding: 12px 30px;
 $header-wrapper-nav-right : 0px;
 $header-wrapper-nav-icon-size : 20px;
 $header-wrapper-nav-icon-color : $theme-font-color;

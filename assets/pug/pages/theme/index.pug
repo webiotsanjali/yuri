@@ -7,13 +7,18 @@
 - var animate               = true;
 - var typeahead             = true;
 - var typeahead_search      = true;
-- var sidebar               = true; 
+- var sidebar               = true;
 - var scrollbar             = true;
 - var wow                   = true;
-- var slick                 = true;
-- var header_slider         = true;
 - var clock                 = true;
-- var height_equal          = true;
+- var height_equal          = true; 
+
+//- Breadcrumbs
+-var pageTitle="Default"; 
+-var breadcrumb=['Dashboard','Default'];
+
+//- mixin
+include ../../mixin/mixin
 
 doctype html
 html(lang='en')
@@ -28,20 +33,6 @@ html(lang='en')
       .page-body-wrapper
         include ../../components/sidebar
         .page-body
-          .container-fluid         
-            .page-title
-              .row
-                .col-6
-                  h4
-                    | Default
-                .col-6
-                  ol.breadcrumb
-                    li.breadcrumb-item
-                      a(href='index.html')                                        
-                        svg.stroke-icon
-                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
-                    li.breadcrumb-item Dashboard
-                    li.breadcrumb-item.active Default      
           // Container-fluid starts
           .container-fluid
             .row.widget-grid

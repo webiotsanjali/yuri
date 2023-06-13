@@ -1172,16 +1172,6 @@ html[dir="rtl"] {
     }
   }
 
-  .page-wrapper {
-    .page-body-wrapper {
-      .page-title {
-        .breadcrumb {
-          margin-left: unset;
-        }
-      }
-    }
-  }
-
   .bookmark {
     ul {
       li {
@@ -2604,22 +2594,6 @@ html[dir="rtl"] {
 
   // sidebar main page
   .page-wrapper {
-    .page-body-wrapper {
-      .page-title {
-        .row {
-          h3 {
-            text-align: right;
-            padding-left: 20px;
-            padding-right: unset !important;
-          }
-
-          h6 {
-            text-align: right;
-          }
-        }
-      }
-    }
-
     &.compact-wrapper {
       .page-header {
         margin-right: 265px;
@@ -2685,6 +2659,15 @@ html[dir="rtl"] {
 
 
   // page main header
+  .profile-dropdown {
+    li {
+      svg {
+        margin-right: unset;
+        margin-left: 10px;
+      }
+    }
+
+  }
   .page-header {
     .header-wrapper {
       .nav-right {
@@ -2764,16 +2747,6 @@ html[dir="rtl"] {
               }
             }
           }
-        }
-
-        .profile-dropdown {
-          li {
-            svg {
-              margin-right: unset;
-              margin-left: 10px;
-            }
-          }
-
         }
       }
 
@@ -4728,12 +4701,6 @@ html[dir="rtl"] {
 
     .page-wrapper {
       .page-body-wrapper {
-        .page-title {
-          .breadcrumb {
-            margin-right: 0;
-          }
-        }
-
         .page-body {
           min-height: calc(100vh - 60px);
         }

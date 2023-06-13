@@ -1,0 +1,13 @@
+//- =====================
+//-  Breadcrumb 
+//- =====================
+mixin breadcrumb(items)
+  -var itemGet=`${items}`;
+  -var breadcrumbItem= itemGet.split(",");
+  nav(aria-label='breadcrumb').custom-breadcrumb
+    ol.breadcrumb.mb-0
+      li.breadcrumb-item
+        a(href='index.html') Home
+      each pageName, index in breadcrumbItem
+        li.breadcrumb-item(class=`${(index === breadcrumbItem.length - 1 ?'active':'')}`)= pageName
+    

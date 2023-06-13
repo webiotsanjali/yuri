@@ -1,7 +1,7 @@
 /*! -----------------------------------------------------------------------------------
 
-    Template Name: Cuba Admin
-    Template URI: http://admin.pixelstrap.com/cuba/theme
+    Template Name: Yuri Admin
+    Template URI: http://admin.pixelstrap.com/yuri/theme
     Description: This is Admin theme
     Author: Pixelstrap
     Author URI: https://themeforest.net/user/pixelstrap

@@ -1,3 +1,4 @@
+- var status_toggle = (sidebar_open ? undefined : 'checked');
 // Page Header Start
 .page-header
   .header-wrapper.row.m-0
@@ -14,111 +15,116 @@
       .logo-wrapper
         a(href='index.html')
           img.img-fluid(src='../assets/images/logo/logo.png', alt='')
-      .toggle-sidebar
-        i.status_toggle.middle(data-feather='align-center').sidebar-toggle
-
     .left-header.col-xxl-5.col-xl-6.col-lg-5.col-md-4.col-sm-3.p-0
-      .notification-slider
-        div.d-flex.h-100 
-          img(src="../assets/images/giftools.gif" alt="gif")
-          h6.mb-0.f-w-400
-            span.font-primary Don't Miss Out! 
-            span.f-light Out new update has been release.
-          i.icon-arrow-top-right.f-light
-        div.d-flex.h-100
-          img(src="../assets/images/giftools.gif" alt="gif")
-          h6.mb-0.f-w-400
-            span.f-light Something you love is now on sale! 
-          a.ms-1(href="https://1.envato.market/3GVzd" target="_blank") Buy now !
+      .toggle-sidebar
+        svg.status_toggle.sidebar-toggle
+          use(href='../assets/svg/icon-sprite.svg#collapse-sidebar')
+      div
+        h1.mb-1= pageTitle
+        // Breadcrumbs Start 
+        +breadcrumb(breadcrumb)
+        // Breadcrumbs End
           
+
 
     .nav-right.col-xxl-7.col-xl-6.col-md-7.col-8.pull-right.right-header.p-0.ms-auto
       ul.nav-menus
-        li.language-nav
-          .translate_wrapper
-            .current_lang
-              .lang
-                i.flag-icon.flag-icon-us
-                span.lang-txt EN                               
-            .more_lang
-              .lang.selected(data-value='en')
-                i.flag-icon.flag-icon-us
-                span.lang-txt
-                  | English
-                  span  (US)
-              .lang(data-value='de')
-                i.flag-icon.flag-icon-de
-                span.lang-txt Deutsch
-              .lang(data-value='es')
-                i.flag-icon.flag-icon-es
-                span.lang-txt Español
-              .lang(data-value='fr')
-                i.flag-icon.flag-icon-fr
-                span.lang-txt Français
-              .lang(data-value='pt')
-                i.flag-icon.flag-icon-pt
-                span.lang-txt
-                  | Português
-                  span  (BR)
-              .lang(data-value='cn')
-                i.flag-icon.flag-icon-cn
-                span.lang-txt 简体中文
-              .lang(data-value='ae')
-                i.flag-icon.flag-icon-ae
-                span.lang-txt
-                  | لعربية 
-                  span  (ae)
+        //- li.language-nav
+        //-   .translate_wrapper
+        //-     .current_lang
+        //-       .lang
+        //-         i.flag-icon.flag-icon-us
+        //-         span.lang-txt EN                               
+        //-     .more_lang
+        //-       .lang.selected(data-value='en')
+        //-         i.flag-icon.flag-icon-us
+        //-         span.lang-txt
+        //-           | English
+        //-           span  (US)
+        //-       .lang(data-value='de')
+        //-         i.flag-icon.flag-icon-de
+        //-         span.lang-txt Deutsch
+        //-       .lang(data-value='es')
+        //-         i.flag-icon.flag-icon-es
+        //-         span.lang-txt Español
+        //-       .lang(data-value='fr')
+        //-         i.flag-icon.flag-icon-fr
+        //-         span.lang-txt Français
+        //-       .lang(data-value='pt')
+        //-         i.flag-icon.flag-icon-pt
+        //-         span.lang-txt
+        //-           | Português
+        //-           span  (BR)
+        //-       .lang(data-value='cn')
+        //-         i.flag-icon.flag-icon-cn
+        //-         span.lang-txt 简体中文
+        //-       .lang(data-value='ae')
+        //-         i.flag-icon.flag-icon-ae
+        //-         span.lang-txt
+        //-           | لعربية 
+        //-           span  (ae)
         li                          
           span.header-search
             svg
               use(href='../assets/svg/icon-sprite.svg#search')
-
         li.onhover-dropdown
-          svg
-            use(href='../assets/svg/icon-sprite.svg#star')
-          .onhover-show-div.bookmark-flip
-            .flip-card
-              .flip-card-inner
-                .front
-                  h6.f-18.mb-0.dropdown-title Bookmark
-                  ul.bookmark-dropdown
-                    li
-                      .row
-                        .col-4.text-center
-                          .bookmark-content
-                            .bookmark-icon
-                              i(data-feather='file-text')
-                            span Forms
-                        .col-4.text-center
-                          .bookmark-content
-                            .bookmark-icon
-                              i(data-feather='user')
-                            span Profile
-                        .col-4.text-center
-                          .bookmark-content
-                            .bookmark-icon
-                              i(data-feather='server')
-                            span Tables
-                    li.text-center
-                      a.flip-btn#flip-btn.f-w-700(href="javascript:void(0)") Add New Bookmark
-                .back
-                  ul
-                    li
-                      .bookmark-dropdown.flip-back-content
-                        input(type='text' placeholder='search...')
-                    li
-                      a.f-w-700.d-block.flip-back#flip-back(href="javascript:void(0)")
-                        | Back
-
+          .notification-box
+            svg
+              use(href='../assets/svg/icon-sprite.svg#notification')
+            span.badge.rounded-pill.badge-success 3 
+          .onhover-show-div.notification-dropdown
+            h6.f-18.mb-0.dropdown-title Notitications                               
+            ul
+              li.d-flex
+                .notification-image 
+                  img.img-fluid(src="../assets/images/avtar/3.jpg", alt="user")
+                  .notification-icon.bg-danger
+                    i(class="fa fa-heart")
+                div
+                  p
+                    span.f-w-500.me-1 Emay Walter 
+                    | liked your post 
+                  span.f-light 10 minutes ago
+              li.d-flex
+                .notification-image 
+                  img.img-fluid(src="../assets/images/avtar/4.jpg", alt="user")
+                  .notification-icon.bg-info
+                    i(class="fa fa-share-alt")
+                div
+                  p
+                    span.f-w-500.me-1 Allie Grater
+                    | shared your post 
+                  span.f-light 5 hours ago
+              li.d-flex
+                .notification-image 
+                  img.img-fluid(src="../assets/images/avtar/7.jpg", alt="user")
+                  .notification-icon.bg-success
+                    i(class="fa fa-wechat")
+                div
+                  p
+                    span.f-w-500.me-1 Colin Sik
+                    | commented on your post
+                  span.f-light yesterday
+              li
+                a.f-w-700(href="#") Check all
+        li.cart-nav.onhover-dropdown
+          .cart-box
+            svg
+              use(href='../assets/svg/icon-sprite.svg#email')
+            span.badge.rounded-pill.badge-danger 2
+          .onhover-show-div.cart-dropdown
+            h6.f-18.mb-0.dropdown-title Inbox
         li
           .mode
-            svg
+            svg.moon-icon
               use(href='../assets/svg/icon-sprite.svg#moon')
+            svg.sun-icon
+              use(href='../assets/svg/icon-sprite.svg#sun')
         li.cart-nav.onhover-dropdown
           .cart-box
             svg
               use(href='../assets/svg/icon-sprite.svg#stroke-ecommerce')
-            span.badge.rounded-pill.badge-success 2
+            span.badge.rounded-pill.badge-info 2
           .cart-dropdown.onhover-show-div
             h6.f-18.mb-0.dropdown-title Cart
             ul
@@ -170,39 +176,13 @@
                   | Go to your cart
                 a.btn.btn-primary.view-checkout(href='checkout.html')
                   | Checkout
-        li.onhover-dropdown
-          .notification-box
-            svg
-              use(href='../assets/svg/icon-sprite.svg#notification')
-            span.badge.rounded-pill.badge-secondary 4 
-          .onhover-show-div.notification-dropdown
-            h6.f-18.mb-0.dropdown-title Notitications                               
-            ul
-              li.b-l-primary.border-4
-                p
-                  | Delivery processing 
-                  span.font-danger 10 min.
-              li.b-l-success.border-4
-                p
-                  | Order Complete
-                  span.font-success 1 hr
-              li.b-l-secondary.border-4
-                p
-                  | Tickets Generated
-                  span.font-secondary 3 hr
-              li.b-l-warning.border-4
-                p
-                  | Delivery Complete
-                  span.font-warning 6 hr
-              li
-                a.f-w-700(href="#") Check all
-        li.profile-nav.onhover-dropdown.pe-0.py-0
-          .media.profile-media
-            img.b-r-10(src='../assets/images/dashboard/profile.png', alt='')
-            .media-body
-              span Emay Walter
-              p.mb-0.font-roboto Admin 
-                i.middle.fa.fa-angle-down
+        li.profile-nav.onhover-dropdown 
+          .sidebar-image 
+            img(src="../assets/images/user.png", alt="profile")
+            span.status.status-online
+          div.sidebar-content 
+            h4 Wade Warren
+            span.f-12.f-w-600.f-light UI Designer
           ul.profile-dropdown.onhover-show-div
             li
               a(href='#')
@@ -223,8 +203,7 @@
             li
               a(href='#')
                 i(data-feather='log-in') 
-                span Log in
-
+                span Log in          
     //- .d-lg-none.mobile-toggle.pull-right
     //-     i(data-feather='more-horizontal')
     script.result-template(type='text/x-handlebars-template').

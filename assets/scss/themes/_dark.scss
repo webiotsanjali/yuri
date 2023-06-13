@@ -425,9 +425,6 @@ body {
 			.page-header {
 				.header-wrapper {
 					.nav-right {
-						.profile-dropdown li span {
-							color: $white;
-						}
 
 						.flip-card .flip-card-inner {
 							.back {
@@ -1173,29 +1170,6 @@ body {
 			}
 		}
 
-		@media only screen and (min-width: 768px) {
-			.page-wrapper {
-				&.material-icon {
-					.page-header {
-						.header-wrapper {
-							.nav-right {
-								ul {
-									li {
-										.profile-dropdown {
-											li {
-												svg {
-													stroke: $white;
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
 
 		::-webkit-calendar-picker-indicator {
 			filter: invert(1);
@@ -1503,20 +1477,6 @@ body {
 		}
 
 		// ecommerce dashboard css end
-		.page-header {
-			.header-wrapper {
-				.nav-right {
-
-					.profile-dropdown {
-						li {
-							&:last-child {
-								border-top: 1px solid $dark-card-border !important;
-							}
-						}
-					}
-				}
-			}
-		}
 
 		$alert-name: primary,
 			secondary,
@@ -2035,6 +1995,35 @@ body {
 			}
 
 			/* Main Header start */
+			.profile-dropdown {
+				li {
+					a {
+						color: $dark-all-font-color;
+
+						svg {
+
+							path,
+							line,
+							circle {
+								color: $dark-all-font-color !important;
+							}
+						}
+
+						&:hover {
+							color: var(--theme-deafult);
+
+							svg {
+
+								line,
+								path,
+								circle {
+									color: var(--theme-deafult) !important;
+								}
+							}
+						}
+					}
+				}
+			}
 			.page-header {
 				.translate_wrapper {
 					&.active {
@@ -2131,36 +2120,6 @@ body {
 								}
 							}
 
-						}
-
-						.profile-dropdown {
-							li {
-								a {
-									color: $dark-all-font-color;
-
-									svg {
-
-										path,
-										line,
-										circle {
-											color: $dark-all-font-color !important;
-										}
-									}
-
-									&:hover {
-										color: var(--theme-deafult);
-
-										svg {
-
-											line,
-											path,
-											circle {
-												color: var(--theme-deafult) !important;
-											}
-										}
-									}
-								}
-							}
 						}
 
 						>ul {
