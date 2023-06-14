@@ -6,7 +6,7 @@
       .form-group.w-100
         .Typeahead.Typeahead--twitterUsers
           .u-posRelative
-            input.demo-input.Typeahead-input.form-control-plaintext.w-100(type='text' placeholder='Search Cuba ..' name='q' title='' autofocus)
+            input.demo-input.Typeahead-input.form-control-plaintext.w-100(type='text' placeholder='Search yuri ..' name='q' title='' autofocus)
             .spinner-border.Typeahead-spinner(role='status')
               span.sr-only Loading...
             i(data-feather='x').close-search
@@ -15,12 +15,12 @@
       .logo-wrapper
         a(href='index.html')
           img.img-fluid(src='../assets/images/logo/logo.png', alt='')
-    .left-header.col-xxl-5.col-xl-6.col-lg-5.col-md-4.col-sm-3.p-0
+    .left-header.col-xxl-5.col-xl-6.col-lg-5.col-md-4.col-sm-3.col-2.p-0
       .toggle-sidebar
         svg.status_toggle.sidebar-toggle
           use(href='../assets/svg/icon-sprite.svg#collapse-sidebar')
       div
-        h1.mb-1= pageTitle
+        h1= pageTitle
         // Breadcrumbs Start 
         +breadcrumb(breadcrumb)
         // Breadcrumbs End
@@ -112,8 +112,42 @@
             svg
               use(href='../assets/svg/icon-sprite.svg#email')
             span.badge.rounded-pill.badge-danger 2
-          .onhover-show-div.cart-dropdown
-            h6.f-18.mb-0.dropdown-title Inbox
+          .onhover-show-div.chat-dropdown
+              .dropdown-title
+                .d-flex.align-items-center 
+                  img.img-fluid.img-40.rounded-circle(src='../assets/images/dashboard/user/1.jpg',alt='user')
+                  div
+                    h6.f-18.mb-0 Jane Cooper
+                    p.mb-0 
+                      span.status.status-online.me-1
+                      span active
+              ul 
+                li.send-msg
+                  div 
+                    img.img-fluid.img-30.rounded-circle(src='../assets/images/dashboard/user/1.jpg',alt='user')
+                    div 
+                      p Hello.how are you?
+                li.reply-msg
+                  div 
+                    img.img-fluid.img-30.rounded-circle(src='../assets/images/dashboard/user/3.jpg',alt='user')
+                    div 
+                      p Hi, i'm fine.what about you?
+                li.send-msg
+                  div 
+                    img.img-fluid.img-30.rounded-circle(src='../assets/images/dashboard/user/1.jpg',alt='user')
+                    div 
+                      p I am facing js issue can you help me?
+                li.reply-msg
+                  div 
+                    img.img-fluid.img-30.rounded-circle(src='../assets/images/dashboard/user/3.jpg',alt='user')
+                    div 
+                      p Sure, i will help you.
+              .chat-input
+                .input-group
+                  input.form-control(type='text' placeholder="Type message here...")
+                  span.input-group-text.bg-primary  
+                    svg
+                      use(href='../assets/svg/icon-sprite.svg#send')
         li
           .mode
             svg.moon-icon
@@ -124,57 +158,53 @@
           .cart-box
             svg
               use(href='../assets/svg/icon-sprite.svg#stroke-ecommerce')
-            span.badge.rounded-pill.badge-info 2
+            span.badge.rounded-pill.badge-primary 2
           .cart-dropdown.onhover-show-div
             h6.f-18.mb-0.dropdown-title Cart
             ul
               li
                 .media
-                  img.img-fluid.b-r-5.me-3.img-60(src='../assets/images/other-images/cart-img.jpg', alt='')
+                  img.img-fluid.b-r-5.me-3.img-60(src='../assets/images/other-images/cart-img.jpg', alt='cosmetic')
                   .media-body
-                    span Furniture Chair for Home
+                    span.f-w-500 Beauty cosmetic
                     .qty-box
-                      .input-group
-                        span.input-group-prepend
-                          button.btn.quantity-left-minus(type='button' data-type='minus' data-field='')
-                            | -
-                        input.form-control.input-number(type='text' name='quantity' value='1')
-                        span.input-group-prepend
-                          button.btn.quantity-right-plus(type='button' data-type='plus' data-field='')
-                            | +
-
-                    h6.font-primary $500
+                      .touchspin-wrapper 
+                          button.decrement-touchspin.btn-touchspin
+                              i.fa.fa-minus.text-gray
+                          input#inputData.input-touchspin(type='number' value='2')
+                          button.increment-touchspin.btn-touchspin
+                              i.fa.fa-plus.text-gray
+                      h6.font-primary $20        
+                    
                   .close-circle
-                    a.bg-danger(href='#')
-                      i(data-feather='x')
+                    a(href='#')
+                      i(data-feather='trash-2')
               li
                 .media
-                  img.img-fluid.b-r-5.me-3.img-60(src='../assets/images/other-images/cart-img.jpg', alt='')
+                  img.img-fluid.b-r-5.me-3.img-60(src='../assets/images/other-images/cart-img-1.jpg', alt='shoes')
                   .media-body
-                    span Furniture Chair for Home
+                    span.f-w-500 Simple shoes
                     .qty-box
-                      .input-group
-                        span.input-group-prepend
-                          button.btn.quantity-left-minus(type='button' data-type='minus' data-field='')
-                            | -
-                        input.form-control.input-number(type='text' name='quantity' value='1')
-                        span.input-group-prepend
-                          button.btn.quantity-right-plus(type='button' data-type='plus' data-field='')
-                            | +
-
-                    h6.font-primary $500.00
+                      .touchspin-wrapper 
+                          button.decrement-touchspin.btn-touchspin
+                              i.fa.fa-minus.text-gray
+                          input#inputData.input-touchspin(type='number' value='1')
+                          button.increment-touchspin.btn-touchspin
+                              i.fa.fa-plus.text-gray
+                      h6.font-primary $30        
+                    
                   .close-circle
-                    a.bg-danger(href='#')
-                      i(data-feather='x')
+                    a(href='#')
+                      i(data-feather='trash-2')
 
               li.total
                 h6.mb-0
                   | Order Total : 
-                  span.f-right $1000.00
+                  span.f-right $70.00
               li.text-center
                 a.d-block.mb-3.view-cart.f-w-700(href='cart.html')
                   | Go to your cart
-                a.btn.btn-primary.view-checkout(href='checkout.html')
+                a.btn.btn-primary.view-checkout.w-100(href='checkout.html')
                   | Checkout
         li.profile-nav.onhover-dropdown 
           .sidebar-image 
@@ -186,24 +216,34 @@
           ul.profile-dropdown.onhover-show-div
             li
               a(href='#')
-                i(data-feather='user')
+                .profile-icon
+                  svg
+                    use(href='../assets/svg/icon-sprite.svg#user')
                 span Account 
             li
               a(href='#')
-                i(data-feather='mail')
+                .profile-icon
+                  svg
+                    use(href='../assets/svg/icon-sprite.svg#stroke-email')
                 span Inbox
             li
               a(href='#')
-                i(data-feather='file-text')
+                .profile-icon
+                  svg
+                    use(href='../assets/svg/icon-sprite.svg#notepad')
                 span Taskboard
             li
               a(href='#')
-                i(data-feather='settings')
+                .profile-icon
+                  svg
+                    use(href='../assets/svg/icon-sprite.svg#settings')
                 span Settings
             li
               a(href='#')
-                i(data-feather='log-in') 
-                span Log in          
+                .profile-icon
+                  svg
+                    use(href='../assets/svg/icon-sprite.svg#login')
+                span Log in 
     //- .d-lg-none.mobile-toggle.pull-right
     //-     i(data-feather='more-horizontal')
     script.result-template(type='text/x-handlebars-template').

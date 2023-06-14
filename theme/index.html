@@ -60,7 +60,7 @@
             <div class="form-group w-100">
               <div class="Typeahead Typeahead--twitterUsers">
                 <div class="u-posRelative">
-                  <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text" placeholder="Search Cuba .." name="q" title="" autofocus>
+                  <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text" placeholder="Search yuri .." name="q" title="" autofocus>
                   <div class="spinner-border Typeahead-spinner" role="status"><span class="sr-only">Loading...</span></div><i class="close-search" data-feather="x"></i>
                 </div>
                 <div class="Typeahead-menu"></div>
@@ -70,14 +70,14 @@
           <div class="header-logo-wrapper col-auto p-0">
             <div class="logo-wrapper"><a href="index.html"><img class="img-fluid" src="../assets/images/logo/logo.png" alt=""></a></div>
           </div>
-          <div class="left-header col-xxl-5 col-xl-6 col-lg-5 col-md-4 col-sm-3 p-0">
+          <div class="left-header col-xxl-5 col-xl-6 col-lg-5 col-md-4 col-sm-3 col-2 p-0">
             <div class="toggle-sidebar">
               <svg class="status_toggle sidebar-toggle">
                 <use href="../assets/svg/icon-sprite.svg#collapse-sidebar"></use>
               </svg>
             </div>
             <div>
-              <h1 class="mb-1">Default</h1>
+              <h1>Default</h1>
               <!-- Breadcrumbs Start -->
               <nav class="custom-breadcrumb" aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0">
@@ -138,8 +138,53 @@
                     <use href="../assets/svg/icon-sprite.svg#email"></use>
                   </svg><span class="badge rounded-pill badge-danger">2</span>
                 </div>
-                <div class="onhover-show-div cart-dropdown">
-                  <h6 class="f-18 mb-0 dropdown-title">Inbox</h6>
+                <div class="onhover-show-div chat-dropdown">
+                  <div class="dropdown-title">
+                    <div class="d-flex align-items-center"> <img class="img-fluid img-40 rounded-circle" src="../assets/images/dashboard/user/1.jpg" alt="user">
+                      <div>
+                        <h6 class="f-18 mb-0">Jane Cooper</h6>
+                        <p class="mb-0"> <span class="status status-online me-1"></span><span>active</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <ul> 
+                    <li class="send-msg">
+                      <div> <img class="img-fluid img-30 rounded-circle" src="../assets/images/dashboard/user/1.jpg" alt="user">
+                        <div> 
+                          <p>Hello.how are you?</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="reply-msg">
+                      <div> <img class="img-fluid img-30 rounded-circle" src="../assets/images/dashboard/user/3.jpg" alt="user">
+                        <div> 
+                          <p>Hi, i'm fine.what about you?</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="send-msg">
+                      <div> <img class="img-fluid img-30 rounded-circle" src="../assets/images/dashboard/user/1.jpg" alt="user">
+                        <div> 
+                          <p>I am facing js issue can you help me?</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="reply-msg">
+                      <div> <img class="img-fluid img-30 rounded-circle" src="../assets/images/dashboard/user/3.jpg" alt="user">
+                        <div> 
+                          <p>Sure, i will help you.</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="chat-input">
+                    <div class="input-group">
+                      <input class="form-control" type="text" placeholder="Type message here..."><span class="input-group-text bg-primary"> 
+                        <svg>
+                          <use href="../assets/svg/icon-sprite.svg#send"></use>
+                        </svg></span>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li>
@@ -156,45 +201,45 @@
                 <div class="cart-box">
                   <svg>
                     <use href="../assets/svg/icon-sprite.svg#stroke-ecommerce"></use>
-                  </svg><span class="badge rounded-pill badge-info">2</span>
+                  </svg><span class="badge rounded-pill badge-primary">2</span>
                 </div>
                 <div class="cart-dropdown onhover-show-div">
                   <h6 class="f-18 mb-0 dropdown-title">Cart</h6>
                   <ul>
                     <li>
-                      <div class="media"><img class="img-fluid b-r-5 me-3 img-60" src="../assets/images/other-images/cart-img.jpg" alt="">
-                        <div class="media-body"><span>Furniture Chair for Home</span>
+                      <div class="media"><img class="img-fluid b-r-5 me-3 img-60" src="../assets/images/other-images/cart-img.jpg" alt="cosmetic">
+                        <div class="media-body"><span class="f-w-500">Beauty cosmetic</span>
                           <div class="qty-box">
-                            <div class="input-group"><span class="input-group-prepend">
-                                <button class="btn quantity-left-minus" type="button" data-type="minus" data-field="">-</button></span>
-                              <input class="form-control input-number" type="text" name="quantity" value="1"><span class="input-group-prepend">
-                                <button class="btn quantity-right-plus" type="button" data-type="plus" data-field="">+</button></span>
+                            <div class="touchspin-wrapper"> 
+                              <button class="decrement-touchspin btn-touchspin"><i class="fa fa-minus text-gray"></i></button>
+                              <input class="input-touchspin" id="inputData" type="number" value="2">
+                              <button class="increment-touchspin btn-touchspin"><i class="fa fa-plus text-gray"></i></button>
                             </div>
+                            <h6 class="font-primary">$20        </h6>
                           </div>
-                          <h6 class="font-primary">$500</h6>
                         </div>
-                        <div class="close-circle"><a class="bg-danger" href="#"><i data-feather="x"></i></a></div>
+                        <div class="close-circle"><a href="#"><i data-feather="trash-2"></i></a></div>
                       </div>
                     </li>
                     <li>
-                      <div class="media"><img class="img-fluid b-r-5 me-3 img-60" src="../assets/images/other-images/cart-img.jpg" alt="">
-                        <div class="media-body"><span>Furniture Chair for Home</span>
+                      <div class="media"><img class="img-fluid b-r-5 me-3 img-60" src="../assets/images/other-images/cart-img-1.jpg" alt="shoes">
+                        <div class="media-body"><span class="f-w-500">Simple shoes</span>
                           <div class="qty-box">
-                            <div class="input-group"><span class="input-group-prepend">
-                                <button class="btn quantity-left-minus" type="button" data-type="minus" data-field="">-</button></span>
-                              <input class="form-control input-number" type="text" name="quantity" value="1"><span class="input-group-prepend">
-                                <button class="btn quantity-right-plus" type="button" data-type="plus" data-field="">+</button></span>
+                            <div class="touchspin-wrapper"> 
+                              <button class="decrement-touchspin btn-touchspin"><i class="fa fa-minus text-gray"></i></button>
+                              <input class="input-touchspin" id="inputData" type="number" value="1">
+                              <button class="increment-touchspin btn-touchspin"><i class="fa fa-plus text-gray"></i></button>
                             </div>
+                            <h6 class="font-primary">$30        </h6>
                           </div>
-                          <h6 class="font-primary">$500.00</h6>
                         </div>
-                        <div class="close-circle"><a class="bg-danger" href="#"><i data-feather="x"></i></a></div>
+                        <div class="close-circle"><a href="#"><i data-feather="trash-2"></i></a></div>
                       </div>
                     </li>
                     <li class="total">
-                      <h6 class="mb-0">Order Total : <span class="f-right">$1000.00</span></h6>
+                      <h6 class="mb-0">Order Total : <span class="f-right">$70.00</span></h6>
                     </li>
-                    <li class="text-center"><a class="d-block mb-3 view-cart f-w-700" href="cart.html">Go to your cart</a><a class="btn btn-primary view-checkout" href="checkout.html">Checkout</a></li>
+                    <li class="text-center"><a class="d-block mb-3 view-cart f-w-700" href="cart.html">Go to your cart</a><a class="btn btn-primary view-checkout w-100" href="checkout.html">Checkout</a></li>
                   </ul>
                 </div>
               </li>
@@ -204,11 +249,36 @@
                   <h4>Wade Warren</h4><span class="f-12 f-w-600 f-light">UI Designer</span>
                 </div>
                 <ul class="profile-dropdown onhover-show-div">
-                  <li><a href="#"><i data-feather="user"></i><span>Account </span></a></li>
-                  <li><a href="#"><i data-feather="mail"></i><span>Inbox</span></a></li>
-                  <li><a href="#"><i data-feather="file-text"></i><span>Taskboard</span></a></li>
-                  <li><a href="#"><i data-feather="settings"></i><span>Settings</span></a></li>
-                  <li><a href="#"><i data-feather="log-in"> </i><span>Log in          </span></a></li>
+                  <li><a href="#">
+                      <div class="profile-icon">
+                        <svg>
+                          <use href="../assets/svg/icon-sprite.svg#user"></use>
+                        </svg>
+                      </div><span>Account </span></a></li>
+                  <li><a href="#">
+                      <div class="profile-icon">
+                        <svg>
+                          <use href="../assets/svg/icon-sprite.svg#stroke-email"></use>
+                        </svg>
+                      </div><span>Inbox</span></a></li>
+                  <li><a href="#">
+                      <div class="profile-icon">
+                        <svg>
+                          <use href="../assets/svg/icon-sprite.svg#notepad"></use>
+                        </svg>
+                      </div><span>Taskboard</span></a></li>
+                  <li><a href="#">
+                      <div class="profile-icon">
+                        <svg>
+                          <use href="../assets/svg/icon-sprite.svg#settings"></use>
+                        </svg>
+                      </div><span>Settings</span></a></li>
+                  <li><a href="#">
+                      <div class="profile-icon">
+                        <svg>
+                          <use href="../assets/svg/icon-sprite.svg#login"></use>
+                        </svg>
+                      </div><span>Log in </span></a></li>
                 </ul>
               </li>
             </ul>
@@ -1305,6 +1375,7 @@
     <script src="../assets/js/notify/bootstrap-notify.min.js"></script>
     <script src="../assets/js/dashboard/default.js"></script>
     <script src="../assets/js/notify/index.js"></script>
+    <script src="../assets/js/touchspin_2/custom_touchspin.js"></script>
     <script src="../assets/js/typeahead/handlebars.js"></script>
     <script src="../assets/js/typeahead/typeahead.bundle.js"></script>
     <script src="../assets/js/typeahead/typeahead.custom.js"></script>

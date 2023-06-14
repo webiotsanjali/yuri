@@ -150,18 +150,11 @@
 		font-weight: 500;
 	}
 
-	span,
-	label,
-	.btn {
-		font-family: $font-roboto, $font-serif;
-	}
-
 	.form-group {
 		input {
 			display: inline-block;
 			width: 300px;
 			background-color: $white;
-			font-family: $font-roboto, $font-serif;
 		}
 	}
 }

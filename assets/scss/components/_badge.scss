@@ -52,7 +52,6 @@ a.badge {
 
 .badge {
   padding: $badge-padding;
-  font-family: $font-roboto, $font-serif;
   font-weight: 500;
 
   &+.badge {

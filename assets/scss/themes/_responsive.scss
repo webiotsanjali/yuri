@@ -2063,19 +2063,6 @@
           .header-logo-wrapper {
             display: flex;
           }
-
-          .toggle-sidebar {
-            position: unset;
-            margin-right: 15px;
-            border-right: 1px solid #ddd;
-            padding-right: 15px;
-            display: block;
-
-            &:before {
-              display: none;
-            }
-          }
-
           .toggle-nav {
             display: none;
           }
@@ -2124,8 +2111,8 @@
         }
 
         .page-body {
-          margin-top: 60px;
-          padding: 0 15px;
+          margin-top: 62px;
+          padding: 20px 15px 0;
         }
       }
     }
@@ -2176,7 +2163,7 @@
     .page-header {
       .header-wrapper {
         margin: 0;
-        padding: 12px 30px;
+        padding: 5px 30px;
 
         .nav-right {
           .notification {
@@ -2571,29 +2558,29 @@
   }
 
   h1 {
-    font-size: calc(20px + (34 - 20) * ((100vw - 320px) / (1200 - 320)));
+    font-size: 20px;
   }
 
 
   h2 {
-    font-size: calc(18px + (28 - 18) * ((100vw - 320px) / (1200 - 320)));
+    font-size: 18px;
   }
 
   h3 {
-    font-size: calc(17px + (26 - 17) * ((100vw - 320px) / (1200 - 320)));
+    font-size: 16px;
 
   }
 
   h4 {
-    font-size: calc(17px + (22 - 17) * ((100vw - 320px) / (1200 - 320)));
+    font-size: 15px;
   }
 
   h5 {
-    font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1200 - 320)));
+    font-size: 14px;
   }
 
   h6 {
-    font-size: calc(12px + (15 - 12) * ((100vw - 320px) / (1200 - 320)));
+    font-size: 13px;
   }
 
   .card-absolute {
@@ -4601,7 +4588,7 @@
 
     .page-header {
       .header-wrapper {
-        padding: 12px 15px !important;
+        padding: 5px 15px !important;
 
         .nav-right {
           >ul {
