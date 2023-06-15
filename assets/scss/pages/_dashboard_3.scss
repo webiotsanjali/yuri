@@ -1,6 +1,86 @@
 /**=====================
     3.10 Dashboard_3 CSS Start
 ==========================**/
+.welcome-card {
+  background-image: url(../images/dashboard-3/bg.png);
+  background-size: cover;
+  h2 {
+    letter-spacing: 0.3px;
+  }
+  .card-body {
+    padding-top: 35px;
+    padding-bottom: 50px;
+  }
+  .welcome-image {
+    img {
+      width: 40%;
+      position: absolute;
+      right: 4px;
+      bottom: 0;
+      animation: bounce-effect 5s infinite ease-in;
+    }
+  }
+}
+.project-widget  {
+  .widget-middle-content {
+    margin-top: 8px;
+    h2 {
+      font-size: 26px;
+      margin-right: 10px;
+    }
+    .txt-warning {
+      display: flex;
+      align-items: center;
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  .header-top {
+    align-items: flex-start;
+  }
+  .earning-chart-container {
+    margin: -30px -16px -30px -28px;
+    padding-top: 10px;
+  }
+  .client-chart-container {
+    overflow: hidden;
+    margin: -42px 20px -30px 0px;
+  }
+  .widget-bottom-content {
+    padding-top: 16px;
+    .progress-details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      ul {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+      }
+      li {
+        width: 27px;
+        height: 27px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        + li {
+          margin-right: -4%;
+          z-index: 0;
+        }
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}
+// old css
 @keyframes hand-move {
   0% {
     transform: rotate(0deg);
@@ -20,102 +100,6 @@
 
   100% {
     transform: rotate(0deg);
-  }
-}
-
-.welcome-card {
-  background-image: url(../images/dashboard-3/bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: $white;
-
-  h4 {
-    img {
-      margin-top: -6px;
-      animation: hand-move 5s infinite ease-in;
-    }
-  }
-
-  p {
-    width: 75%;
-
-    @media (max-width:1830px) {
-      width: 62%;
-    }
-
-    @media (max-width:991px) {
-      width: 70%;
-    }
-
-    @media (max-width:480px) {
-      width: 100%;
-    }
-  }
-
-  .welcome-img {
-    height: 200px;
-    position: absolute;
-    right: 0;
-    bottom: -32px;
-
-    [dir="rtl"] & {
-      right: unset;
-      left: 0;
-    }
-
-    @media (max-width:1780px) {
-      height: 180px;
-      bottom: -28px;
-    }
-
-    @media (max-width:1700px) {
-      bottom: -23px;
-    }
-
-    @media (max-width:767px) {
-      height: 140px;
-      bottom: -18px;
-    }
-
-    @media (max-width:480px) {
-      display: none;
-    }
-  }
-}
-
-.course-box {
-  overflow: hidden;
-
-  .card-body {
-    padding: 25px 15px;
-
-    @media (max-width: 1722px) {
-      padding: 20px 15px;
-    }
-
-    @media (max-width: 1660px) {
-      padding: 16px 15px;
-    }
-  }
-
-  &.widget-course {
-    .card-body {
-      @media (max-width: 1660px) {
-        padding: 25px 15px;
-      }
-    }
-  }
-
-  &:hover {
-    transform: translateY(-5px);
-    transition: 0.5s;
-
-    .course-icon {
-      svg {
-        animation: tada 1.5s ease infinite;
-      }
-    }
   }
 }
 
@@ -167,124 +151,6 @@
   }
 }
 
-.get-card {
-  .card-header {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-.square-group {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  transform: scaleX(-1);
-
-  [dir="rtl"] & {
-    right: unset;
-    left: 0;
-  }
-
-  .square-1 {
-    width: 12px;
-    height: 18px;
-  }
-
-  .square-2 {
-    width: 12px;
-    height: 10px;
-    margin-bottom: -10px;
-  }
-
-  .square-3 {
-    width: 18px;
-    height: 10px;
-    margin-left: 10px;
-
-    [dir="rtl"] & {
-      margin-left: unset;
-      margin-right: 10px;
-    }
-  }
-
-  .square-4 {
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    top: 20px;
-    right: -15px;
-
-    [dir="rtl"] & {
-      right: unset;
-      left: -15px;
-    }
-  }
-
-  .square-5 {
-    width: 6px;
-    height: 6px;
-    bottom: 22px;
-    position: absolute;
-    right: -1px;
-
-    [dir="rtl"] & {
-      right: unset;
-      left: -1px;
-    }
-  }
-
-  .square-6,
-  .square-7 {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-  }
-
-  .square-6 {
-    right: -23px;
-    bottom: 5px;
-
-    [dir="rtl"] & {
-      right: unset;
-      left: -23px;
-    }
-  }
-
-  .square-7 {
-    right: 8px;
-    bottom: 45px;
-
-    [dir="rtl"] & {
-      right: unset;
-      left: 8px;
-    }
-  }
-
-  .warning1 {
-    background: #FFD497;
-  }
-
-  .warning {
-    background: #FFA73B;
-  }
-
-  .primary {
-    background: $primary-color;
-  }
-
-  .danger {
-    background: #f54132;
-  }
-
-  .light {
-    background: #E6E8EF;
-  }
-
-  .success {
-    background: $success-color;
-  }
-}
-
 .progress-chart-wrap {
   margin: -40px 0 -22px;
 
@@ -302,175 +168,6 @@
     .apexcharts-datalabels-group {
       .apexcharts-datalabel-label {
         fill: var(--chart-text-color);
-      }
-    }
-  }
-}
-
-.get-card {
-  .btn {
-    margin-top: 15px;
-    padding: 8px 15px;
-
-    &:hover {
-      svg {
-        transform: translateX(5px);
-        transition: 0.5s;
-      }
-    }
-
-    svg {
-      width: 13px;
-      height: 13px;
-      fill: $white;
-      vertical-align: middle;
-      transition: 0.5s;
-    }
-  }
-}
-
-.default-datepicker {
-  .datepicker-inline {
-    .datepicker {
-      width: auto;
-      background: $white;
-      box-shadow: none;
-      padding: 0;
-
-      .datepicker--content {
-        padding: 0;
-
-        .datepicker--days {
-          .datepicker--days-names {
-            margin: 27px 0 0;
-            padding: 15px 0;
-
-            .datepicker--day-name {
-              color: $dark-editor-document;
-              font-size: 14px;
-            }
-          }
-
-          .datepicker--cells {
-            .datepicker--cell-day {
-              height: 35px;
-              width: 14%;
-              color: $dark-editor-document;
-
-              &.-other-month- {
-                color: $dark-editor-document;
-                opacity: 20%;
-              }
-
-              &.-weekend- {
-                +.-weekend- {
-                  color: $danger-color;
-                }
-              }
-            }
-
-            .datepicker--cell {
-              font-weight: 500;
-              font-size: 14px;
-              line-height: 17px;
-              z-index: 0;
-              letter-spacing: 2px;
-
-              &.-selected- {
-                background: var(--theme-deafult);
-                color: $white;
-                position: relative;
-                box-shadow: 0px 0px 13px 0 rgba($primary-color, 0.5);
-              }
-
-              &.-current- {
-                background-color: $success-color;
-                border: none;
-                color: $white;
-
-                &::after {
-                  position: absolute;
-                  content: '';
-                  width: 10px;
-                  height: 10px;
-                  border: 2px solid var(--white);
-                  background: $danger-color;
-                  right: -3px;
-                  top: -2px;
-                  border-radius: 100%;
-                }
-              }
-
-              &.-focus- {
-                color: $white;
-                box-shadow: none;
-              }
-            }
-          }
-        }
-
-        .datepicker-cell {
-          .datepicker--cell-month {
-            &.-current- {
-              &.-selected- {
-                background-color: var(--theme-deafult);
-              }
-            }
-          }
-        }
-      }
-
-      .datepicker--nav {
-        border-bottom: none;
-        padding: 0;
-        text-transform: capitalize;
-        margin-top: 0;
-
-        .datepicker--nav-action {
-          background-color: transparent;
-          width: 22px;
-          height: 22px;
-
-          &[data-action="prev"] {
-            position: absolute;
-            right: 50px;
-
-            [dir="rtl"] & {
-              right: unset;
-              left: 50px;
-            }
-          }
-
-          svg {
-            width: 22px;
-            height: 22px;
-          }
-
-          path {
-            stroke: var(--chart-text-color);
-          }
-        }
-      }
-
-      .datepicker--nav-title {
-        color: $dark-editor-document;
-        font-size: 20px;
-        font-weight: 500;
-
-        @media (max-width:767px) {
-          font-size: 14px;
-        }
-
-        i {
-          margin-left: 10px;
-          font-weight: 500;
-          font-size: 20px;
-          color: $dark-editor-document;
-
-          @media (max-width:767px) {
-            font-size: 14px;
-          }
-        }
       }
     }
   }
@@ -768,73 +465,6 @@
 
 // responsive
 
-@media only screen and (max-width: 575px) {
-  .default-datepicker {
-    .datepicker-inline {
-      .datepicker {
-        .datepicker--nav-title {
-          font-size: 17px;
-
-          i {
-            font-size: 17px;
-            margin-left: 10px;
-          }
-        }
-
-        .datepicker--content {
-          .datepicker--days {
-            .datepicker--cells {
-              .datepicker--cell {
-                font-size: 13px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 360px) {
-  .default-datepicker {
-    .datepicker-inline {
-      .datepicker {
-        .datepicker--content {
-          .datepicker--days {
-            .datepicker--cells {
-              .datepicker--cell {
-                &.-selected- {
-                  &:before {
-                    height: 36px;
-                  }
-                }
-              }
-
-              .datepicker--cell-day {
-                height: 36px;
-              }
-            }
-
-            .datepicker--days-names {
-              margin: 13px 0 13px;
-
-              .datepicker--day-name {
-                font-size: 12px;
-              }
-            }
-          }
-        }
-
-        .datepicker--nav-title {
-          i {
-            margin-left: 15px;
-            font-size: 25px;
-          }
-        }
-      }
-    }
-  }
-}
 
 /**=====================
   3.10 Dashboard_3 CSS Ends

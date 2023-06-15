@@ -2,14 +2,7 @@
     1.1 Reset CSS start
 ==========================**/
 .f-light {
-  color: rgba($theme-body-sub-title-color, 0.8);
-}
-
-svg {
-  &.f-light {
-    fill: $theme-body-sub-title-color;
-    opacity: 0.8;
-  }
+  color: var(--body-light-font-color);
 }
 
 .light-card {

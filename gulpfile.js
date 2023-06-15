@@ -11,7 +11,7 @@ const paths = {
     dest: "./assets/css",
   },
   html: {
-    src: "./assets/pug/pages/theme/index.pug",
+    src: "./assets/pug/pages/theme/dashboard-03.pug",
     dest: "./theme",
   },
 };

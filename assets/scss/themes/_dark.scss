@@ -471,6 +471,10 @@ body {
 						}
 
 					}
+					&::before {
+						background-blend-mode: overlay;
+    					background-color: #1c1919;
+					}
 				}
 			}
 		}
@@ -1422,40 +1426,6 @@ body {
 			}
 		}
 
-		.default-datepicker {
-			.datepicker-inline {
-				.datepicker {
-					background: $dark-card-background;
-
-					.datepicker--nav-title {
-						color: $dark-all-font-color;
-
-						i {
-							color: $dark-all-font-color;
-						}
-					}
-
-					.datepicker--content {
-						.datepicker--days {
-
-							.datepicker--days-names,
-							.datepicker--cells {
-
-								.datepicker--day-name,
-								.datepicker--cell-day {
-									color: $dark-all-font-color;
-
-									&.-selected- {
-										color: $white;
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-
 		// index page css end
 		// ecommerce dashboard css start
 		[class*='activity-dot-'] {
@@ -2041,20 +2011,6 @@ body {
 							>li {
 								svg {
 									stroke: $white;
-								}
-							}
-						}
-
-						&.right-header {
-							>ul {
-								>li {
-									.profile-media {
-										.media-body {
-											p {
-												color: $dark-all-font-color;
-											}
-										}
-									}
 								}
 							}
 						}

@@ -359,8 +359,8 @@ $(".mobile-title svg").click(function () {
   $(".header-mega").toggleClass("d-block");
 });
 
-$(".onhover-dropdown").on("click", function () {
-  $(this).children(".onhover-show-div").toggleClass("active");
+$(".onhover-dropdown .onhover-click").on("click", function () {
+  $(this).next(".onhover-show-div").toggleClass("active");
 });
 
 $("#flip-btn").click(function () {
@@ -369,4 +369,25 @@ $("#flip-btn").click(function () {
 
 $("#flip-back").click(function () {
   $(".flip-card-inner").removeClass("flipped");
+});
+
+
+// cart dropdown product delete
+function CheckProductvalid() {
+  let AllProducts = document.getElementsByClassName("cart-product");
+  let HiddenProducts = document.getElementsByClassName("d-none");
+  if (AllProducts.length == HiddenProducts.length) {
+    document.querySelector(".cart-empty").classList.add("show");
+    document.querySelector(".cart-main-wrapper").classList.add("d-none");
+  }
+}
+const cart_details = document.getElementsByClassName(
+  "cart-product"
+);
+cart_details.forEach((item, index) => {
+  let DeleteButton = item.querySelector(".close-circle");
+  DeleteButton.addEventListener("click", (event) => {
+    item.classList.add("d-none");
+    CheckProductvalid();
+  });
 });

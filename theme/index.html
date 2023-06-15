@@ -96,7 +96,7 @@
                     <use href="../assets/svg/icon-sprite.svg#search"></use>
                   </svg></span></li>
               <li class="onhover-dropdown">
-                <div class="notification-box">
+                <div class="notification-box onhover-click">
                   <svg>
                     <use href="../assets/svg/icon-sprite.svg#notification"></use>
                   </svg><span class="badge rounded-pill badge-success">3 </span>
@@ -133,7 +133,7 @@
                 </div>
               </li>
               <li class="cart-nav onhover-dropdown">
-                <div class="cart-box">
+                <div class="cart-box onhover-click">
                   <svg>
                     <use href="../assets/svg/icon-sprite.svg#email"></use>
                   </svg><span class="badge rounded-pill badge-danger">2</span>
@@ -198,17 +198,17 @@
                 </div>
               </li>
               <li class="cart-nav onhover-dropdown">
-                <div class="cart-box">
+                <div class="cart-box onhover-click">
                   <svg>
                     <use href="../assets/svg/icon-sprite.svg#stroke-ecommerce"></use>
                   </svg><span class="badge rounded-pill badge-primary">2</span>
                 </div>
                 <div class="cart-dropdown onhover-show-div">
                   <h6 class="f-18 mb-0 dropdown-title">Cart</h6>
-                  <ul>
-                    <li>
-                      <div class="media"><img class="img-fluid b-r-5 me-3 img-60" src="../assets/images/other-images/cart-img.jpg" alt="cosmetic">
-                        <div class="media-body"><span class="f-w-500">Beauty cosmetic</span>
+                  <ul class="cart-main-wrapper">
+                    <li class="cart-product">
+                      <div class="d-flex"><img class="img-fluid b-r-5 me-3 img-60" src="../assets/images/other-images/cart-img.jpg" alt="cosmetic">
+                        <div class="flex-grow-1"><span class="f-w-500">Beauty cosmetic</span>
                           <div class="qty-box">
                             <div class="touchspin-wrapper"> 
                               <button class="decrement-touchspin btn-touchspin"><i class="fa fa-minus text-gray"></i></button>
@@ -221,9 +221,9 @@
                         <div class="close-circle"><a href="#"><i data-feather="trash-2"></i></a></div>
                       </div>
                     </li>
-                    <li>
-                      <div class="media"><img class="img-fluid b-r-5 me-3 img-60" src="../assets/images/other-images/cart-img-1.jpg" alt="shoes">
-                        <div class="media-body"><span class="f-w-500">Simple shoes</span>
+                    <li class="cart-product">
+                      <div class="d-flex"><img class="img-fluid b-r-5 me-3 img-60" src="../assets/images/other-images/cart-img-1.jpg" alt="shoes">
+                        <div class="flex-grow-1"><span class="f-w-500">Simple shoes</span>
                           <div class="qty-box">
                             <div class="touchspin-wrapper"> 
                               <button class="decrement-touchspin btn-touchspin"><i class="fa fa-minus text-gray"></i></button>
@@ -241,12 +241,18 @@
                     </li>
                     <li class="text-center"><a class="d-block mb-3 view-cart f-w-700" href="cart.html">Go to your cart</a><a class="btn btn-primary view-checkout w-100" href="checkout.html">Checkout</a></li>
                   </ul>
+                  <div class="cart-empty">
+                    <div class="cart-image"> <img class="img-fluid" src="../assets/images/dashboard-8/order-trash.gif" alt="empty"></div>
+                    <h5>Oops! Your cart empty!!!</h5>
+                  </div>
                 </div>
               </li>
-              <li class="profile-nav onhover-dropdown"> 
-                <div class="sidebar-image"> <img src="../assets/images/user.png" alt="profile"><span class="status status-online"></span></div>
-                <div class="sidebar-content"> 
-                  <h4>Wade Warren</h4><span class="f-12 f-w-600 f-light">UI Designer</span>
+              <li class="profile-nav onhover-dropdown">
+                <div class="onhover-click">
+                  <div class="sidebar-image"> <img src="../assets/images/user.png" alt="profile"><span class="status status-online"></span></div>
+                  <div class="sidebar-content"> 
+                    <h4>Wade Warren</h4><span class="f-12 f-w-600 f-light">UI Designer</span>
+                  </div>
                 </div>
                 <ul class="profile-dropdown onhover-show-div">
                   <li><a href="#">

@@ -58,6 +58,30 @@
     }
   }
 }
+.cart-empty {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  @media (max-width: 575px) {
+    padding: 15px;
+  }
+  h5 {
+    margin-top: 15px;
+  }
+  .cart-image {
+    width: calc(85px + 55 * (100vw - 1400px) / 520);
+    height: calc(85px + 55 * (100vw - 1400px) / 520);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--light-slate);
+    margin: 0 auto;
+  }
+  &.show {
+    display: block;
+  }
+}
 
 /*======= Page Header css ends  ======= */
 

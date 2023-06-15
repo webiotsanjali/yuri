@@ -68,7 +68,7 @@
             svg
               use(href='../assets/svg/icon-sprite.svg#search')
         li.onhover-dropdown
-          .notification-box
+          .notification-box.onhover-click
             svg
               use(href='../assets/svg/icon-sprite.svg#notification')
             span.badge.rounded-pill.badge-success 3 
@@ -108,7 +108,7 @@
               li
                 a.f-w-700(href="#") Check all
         li.cart-nav.onhover-dropdown
-          .cart-box
+          .cart-box.onhover-click
             svg
               use(href='../assets/svg/icon-sprite.svg#email')
             span.badge.rounded-pill.badge-danger 2
@@ -155,17 +155,17 @@
             svg.sun-icon
               use(href='../assets/svg/icon-sprite.svg#sun')
         li.cart-nav.onhover-dropdown
-          .cart-box
+          .cart-box.onhover-click
             svg
               use(href='../assets/svg/icon-sprite.svg#stroke-ecommerce')
             span.badge.rounded-pill.badge-primary 2
           .cart-dropdown.onhover-show-div
             h6.f-18.mb-0.dropdown-title Cart
-            ul
-              li
-                .media
+            ul.cart-main-wrapper
+              li.cart-product
+                .d-flex
                   img.img-fluid.b-r-5.me-3.img-60(src='../assets/images/other-images/cart-img.jpg', alt='cosmetic')
-                  .media-body
+                  .flex-grow-1
                     span.f-w-500 Beauty cosmetic
                     .qty-box
                       .touchspin-wrapper 
@@ -179,10 +179,10 @@
                   .close-circle
                     a(href='#')
                       i(data-feather='trash-2')
-              li
-                .media
+              li.cart-product
+                .d-flex
                   img.img-fluid.b-r-5.me-3.img-60(src='../assets/images/other-images/cart-img-1.jpg', alt='shoes')
-                  .media-body
+                  .flex-grow-1
                     span.f-w-500 Simple shoes
                     .qty-box
                       .touchspin-wrapper 
@@ -196,7 +196,6 @@
                   .close-circle
                     a(href='#')
                       i(data-feather='trash-2')
-
               li.total
                 h6.mb-0
                   | Order Total : 
@@ -206,13 +205,18 @@
                   | Go to your cart
                 a.btn.btn-primary.view-checkout.w-100(href='checkout.html')
                   | Checkout
-        li.profile-nav.onhover-dropdown 
-          .sidebar-image 
-            img(src="../assets/images/user.png", alt="profile")
-            span.status.status-online
-          div.sidebar-content 
-            h4 Wade Warren
-            span.f-12.f-w-600.f-light UI Designer
+            .cart-empty
+              .cart-image 
+                img.img-fluid(src='../assets/images/dashboard-8/order-trash.gif' alt='empty')
+              h5 Oops! Your cart empty!!!
+        li.profile-nav.onhover-dropdown
+          .onhover-click
+            .sidebar-image 
+              img(src="../assets/images/user.png", alt="profile")
+              span.status.status-online
+            div.sidebar-content 
+              h4 Wade Warren
+              span.f-12.f-w-600.f-light UI Designer
           ul.profile-dropdown.onhover-show-div
             li
               a(href='#')

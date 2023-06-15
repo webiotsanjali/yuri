@@ -1,148 +1,138 @@
 (function () {
-  var options = {
-    series: [38, 60],
+
+  // activity chart
+  var options_earning = {
+    series: [{
+      name: "Earning",
+      data: [4, 3, 3, 3, 4, 3, 3,4, 5,3.5, 2.5, 2.5],
+    }, ],
     chart: {
-      width: 240,
-      height: 360,
-      type: "radialBar",
-      offsetX: -28,
+      height: 100,
+      type: "bar",
+      toolbar: {
+        show: false,
+      },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        blur: 3,
+        color: "var(--theme-deafult)",
+        opacity: 0.25,
+      },
     },
     plotOptions: {
-      radialBar: {
-        dataLabels: {
-          name: {
-            offsetY: 20,
-            color: "var(--chart-text-color)",
-            fontFamily: "Rubik, sans-serif",
-            fontWeight: 500,
-          },
-          value: {
-            fontSize: "22px",
-            offsetY: -16,
-            fontFamily: "Rubik, sans-serif",
-            fontWeight: 500,
-          },
-          total: {
-            show: true,
-            label: "Task Done!",
-            fontSize: "12px",
-            formatter: function () {
-              return "89%";
-            },
-          },
-        },
-        hollow: {
-          margin: 5,
-          size: "70%",
-          image: "../assets/images/dashboard-3/round.png",
-          imageWidth: 115,
-          imageHeight: 115,
-          imageClipped: false,
-        },
-        track: {
-          background: "transparent",
-        },
+      bar: {
+        borderRadius: 2,
+        borderRadiusApplication: 'around',
+        borderRadiusWhenStacked: 'last',
+        columnWidth: "25%",
       },
     },
-    colors: ["var(--theme-deafult)", "#FFA941"],
-    labels: ["Progress", "Done"],
-    stroke: {
-      lineCap: "round",
+    dataLabels: {
+      enabled: false,
     },
-    legend: {
-      show: true,
-      position: "bottom",
-      horizontalAlign: "center",
-      offsetY: -15,
-      fontSize: "14px",
-      fontFamily: "Rubik, sans-serif",
-      fontWeight: 500,
+    xaxis: {
+      categories: ["S", "M", "T", "W", "T", "F", "S", "s", "m", "t", "w", "t"],
       labels: {
-        colors: "var(--chart-text-color)",
+        show: false,
       },
-      markers: {
-        width: 6,
-        height: 6,
+      axisBorder: {
+        show: false,
+      },
+      axisTicks: {
+        show: false,
+      },
+      tooltip: {
+        enabled: false,
       },
     },
-    responsive: [
-      {
-        breakpoint: 1830,
-        options: {
-          chart: {
-            offsetX: -40,
-          },
-        },
+    yaxis: {
+      axisBorder: {
+        show: false,
       },
-      {
-        breakpoint: 1750,
-        options: {
-          chart: {
-            offsetX: -50,
-          },
-        },
+      axisTicks: {
+        show: false,
       },
-      {
-        breakpoint: 1661,
-        options: {
-          chart: {
-            offsetX: -10,
-          },
-        },
+      labels: {
+        show: false,
       },
-      {
-        breakpoint: 1530,
-        options: {
-          chart: {
-            offsetX: -25,
-          },
-        },
-      },
-      {
-        breakpoint: 1400,
-        options: {
-          chart: {
-            offsetX: 10,
-          },
-        },
-      },
-      {
-        breakpoint: 1300,
-        options: {
-          chart: {
-            offsetX: -10,
-          },
-        },
-      },
-      {
-        breakpoint: 1200,
-        options: {
-          chart: {
-            width: 255,
-          },
-        },
-      },
-      {
-        breakpoint: 992,
-        options: {
-          chart: {
-            width: 245,
-          },
-        },
-      },
-      {
-        breakpoint: 600,
-        options: {
-          chart: {
-            width: 225,
-          },
-        },
-      },
-    ],
+    },
+    grid: {
+      show: false,
+    },
+    colors: ["var(--theme-deafult)"],
   };
 
-  var chart = new ApexCharts(document.querySelector("#progresschart"), options);
-  chart.render();
+  var chart_earning = new ApexCharts(
+    document.querySelector("#earnings-chart"),
+    options_earning
+  );
+  chart_earning.render();
+
+  // total client chart
+  var options_client = {
+    series: [{
+      data: [0,15, 15, 10, 10, 20,20, 25,25, 25]
+    }],
+    chart: {
+      type: 'area',
+      height: 145,
+      toolbar: {
+        show: false
+      }
+    },
+    stroke: {
+      curve: 'smooth',
+      width: 2,
+    },
+    xaxis: {
+      type: 'category',
+      categories: ["jan", "feb", "mar", "apr", "may", "jun", "july", "aug", "sep", "oct"],
+      labels: {
+        show: false,
+      },
+      axisBorder: {
+        show: false,
+      },
+      axisTicks: {
+        show: false
+      }
+    },
+    grid: {
+      show: false,
+      padding: {
+        left: -60
+      },
+    },
+    yaxis: {
+      show: false,
+    },
+    dataLabels: {
+      enabled: false
+    },
+    markers: {
+      hover: {
+        sizeOffset: 4
+      }
+    },
+    colors: ["#F99B0D"],
+    fill: {
+      type: 'gradient',
+      gradient: {
+        shade: 'light',
+        type: "vertical",
+        shadeIntensity: 0.1,
+        inverseColors: true,
+        opacityFrom: 0.5,
+        opacityTo: 0,
+        stops: [0, 100],
+      }
+    }
+  };
+
+  var chart_client = new ApexCharts(document.querySelector("#total-client"), options_client);
+  chart_client.render();
 
   // learning chart
   var optionslearning = {

@@ -453,15 +453,6 @@
   .testimonial p {
     margin-top: 20px;
   }
-  .redial-social-widget {
-    width: 125px;
-    height: 125px;
-  }
-  .redial-social-widget i {
-    width: 100px;
-    height: 100px;
-    font-size: 35px;
-  }
   .chat-body {
     padding: 10px;
   }
@@ -1616,11 +1607,6 @@
     margin-top: 0;
   }
 }
-@media only screen and (max-width: 810px) {
-  .page-wrapper .page-header .header-wrapper .nav-right > ul > li .profile-media .media-body {
-    display: none;
-  }
-}
 @media only screen and (max-width: 767.98px) {
   .wizard-4 ul.anchor {
     width: 100%;
@@ -1660,9 +1646,6 @@
   }
   .new-products .owl-carousel .product-box.row > div {
     width: auto;
-  }
-  .profile-media .media-body {
-    display: none;
   }
   .form-inline .form-group:not(.form-control-search) {
     width: 100%;
@@ -2358,9 +2341,6 @@
   .page-wrapper .page-body-wrapper .page-title > .row .col-6:first-child h3 {
     padding-right: 0;
   }
-  .page-wrapper .page-header .header-wrapper .nav-right ul li i {
-    font-size: 14px !important;
-  }
   .page-wrapper .page-header .header-wrapper .nav-right ul li svg {
     width: 18px;
   }
@@ -2369,14 +2349,6 @@
   }
   .page-wrapper.compact-wrapper .page-header .header-wrapper .logo-wrapper, .page-wrapper.compact-sidebar .page-header .header-wrapper .logo-wrapper {
     display: none;
-  }
-  .page-wrapper.compact-wrapper .page-header .header-wrapper .toggle-sidebar, .page-wrapper.compact-sidebar .page-header .header-wrapper .toggle-sidebar {
-    margin-left: 0;
-    padding-left: 0;
-    border-left: none;
-    border-right: 1px solid #ddd;
-    padding-right: 8px;
-    margin-right: 8px;
   }
   .page-wrapper.compact-wrapper .page-header .header-wrapper .toggle-sidebar svg, .page-wrapper.compact-sidebar .page-header .header-wrapper .toggle-sidebar svg {
     width: 18px;
@@ -2399,12 +2371,6 @@
   .page-wrapper .page-header .header-wrapper .nav-right.right-header ul li.px-0 {
     padding: 6px !important;
   }
-  .page-wrapper .page-header .header-wrapper .nav-right > ul li .flag-icon {
-    font-size: 14px !important;
-  }
-  .page-wrapper .page-header .header-wrapper .nav-right > ul li .profile-media img {
-    width: 25px;
-  }
   .page-wrapper .page-header .header-wrapper .nav-right .notification-dropdown.onhover-show-div:before, .page-wrapper .page-header .header-wrapper .nav-right .notification-dropdown.onhover-show-div:after {
     left: 24px !important;
     right: unset !important;
@@ -2413,7 +2379,7 @@
     padding: 8px 30px;
   }
   .page-wrapper.compact-wrapper .page-body-wrapper .page-body {
-    margin-top: 53px;
+    margin-top: 58px;
   }
   .page-wrapper.compact-wrapper .page-body-wrapper.sidebar-wrapper .sidebar-main .sidebar-links {
     height: calc(100vh - 79px);
@@ -2948,7 +2914,7 @@
     margin-bottom: 20px !important;
   }
   .page-wrapper .page-body-wrapper .page-body {
-    padding: 0 !important;
+    padding: 15px 0 0 !important;
   }
   .page-wrapper .page-body-wrapper .page-title {
     padding-top: 15px;

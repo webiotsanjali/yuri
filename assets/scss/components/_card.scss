@@ -154,6 +154,21 @@
   }
 }
 
+.title-line {
+  .card-header {
+    position: relative;
+    &::before {
+      width: 4px;
+      height: 26px;
+      top: 23px;
+      background: var(--theme-deafult);
+      position: absolute;
+      content: '';
+      left: 0;
+    }
+  }
+}
+
 .page-body-wrapper {
   .card {
     .sub-title {
