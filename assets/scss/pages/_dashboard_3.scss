@@ -80,6 +80,94 @@
     }
   }
 }
+.project-overview-wrapper {
+  position: relative;
+  z-index: 1;
+  margin: -22px 0 -24px;
+  .project-back-bar {
+    position: absolute;
+    width: calc(100% - 20px);
+    bottom: 23px;
+    margin: 0 auto !important;
+    left: 28px;
+    z-index: -1;
+  }
+
+}
+.calendar-wrapper {
+  .calendar-date-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    margin-bottom: -26px;
+    li {
+      padding: 0 9px;
+      text-align: center;
+      width: 100%;
+      h4 {
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 26px;
+      }
+      &.today-date {
+        h4 {
+          color: $white;
+          background: var(--theme-deafult);
+          border-radius: 5px;
+          box-shadow: 0px 22.3363px 17.869px rgba(0, 157, 181, 0.143066), 0px 12.5216px 10.0172px rgba(0, 157, 181, 0.12), 0px 6.6501px 5.32008px rgba(0, 157, 181, 0.0969343), 0px 2.76726px 2.21381px rgba(0, 157, 181, 0.0674749);
+        }
+      }
+    }
+  }
+  .client-content {
+    margin-bottom: -10px;
+    padding-top: 15px;
+    li {
+      gap: 10px;
+      align-items: center;
+      img {
+        min-width: 58px;
+        height: 58px;
+      }
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+        padding: 17px 0;
+      }
+      + li {
+        > div {
+          border-top: 1px solid var(--light-border);
+        }
+      }
+      .client-sub-content {
+        display: flex;
+        li {
+          gap: 6px;
+          padding: 0 8px;
+          + li {
+            border-left: 1px solid var(--light-border);
+          }
+          &:first-child {
+            padding-left: 0;
+          }
+          &:last-child {
+            padding-right: 0;
+          }
+          svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--body-light-font-color);
+          }
+        }
+      }
+      .btn-light {
+        color: var(--body-light-font-color);
+      }
+    }
+  }
+}
 // old css
 @keyframes hand-move {
   0% {

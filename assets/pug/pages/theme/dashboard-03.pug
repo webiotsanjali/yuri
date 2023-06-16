@@ -1,6 +1,7 @@
 - var theme_customizer      = true;
 - var sidebar               = true;
 - var apexmoment            = true;
+- var datatable_2           = true;
 - var animate               = true;
 - var scrollbar             = true;
 - var apex                  = true;
@@ -140,6 +141,143 @@ html(lang='en')
                             a.dropdown-item(href='#') Monthly
                             a.dropdown-item(href='#') weekly
                             a.dropdown-item(href='#') yearly
+                  .card-body.pt-0 
+                    .project-overview-wrapper
+                      #project-overview
+                      .project-back-bar
+                        #project-bar
+              .col-xl-5 
+                .card.height-equal.title-line
+                  .card-header.card-no-border
+                    .header-top
+                      h2 Calendar
+                      .card-header-right-icon
+                        a.link-with-icon(href="#")
+                          | Report
+                          svg
+                            use(href='../assets/svg/icon-sprite.svg#arrow-two-tone')
+                  .card-body.pt-0 
+                    .calendar-wrapper
+                      ul.calendar-date-list 
+                        li 
+                          span.f-12.f-light Mon
+                          h4.f-w-500 14
+                        li 
+                          span.f-12.f-light Tue
+                          h4.f-w-500 15
+                        li 
+                          span.f-12.f-light Wed
+                          h4.f-w-500 16
+                        li 
+                          span.f-12.f-light Thu
+                          h4.f-w-500 17
+                        li 
+                          span.f-12.f-light Fri
+                          h4.f-w-500 18
+                        li.today-date 
+                          span.f-12.f-light Sat
+                          h4.f-w-500 19
+                        li 
+                          span.f-12.f-light Sun
+                          h4.f-w-500 20
+                        li 
+                          span.f-12.f-light Mon
+                          h4.f-w-500 21
+                        li 
+                          span.f-12.f-light Tue
+                          h4.f-w-500 22
+                        li 
+                          span.f-12.f-light Wed
+                          h4.f-w-500 23
+                        li 
+                          span.f-12.f-light Thu
+                          h4.f-w-500 24
+                      ul.client-content
+                        li.d-flex 
+                          img(src="../assets/images/dashboard-3/client/1.png", alt="client")
+                          div 
+                            .flex-grow-1 
+                              h4.mb-1 Meeting with Client
+                              ul.client-sub-content
+                                li.d-flex 
+                                  svg
+                                    use(href='../assets/svg/icon-sprite.svg#video')
+                                  span.f-12.f-light.f-w-500 Zoom Meeting
+                                li.d-flex 
+                                  svg
+                                    use(href='../assets/svg/icon-sprite.svg#dashboard-clock')
+                                  span.f-12.f-light.f-w-500 09 am
+                                li.d-flex.f-12.f-light.f-w-500 Lead by 
+                                  span.txt-warning Jaskion Raio
+                            a(href="#").btn.btn-light.f-12.f-w-500 View
+                        li.d-flex 
+                          img(src="../assets/images/dashboard-3/client/2.png", alt="client")
+                          div 
+                            .flex-grow-1 
+                              h4.mb-1 Deal with New Client
+                              ul.client-sub-content
+                                li.d-flex 
+                                  svg
+                                    use(href='../assets/svg/icon-sprite.svg#video')
+                                  span.f-12.f-light.f-w-500 Zoom Meeting
+                                li.d-flex 
+                                  svg
+                                    use(href='../assets/svg/icon-sprite.svg#dashboard-clock')
+                                  span.f-12.f-light.f-w-500 09 am
+                                li.d-flex.f-12.f-light.f-w-500 Lead by 
+                                  span.txt-warning Ashkista Jashion
+                            a(href="#").btn.btn-light.f-12.f-w-500 View
+              .col-xl-7 
+                .card.height-equal.title-line
+                  .card-header.card-no-border
+                    .header-top
+                      h2 Projects Status
+                      .card-header-right-icon
+                        a.link-with-icon(href="#")
+                          | View all
+                          svg
+                            use(href='../assets/svg/icon-sprite.svg#arrow-two-tone')
+                  .card-body.project-datatable 
+                    table#project-status.table
+                      thead 
+                        tr 
+                          th Project
+                          th Team
+                          th Start Date
+                          th Due Date
+                          th Progress
+                          th Status
+                          th Action
+                      tbody 
+                        tr 
+                          td Development
+                          td
+                            .customers
+                              ul 
+                                li.d-inline-block
+                                  img.img-40.rounded-circle(src="../assets/images/dashboard/user/1.jpg", alt="user")
+                                li.d-inline-block
+                                  img.img-40.rounded-circle(src="../assets/images/dashboard/user/6.jpg", alt="user")
+                                li.d-inline-block
+                                  img.img-40.rounded-circle(src="../assets/images/dashboard/user/7.jpg", alt="user")
+                                li.d-inline-block
+                                  .light-card
+                                    span.f-w-500 +5 
+                          td  
+                            span.f-light 12 Jan 2023
+                          td  
+                            span.f-light 15 Jan 2023           
+                          td 
+                          td
+                            span.badge.badge-light-primary In Progress      
+                          td
+                            .dropdown.icon-dropdown.text-center
+                              button#tableButton1.btn.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                svg
+                                  use(href='../assets/svg/icon-sprite.svg#more-horizontal')
+                              .dropdown-menu.dropdown-menu-end(aria-labelledby='tableButton1')
+                                a.dropdown-item(href='#') Edit
+                                a.dropdown-item(href='#') Delete
               .col-xxl-5.col-ed-7.col-xl-7.box-col-7
                 .card 
                   .card-header.card-no-border

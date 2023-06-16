@@ -1,3 +1,8 @@
+console.log("test");
+const datatable = new simpleDatatables.DataTable("#project-status", {
+  paging: false,
+  tabIndex: 1,
+});
 (function () {
 
   // activity chart
@@ -133,6 +138,234 @@
 
   var chart_client = new ApexCharts(document.querySelector("#total-client"), options_client);
   chart_client.render();
+
+  // project overview chart
+  var options_overview = {
+    series: [{
+        name: "Earning",
+        type: "line",
+        data: [120, 250, 70, 330, 140, 230, 90, 280, 40, 150, 350, 150, 350],
+      },
+      {
+        name: "Order",
+        type: "line",
+        data: [80, 200, 150, 200, 100, 150, 110, 200, 110, 200, 150,80, 30 ],
+      },
+    ],
+    chart: {
+      height: 240,
+      type: "line",
+      stacked: false,
+      toolbar: {
+        show: false,
+      },
+      dropShadow: {
+        enabled: true,
+        top: 2,
+        left: 0,
+        blur: 4,
+        color: "#000",
+        opacity: 0.08,
+      },
+    },
+    stroke: {
+      width: [2, 2, 2],
+      curve: "smooth",
+    },
+    grid: {
+      show: true,
+      borderColor: "var(--chart-border)",
+      strokeDashArray: 0,
+      position: "back",
+      xaxis: {
+        lines: {
+          show: true,
+        },
+      },
+      padding: {
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0,
+      },
+    },
+    plotOptions: {
+      bar: {
+        columnWidth: "50%",
+      },
+    },
+    colors: ["#009DB5", "#83BF6E"],
+    fill: {
+      opacity: 1,
+      type: 'solid',
+    },
+    labels: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+    ],
+    xaxis: {
+      type: "category",
+      tickAmount: 4,
+      tickPlacement: "between",
+      tooltip: {
+        enabled: false,
+      },
+      axisBorder: {
+        color: "var(--chart-border)",
+      },
+      axisTicks: {
+        show: false,
+      },
+    },
+    legend: {
+      show: false,
+    },
+    yaxis: {
+      min: 0,
+      tickAmount: 4,
+      tickPlacement: "between",
+      labels: {
+        formatter: function (val) {
+          return val + "K";
+        },
+        offsetX: -5,
+      }
+    },
+    tooltip: {
+      shared: false,
+      intersect: false,
+    },
+    responsive: [{
+      breakpoint: 1200,
+      options: {
+        chart: {
+          height: 250,
+        },
+      },
+    }, ],
+  };
+
+  var chart_overview = new ApexCharts(
+    document.querySelector("#project-overview"),
+    options_overview
+  );
+  chart_overview.render();
+
+  // bar overview chart
+  var options_bar = {
+    series: [{
+      name: "Revenue",
+      data: [
+        30, 40, 18, 25, 18, 10, 20, 35, 22, 40, 30, 38, 20, 35, 11, 28, 40,
+        11, 28, 40, 11, 28, 40, 11, 28, 40, 11, 11, 28, 40, 11, 28, 40, 11, 28, 40, 11,
+      ],
+    }, ],
+    chart: {
+      type: "bar",
+      height: 180,
+      toolbar: {
+        show: false,
+      },
+    },
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: "55%",
+      },
+    },
+    colors: ["var(--chart-dashed-border)"],
+    grid: {
+      show: false,
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: {
+      show: true,
+      width: 2,
+      colors: ["transparent"],
+    },
+    xaxis: {
+      categories: [
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+      ],
+      labels: {
+        show: false,
+      },
+      axisBorder: {
+        show: false,
+      },
+      axisTicks: {
+        show: false,
+      },
+    },
+    yaxis: {
+      labels: {
+        show: false,
+      },
+      axisBorder: {
+        show: false,
+      },
+      axisTicks: {
+        show: false,
+      },
+    },
+    fill: {
+      opacity: 0.7,
+    },
+    tooltip: {
+      enabled: false,
+    },
+    states: {
+      normal: {
+        filter: {
+          type: "none",
+        },
+      },
+      hover: {
+        filter: {
+          type: "none",
+        },
+      },
+      active: {
+        allowMultipleDataPointsSelection: false,
+        filter: {
+          type: "none",
+        },
+      },
+    },
+    responsive: [{
+      breakpoint: 405,
+      options: {
+        chart: {
+          height: 150,
+        },
+      },
+    }, ],
+  };
+
+  var chart_bar = new ApexCharts(
+    document.querySelector("#project-bar"),
+    options_bar
+  );
+  chart_bar.render();
 
   // learning chart
   var optionslearning = {

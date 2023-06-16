@@ -1,6 +1,9 @@
 /**=====================
    3.34 Progress CSS Start
 ==========================**/
+.progress {
+	background: var(--progress-bg);
+}
 .progress-showcase {
 	.progress {
 		margin-bottom: 10px;

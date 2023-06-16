@@ -411,6 +411,9 @@ $btn-color in (primary, $primary-color),
       }
     }
   }
+  .dropdown-menu {
+    z-index: 2;
+  }
 }
 
 

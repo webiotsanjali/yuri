@@ -718,7 +718,7 @@
     margin-bottom: 0;
   }
   .error-wrapper .maintenance-icons li i {
-    color: #f4f4f4;
+    color: #F2F3F7;
     font-size: 40px;
   }
   .error-wrapper .maintenance-icons li:nth-child(2) i {
@@ -1820,7 +1820,7 @@
     bottom: 0;
   }
   .error-wrapper .maintenance-icons li i {
-    color: #f4f4f4;
+    color: #F2F3F7;
     font-size: 30px;
   }
   .error-wrapper .maintenance-icons li:nth-child(2) i {
@@ -2961,8 +2961,8 @@
     padding: 20px;
   }
   .user-profile .hovercard .info .user-designation {
-    border-top: 1px solid #f4f4f4;
-    border-bottom: 1px solid #f4f4f4;
+    border-top: 1px solid #F2F3F7;
+    border-bottom: 1px solid #F2F3F7;
     margin-bottom: 15px;
     padding: 15px 0px;
   }

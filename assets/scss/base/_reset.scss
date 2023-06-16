@@ -13,6 +13,22 @@
   background-color: var(--light-bg);
 }
 
+.link-with-icon {
+  color: var(--body-light-font-color);
+  padding: 9px 10px;
+  background-color: var(--light-bg);
+  border-radius: 5px;
+  svg {
+    width: 13px;
+    height: 13px;
+    stroke: var(--body-light-font-color);
+    vertical-align: -2px;
+  }
+  &:hover {
+    color: var(--body-light-font-color);
+  }
+}
+
 .icon-arrow-down,
 .icon-arrow-up {
   &.icon-rotate {
@@ -584,12 +600,12 @@ $btn-color in (primary, $primary-color),
 }
 
 .btn-light {
-  background-color: rgba($primary-color, 0.06) !important;
-  border-color: rgba($primary-color, 0.06) !important;
+  background-color: rgba($light-color, 0.7) !important;
+  border-color: rgba($light-color, 0.7) !important;
 
   &:hover {
-    background-color: rgba($primary-color, 0.1) !important;
-    border-color: rgba($primary-color, 0.1) !important;
+    background-color: rgba($light-color, 0.8) !important;
+    border-color: rgba($light-color, 0.8) !important;
   }
 }
 
@@ -1270,6 +1286,27 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* Override the default tooltip arrow color */
+.bs-tooltip-top .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
+ border-top-color: $light-primary;
+}
+
+.bs-tooltip-end .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before {
+ border-right-color: $light-primary;
+}
+
+.bs-tooltip-bottom .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before {
+ border-bottom-color: $light-primary;
+}
+
+.bs-tooltip-start .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
+ border-left-color: $light-primary;
 }
 
 

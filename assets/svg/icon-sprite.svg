@@ -277,8 +277,22 @@
         </defs>
     </symbol>
 
+    <symbol id="arrow-two-tone" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.4299 5.93005L20.4999 12.0001L14.4299 18.0701" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path opacity="0.4" d="M3.5 12H20.33" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    
+    <symbol id="video" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.39803 15.315H4.65803C2.28803 15.315 1.50053 13.74 1.50053 12.1575V5.8425C1.50053 3.4725 2.28803 2.685 4.65803 2.685H9.39803C11.768 2.685 12.5555 3.4725 12.5555 5.8425V12.1575C12.5555 14.5275 11.7605 15.315 9.39803 15.315Z" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14.6404 12.825L12.5554 11.3625V6.62998L14.6404 5.16748C15.6604 4.45498 16.5004 4.88998 16.5004 6.14248V11.8575C16.5004 13.11 15.6604 13.545 14.6404 12.825Z" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8.62495 8.25C9.24627 8.25 9.74995 7.74632 9.74995 7.125C9.74995 6.50368 9.24627 6 8.62495 6C8.00363 6 7.49995 6.50368 7.49995 7.125C7.49995 7.74632 8.00363 8.25 8.62495 8.25Z" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
 
-
+    <symbol id="dashboard-clock" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.5627 9.9375C15.5627 13.56 12.6227 16.5 9.00024 16.5C5.37774 16.5 2.43774 13.56 2.43774 9.9375C2.43774 6.315 5.37774 3.375 9.00024 3.375C12.6227 3.375 15.5627 6.315 15.5627 9.9375Z" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.00024 6V9.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6.75024 1.5H11.2502" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
 
     <!-- profile dropdown icons -->
     <symbol id="user" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
