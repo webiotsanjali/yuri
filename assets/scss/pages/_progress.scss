@@ -128,6 +128,38 @@
 		margin-bottom: 35px;
 	}
 }
+@keyframes progress-animation {
+	0% {
+		background-position: 40px 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+.progress-stripe-primary, .progress-stripe-secondary, .progress-stripe-success, .progress-stripe-info, .progress-stripe-warning, .progress-stripe-danger {
+	background: var(--light2);
+	.progress-bar-animated {
+		animation: progress-bar-stripes 5s linear infinite;
+	}
+	.progress-bar-striped {
+		background-size: 10px 15px;
+	}
+}
+.progress-stripe-primary {
+	.progress-bar-striped {
+		background-image: linear-gradient(120deg, var(--theme-deafult) 25%, transparent 25%, transparent 50%, var(--theme-deafult) 50%, var(--theme-deafult) 75%, transparent 75%, transparent);
+	}
+}
+.progress-stripe-warning {
+	.progress-bar-striped {
+		background-image: linear-gradient(120deg, $warning-color 25%, transparent 25%, transparent 50%, $warning-color 50%, $warning-color 75%, transparent 75%, transparent);
+	}
+}
+.progress-stripe-success {
+	.progress-bar-striped {
+		background-image: linear-gradient(120deg, $success-color 25%, transparent 25%, transparent 50%, $success-color 50%, $success-color 75%, transparent 75%, transparent);
+	}
+}
 
 /**=====================
    3.34 Progress CSS Ends

@@ -168,6 +168,94 @@
     }
   }
 }
+.project-datatable {
+  .datatable-table {
+    > thead {
+      > tr {
+         > th {
+           &:last-child {
+            width: 10% !important;
+           }
+         }
+      }
+    }
+    > tbody {
+      > tr {
+        > td {
+          vertical-align: middle;
+          .d-flex {
+            align-items: center;
+          }
+          .progress {
+            min-width: 73px;
+            margin-right: 12px;
+          }
+          .customers {
+            .light-card {
+              width: 30px;
+              height: 30px;
+              border-radius: 100%;
+              background: var(--light2);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  .datatable-top {
+    display: none;
+  }
+  .datatable-bottom {
+    display: none;
+  }
+}
+.card-body {
+  .project-details {
+    p {
+      &:last-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+.project-details {
+  p {
+    margin-block: 20px;
+  }
+  .budget-details {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    li {
+      width: 100%;
+      padding: 20px 10px;
+      +li {
+        border-left: 1px dashed var(--light-border);
+      }
+    }
+  }
+  .customers {
+    ul {
+      li {
+        + li {
+          margin-left: -10%;
+        }
+      }
+    }
+  }
+  .d-flex {
+    align-items: center;
+  }
+  .badge-light-primary {
+    svg {
+      stroke: $primary-color;
+    }
+  }
+}
 // old css
 @keyframes hand-move {
   0% {

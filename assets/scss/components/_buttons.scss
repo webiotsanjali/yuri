@@ -416,6 +416,18 @@ $btn-color in (primary, $primary-color),
   }
 }
 
+.btn {
+  &.badge-light-primary {
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+      svg {
+        stroke: $white;
+      }
+    }
+  }
+}
+
 
 /**=====================
     2.9 Buttons CSS end

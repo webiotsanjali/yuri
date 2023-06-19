@@ -333,6 +333,49 @@ th {
 	}
 }
 
+// datatable css
+.datatable-table {
+	thead, tbody, tfoot, tr, td, th {
+		border-color: var(--light-border);
+		border-style: dashed;
+	}
+	> thead {
+		> tr {
+			> th {
+				background: var(--light2);
+				padding: 13px 10px;
+			}
+		}
+	}
+	> tbody {
+		> tr {
+			> td {
+				padding: 12px 10px;
+			}
+			&:last-child {
+				> td {
+					border-bottom: none;
+				}
+			}
+		}
+	}
+}
+.datatable-wrapper {
+	&.no-footer {
+		.datatable-container {
+			border-bottom: none;
+		}
+	}
+	.datatable-container {
+		overflow: auto;
+	}
+}
+table.datatable-table {
+	&:focus {
+		outline: none;
+	}
+}
+
 /**=====================
     2.30 Table CSS Ends
 ==========================**/

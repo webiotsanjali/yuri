@@ -237,17 +237,24 @@ html(lang='en')
                           | View all
                           svg
                             use(href='../assets/svg/icon-sprite.svg#arrow-two-tone')
-                  .card-body.project-datatable 
+                  .card-body.project-datatable.p-0 
                     table#project-status.table
                       thead 
                         tr 
-                          th Project
-                          th Team
-                          th Start Date
-                          th Due Date
-                          th Progress
-                          th Status
-                          th Action
+                          th 
+                            span.f-light.f-w-600 Project
+                          th 
+                            span.f-light.f-w-600 Team
+                          th 
+                            span.f-light.f-w-600 Start Date
+                          th 
+                            span.f-light.f-w-600 Due Date
+                          th 
+                            span.f-light.f-w-600 Progress
+                          th 
+                            span.f-light.f-w-600 Status
+                          th 
+                            span.f-light.f-w-600 Action
                       tbody 
                         tr 
                           td Development
@@ -255,19 +262,23 @@ html(lang='en')
                             .customers
                               ul 
                                 li.d-inline-block
-                                  img.img-40.rounded-circle(src="../assets/images/dashboard/user/1.jpg", alt="user")
+                                  img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/1.png", alt="user")
                                 li.d-inline-block
-                                  img.img-40.rounded-circle(src="../assets/images/dashboard/user/6.jpg", alt="user")
+                                  img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/2.png", alt="user")
                                 li.d-inline-block
-                                  img.img-40.rounded-circle(src="../assets/images/dashboard/user/7.jpg", alt="user")
+                                  img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/3.png", alt="user")
                                 li.d-inline-block
                                   .light-card
-                                    span.f-w-500 +5 
+                                    span.f-w-500.f-light.f-12 +3 
                           td  
                             span.f-light 12 Jan 2023
                           td  
                             span.f-light 15 Jan 2023           
                           td 
+                            div.d-flex 
+                              .progress.progress-stripe-primary(style="height: 5px")
+                                .progress-bar-animated.progress-bar-striped( role="progressbar" style="width: 70%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100")
+                              span.f-12.f-light 40%
                           td
                             span.badge.badge-light-primary In Progress      
                           td
@@ -278,6 +289,171 @@ html(lang='en')
                               .dropdown-menu.dropdown-menu-end(aria-labelledby='tableButton1')
                                 a.dropdown-item(href='#') Edit
                                 a.dropdown-item(href='#') Delete
+                        tr 
+                          td Web Landing 
+                          td
+                            .customers
+                              ul 
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/4.png", alt="user")
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/5.png", alt="user")
+                                li.d-inline-block
+                                  .light-card
+                                    span.f-w-500.f-light.f-12 +9
+                          td  
+                            span.f-light 5 Feb 2023
+                          td  
+                            span.f-light 25 Feb 2023           
+                          td 
+                            div.d-flex 
+                              .progress.progress-stripe-warning(style="height: 5px")
+                                .progress-bar-animated.progress-bar-striped( role="progressbar" style="width: 25%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100")
+                              span.f-12.f-light 25%
+                          td
+                            span.badge.badge-light-warning Pending
+                          td
+                            .dropdown.icon-dropdown.text-center
+                              button#tableButton2.btn.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                svg
+                                  use(href='../assets/svg/icon-sprite.svg#more-horizontal')
+                              .dropdown-menu.dropdown-menu-end(aria-labelledby='tableButton2')
+                                a.dropdown-item(href='#') Edit
+                                a.dropdown-item(href='#') Delete
+                        tr 
+                          td Development 
+                          td
+                            .customers
+                              ul 
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/6.png", alt="user")
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/7.png", alt="user")
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/8.png", alt="user")
+                                li.d-inline-block
+                                  .light-card
+                                    span.f-w-500.f-light.f-12 +3
+                          td  
+                            span.f-light 12 Feb 2023
+                          td  
+                            span.f-light 1 Mar 2023           
+                          td 
+                            div.d-flex 
+                              .progress.progress-stripe-success(style="height: 5px")
+                                .progress-bar-animated.progress-bar-striped( role="progressbar" style="width: 100%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100")
+                              span.f-12.f-light 100%
+                          td
+                            span.badge.badge-light-success Done
+                          td
+                            .dropdown.icon-dropdown.text-center
+                              button#tableButton3.btn.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                svg
+                                  use(href='../assets/svg/icon-sprite.svg#more-horizontal')
+                              .dropdown-menu.dropdown-menu-end(aria-labelledby='tableButton3')
+                                a.dropdown-item(href='#') Edit
+                                a.dropdown-item(href='#') Delete
+                        tr 
+                          td Marketing 
+                          td
+                            .customers
+                              ul 
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/9.png", alt="user")
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/10.png", alt="user")
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/11.png", alt="user")
+                                li.d-inline-block
+                                  .light-card
+                                    span.f-w-500.f-light.f-12 +4
+                          td  
+                            span.f-light 25 Feb 2023
+                          td  
+                            span.f-light 10 Mar 2023           
+                          td 
+                            div.d-flex 
+                              .progress.progress-stripe-warning(style="height: 5px")
+                                .progress-bar-animated.progress-bar-striped( role="progressbar" style="width: 40%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100")
+                              span.f-12.f-light 40%
+                          td
+                            span.badge.badge-light-warning Pending
+                          td
+                            .dropdown.icon-dropdown.text-center
+                              button#tableButton4.btn.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                svg
+                                  use(href='../assets/svg/icon-sprite.svg#more-horizontal')
+                              .dropdown-menu.dropdown-menu-end(aria-labelledby='tableButton4')
+                                a.dropdown-item(href='#') Edit
+                                a.dropdown-item(href='#') Delete
+                        tr 
+                          td Mobile Application
+                          td
+                            .customers
+                              ul 
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src="../assets/images/avtar/7.jpg", alt="user")
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/9.png", alt="user")
+                                li.d-inline-block
+                                  .light-card
+                                    span.f-w-500.f-light.f-12 +2
+                          td  
+                            span.f-light 18 Apr 2023
+                          td  
+                            span.f-light 28 Apr 2023           
+                          td 
+                            div.d-flex 
+                              .progress.progress-stripe-primary(style="height: 5px")
+                                .progress-bar-animated.progress-bar-striped( role="progressbar" style="width: 30%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100")
+                              span.f-12.f-light 30%
+                          td
+                            span.badge.badge-light-primary In Progress
+                          td
+                            .dropdown.icon-dropdown.text-center
+                              button#tableButton6.btn.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                svg
+                                  use(href='../assets/svg/icon-sprite.svg#more-horizontal')
+                              .dropdown-menu.dropdown-menu-end(aria-labelledby='tableButton6')
+                                a.dropdown-item(href='#') Edit
+                                a.dropdown-item(href='#') Delete
+              .col-xl-5 
+                .card.height-equal.title-line
+                  .row 
+                    .col-xl-6 
+                      .card-header.card-no-border
+                        h2 Chat Application
+                        span.f-w-500 Live Chart
+                      .card-body.pt-0
+                        .project-details
+                          .d-flex.gap-2
+                            img(src="../assets/images/dashboard-3/user/13.png", alt="user")
+                            div 
+                              h4.f-w-500 Brooklyn Simmons
+                              span.f-12.f-light.f-w-500 Web Manager
+                          p.f-w-500.f-light Bring your teams, work, and apps together from anywhere in one tool with github. Customize Workflows.
+                          ul.light-card.budget-details
+                            li 
+                              h3.f-w-600 21 Oct 2023
+                              span.f-12.f-w-500.f-light Due Date
+                            li 
+                              h3.f-w-600 $78,320
+                              span.f-12.f-w-500.f-light Budget
+                          .d-flex.gap-2 
+                            a.btn.badge-light-primary.link-with-icon(href="#") View Project
+                              svg
+                                use(href='../assets/svg/icon-sprite.svg#arrow-two-tone')
+                            .customers
+                              ul
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-3/user/1.png' alt='user')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-3/user/2.png' alt='user')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-3/user/3.png' alt='user')
+                    .col-xl-6 
+                      .project-banner.card-body
+                        img.img-fluid(src="../assets/images/dashboard-3/banner.png", alt="banner")
               .col-xxl-5.col-ed-7.col-xl-7.box-col-7
                 .card 
                   .card-header.card-no-border
