@@ -149,15 +149,32 @@
 	.progress-bar-striped {
 		background-image: linear-gradient(120deg, var(--theme-deafult) 25%, transparent 25%, transparent 50%, var(--theme-deafult) 50%, var(--theme-deafult) 75%, transparent 75%, transparent);
 	}
+	&.with-light-background {
+		background-color: rgba($primary-color, 0.1);
+	}
 }
 .progress-stripe-warning {
 	.progress-bar-striped {
 		background-image: linear-gradient(120deg, $warning-color 25%, transparent 25%, transparent 50%, $warning-color 50%, $warning-color 75%, transparent 75%, transparent);
 	}
+	&.with-light-background {
+		background-color: rgba($warning-color, 0.1);
+	}
 }
 .progress-stripe-success {
 	.progress-bar-striped {
 		background-image: linear-gradient(120deg, $success-color 25%, transparent 25%, transparent 50%, $success-color 50%, $success-color 75%, transparent 75%, transparent);
+	}
+	&.with-light-background {
+		background-color: rgba($success-color, 0.1);
+	}
+}
+.progress-stripe-secondary {
+	.progress-bar-striped {
+		background-image: linear-gradient(120deg, $secondary-color 25%, transparent 25%, transparent 50%, $secondary-color 50%, $secondary-color 75%, transparent 75%, transparent);
+	}
+	&.with-light-background {
+		background-color: rgba($secondary-color, 0.1);
 	}
 }
 

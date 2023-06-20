@@ -1,4 +1,4 @@
-console.log("test");
+
 const datatable = new simpleDatatables.DataTable("#project-status", {
   paging: false,
   tabIndex: 1,
@@ -366,6 +366,68 @@ const datatable = new simpleDatatables.DataTable("#project-status", {
     options_bar
   );
   chart_bar.render();
+
+  // swiper slider
+  var swiper = new Swiper(".recent-slider", {
+    slidesPerView: 2,
+    grid: {
+      rows: 2,
+    },
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.next',
+      prevEl: '.prev',
+    },
+  });
+  
+  // earning chart
+  var options_earning = {
+    series: [{
+         data: [20, 30, 100, 21, 100, 43, 33, 23, 66, 66, 58]
+       }],
+       chart: {
+         type: 'line',
+         height: 160,
+         toolbar: {
+          show: false,
+         }
+       },
+       stroke: {
+         curve: 'stepline',
+         width: 2,
+       },
+       dataLabels: {
+         enabled: false
+       },
+       xaxis: {
+        labels: {
+          show: false
+        },
+        axisBorder: {
+          show: false
+        },
+        axisTicks: {
+          show: false
+        }
+       },
+       yaxis: {
+        labels: {
+          show: false
+        },
+        min: 0,
+        tickAmount: 5,
+        tickPlacement: "between",
+       },
+       markers: {
+         hover: {
+           sizeOffset: 4
+         }
+       },
+    colors: ["#009DB5"],
+  };
+
+  var chart_earning = new ApexCharts(document.querySelector("#earning-average"), options_earning);
+  chart_earning.render();
 
   // learning chart
   var optionslearning = {

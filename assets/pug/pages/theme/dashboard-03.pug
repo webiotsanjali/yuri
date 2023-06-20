@@ -4,6 +4,7 @@
 - var datatable_2           = true;
 - var animate               = true;
 - var scrollbar             = true;
+- var swiper                = true;
 - var apex                  = true;
 - var dashboard_3           = true;
 - var date_picker           = true;
@@ -424,7 +425,7 @@ html(lang='en')
                       .card-header.card-no-border
                         h2 Chat Application
                         span.f-w-500 Live Chart
-                      .card-body.pt-0
+                      .card-body.pt-0.pe-0
                         .project-details
                           .d-flex.gap-2
                             img(src="../assets/images/dashboard-3/user/13.png", alt="user")
@@ -454,6 +455,242 @@ html(lang='en')
                     .col-xl-6 
                       .project-banner.card-body
                         img.img-fluid(src="../assets/images/dashboard-3/banner.png", alt="banner")
+              .col-xl-5 
+                .card.title-line
+                  .card-header.card-no-border
+                    h2 Recent Project Update
+                  .card-body.pt-0 
+                    .recent-update
+                      .swiper.recent-slider
+                        .swiper-wrapper
+                          .swiper-slide 
+                            .light-card-2.recent-project-wrapper 
+                              .recent-icon.primary
+                                svg
+                                  use(href='../assets/svg/icon-sprite.svg#game-icon')
+                              div.recent-content
+                                div.d-flex
+                                  div 
+                                    h6 Marketing 
+                                    span.f-12.f-w-500.f-light Design
+                                  .customers
+                                    ul 
+                                      li.d-inline-block
+                                        img.img-30.rounded-circle(src="../assets/images/avtar/4.jpg", alt="user")
+                                      li.d-inline-block
+                                        img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/12.png", alt="user")
+                                      li.d-inline-block
+                                        .light-card
+                                          span.f-w-500.f-light.f-12 +2
+                                .recent-progress
+                                  .d-flex.justify-content-between.align-items-center
+                                    span.f-light.f-w-500.f-12 Progress
+                                    span.f-light.f-w-500.f-12 45%
+                                  .progress.progress-stripe-primary.with-light-background(style="height: 5px")
+                                    .progress-bar-animated.progress-bar-striped( role="progressbar" style="width: 45%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100")
+                          .swiper-slide 
+                            .light-card-2.recent-project-wrapper 
+                              .recent-icon.success
+                                svg
+                                  use(href='../assets/svg/icon-sprite.svg#pen-scale')
+                              div.recent-content
+                                div.d-flex
+                                  div 
+                                    h6 NFT Design
+                                    span.f-12.f-w-500.f-light Design
+                                  .customers
+                                    ul 
+                                      li.d-inline-block
+                                        img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/14.png", alt="user")
+                                      li.d-inline-block
+                                        img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/15.png", alt="user")
+                                      li.d-inline-block
+                                        .light-card
+                                          span.f-w-500.f-light.f-12 +6
+                                .recent-progress
+                                  .d-flex.justify-content-between.align-items-center
+                                    span.f-light.f-w-500.f-12 Progress
+                                    span.f-light.f-w-500.f-12 70%
+                                  .progress.progress-stripe-success.with-light-background(style="height: 5px")
+                                    .progress-bar-animated.progress-bar-striped( role="progressbar" style="width: 70%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100")
+                          .swiper-slide
+                            .light-card-2.recent-project-wrapper 
+                              .recent-icon.secondary
+                                svg
+                                  use(href='../assets/svg/icon-sprite.svg#programming')
+                              div.recent-content
+                                div.d-flex
+                                  div 
+                                    h6 Development
+                                    span.f-12.f-w-500.f-light Design
+                                  .customers
+                                    ul 
+                                      li.d-inline-block
+                                        img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/16.png", alt="user")
+                                      li.d-inline-block
+                                        img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/17.png", alt="user")
+                                      li.d-inline-block
+                                        .light-card
+                                          span.f-w-500.f-light.f-12 +1
+                                .recent-progress
+                                  .d-flex.justify-content-between.align-items-center
+                                    span.f-light.f-w-500.f-12 Progress
+                                    span.f-light.f-w-500.f-12 80%
+                                  .progress.progress-stripe-secondary.with-light-background(style="height: 5px")
+                                    .progress-bar-animated.progress-bar-striped( role="progressbar" style="width: 80%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100")
+                          .swiper-slide
+                            .light-card-2.recent-project-wrapper 
+                              .recent-icon.warning
+                                svg
+                                  use(href='../assets/svg/icon-sprite.svg#apple-ios')
+                              div.recent-content
+                                div.d-flex
+                                  div 
+                                    h6 iOS App UI
+                                    span.f-12.f-w-500.f-light Design
+                                  .customers
+                                    ul 
+                                      li.d-inline-block
+                                        img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/18.png", alt="user")
+                                      li.d-inline-block
+                                        img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/19.png", alt="user")
+                                      li.d-inline-block
+                                        .light-card
+                                          span.f-w-500.f-light.f-12 +1
+                                .recent-progress
+                                  .d-flex.justify-content-between.align-items-center
+                                    span.f-light.f-w-500.f-12 Progress
+                                    span.f-light.f-w-500.f-12 30%
+                                  .progress.progress-stripe-warning.with-light-background(style="height: 5px")
+                                    .progress-bar-animated.progress-bar-striped( role="progressbar" style="width: 30%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100")
+                          .swiper-slide 
+                            .light-card-2.recent-project-wrapper 
+                              .recent-icon.secondary
+                                svg
+                                  use(href='../assets/svg/icon-sprite.svg#programming')
+                              div.recent-content
+                                div.d-flex
+                                  div 
+                                    h6 Development
+                                    span.f-12.f-w-500.f-light Design
+                                  .customers
+                                    ul 
+                                      li.d-inline-block
+                                        img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/16.png", alt="user")
+                                      li.d-inline-block
+                                        img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/17.png", alt="user")
+                                      li.d-inline-block
+                                        .light-card
+                                          span.f-w-500.f-light.f-12 +1
+                                .recent-progress
+                                  .d-flex.justify-content-between.align-items-center
+                                    span.f-light.f-w-500.f-12 Progress
+                                    span.f-light.f-w-500.f-12 80%
+                                  .progress.progress-stripe-secondary.with-light-background(style="height: 5px")
+                                    .progress-bar-animated.progress-bar-striped( role="progressbar" style="width: 80%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100")
+                          .swiper-slide 
+                            .light-card-2.recent-project-wrapper 
+                              .recent-icon.primary
+                                svg
+                                  use(href='../assets/svg/icon-sprite.svg#game-icon')
+                              div.recent-content
+                                div.d-flex
+                                  div 
+                                    h6 Marketing 
+                                    span.f-12.f-w-500.f-light Design
+                                  .customers
+                                    ul 
+                                      li.d-inline-block
+                                        img.img-30.rounded-circle(src="../assets/images/avtar/4.jpg", alt="user")
+                                      li.d-inline-block
+                                        img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/12.png", alt="user")
+                                      li.d-inline-block
+                                        .light-card
+                                          span.f-w-500.f-light.f-12 +2
+                                .recent-progress
+                                  .d-flex.justify-content-between.align-items-center
+                                    span.f-light.f-w-500.f-12 Progress
+                                    span.f-light.f-w-500.f-12 45%
+                                  .progress.progress-stripe-primary.with-light-background(style="height: 5px")
+                                    .progress-bar-animated.progress-bar-striped( role="progressbar" style="width: 45%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100")
+                          .swiper-slide
+                            .light-card-2.recent-project-wrapper 
+                              .recent-icon.secondary
+                                svg
+                                  use(href='../assets/svg/icon-sprite.svg#programming')
+                              div.recent-content
+                                div.d-flex
+                                  div 
+                                    h6 Development
+                                    span.f-12.f-w-500.f-light Design
+                                  .customers
+                                    ul 
+                                      li.d-inline-block
+                                        img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/16.png", alt="user")
+                                      li.d-inline-block
+                                        img.img-30.rounded-circle(src="../assets/images/dashboard-3/user/17.png", alt="user")
+                                      li.d-inline-block
+                                        .light-card
+                                          span.f-w-500.f-light.f-12 +1
+                                .recent-progress
+                                  .d-flex.justify-content-between.align-items-center
+                                    span.f-light.f-w-500.f-12 Progress
+                                    span.f-light.f-w-500.f-12 80%
+                                  .progress.progress-stripe-secondary.with-light-background(style="height: 5px")
+                                    .progress-bar-animated.progress-bar-striped( role="progressbar" style="width: 80%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100")
+                      .arrow-group
+                        .prev
+                          svg
+                            use(href='../assets/svg/icon-sprite.svg#swiper-prev-arrow')
+                        .next
+                          svg
+                            use(href='../assets/svg/icon-sprite.svg#swiper-next-arrow')
+              .col-xl-4 
+                .card.title-line
+                  .card-header.card-no-border
+                    .header-top
+                      div 
+                        h2 Avg. Earnings
+                      .card-header-right-icon
+                        .dropdown.icon-dropdown
+                          button#earning-avg.btn.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                            svg
+                              use(href='../assets/svg/icon-sprite.svg#more-horizontal')
+                          .dropdown-menu.dropdown-menu-end(aria-labelledby='earning-avg')
+                            a.dropdown-item(href='#') Today
+                            a.dropdown-item(href='#') Tomorrow
+                            a.dropdown-item(href='#') Yesterday
+                  .card-body.pt-0 
+                    .row 
+                      .col-lg-6 
+                        .earning-left-content
+                          h2 $342,091.56
+                          div
+                            span.f-12.f-w-500.txt-warning 
+                              i.me-1(data-feather="trending-up")
+                              | +20%
+                            span.f-12.f-w-500.f-light.ms-2 Than Last Week
+                      .col-lg-6
+                        ul.earning-right-content 
+                          li 
+                            span.f-12.f-w-500.f-light 10:45 PM
+                            span.f-12.f-w-500.txt-success +732.67
+                          li 
+                            span.f-12.f-w-500.f-light 03:20 AM
+                            span.f-12.f-w-500.txt-danger -108.09
+                    ul.earning-buttons
+                      li 
+                        button.btn.btn-light(type="button") 1d
+                      li 
+                        button.btn.btn-light(type="button") 10d
+                      li 
+                        button.btn.btn-light(type="button") 1m
+                      li 
+                        button.btn.btn-light(type="button") 6m
+                      li 
+                        button.btn.btn-light(type="button") 1y
+                    .avg-earning-chart-container
+                      #earning-average
               .col-xxl-5.col-ed-7.col-xl-7.box-col-7
                 .card 
                   .card-header.card-no-border
