@@ -82,54 +82,6 @@ $badge-light-color in (primary, $primary-color),
   }
 }
 
-.overall-card {
-  .balance-card {
-    @media (max-width:1712px) {
-      padding: 12px;
-    }
-  }
-
-  @media (max-width: 1662px) and (min-width:1600px) {
-    .col-xl-9 {
-      width: 73%;
-    }
-
-    .col-xl-3 {
-      width: 27%;
-    }
-  }
-
-  @media (max-width: 1650px) and (min-width:1600px) {
-    .col-xl-9 {
-      width: 72%;
-    }
-
-    .col-xl-3 {
-      width: 28%;
-    }
-  }
-
-  @media (max-width: 1600px) and (min-width:1500px) {
-    .col-xl-9 {
-      width: 70%;
-    }
-
-    .col-xl-3 {
-      width: 30%;
-    }
-  }
-
-  @media (max-width: 1500px) and (min-width:1200px) {
-    .col-xl-9 {
-      width: 65%;
-    }
-
-    .col-xl-3 {
-      width: 35%;
-    }
-  }
-}
-
 /* Clock styles */
 .clockbox {
   margin-bottom: -5px;
@@ -673,12 +625,11 @@ $badge-light-color in (primary, $primary-color),
   }
 
   li {
-    padding-bottom: 22px;
+    margin-bottom: 20px;
   }
 
   div[class*="activity-dot-"] {
     margin-top: 12px;
-    animation: round 1.3s ease-in-out infinite;
   }
 
   .card {

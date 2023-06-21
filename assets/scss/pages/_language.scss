@@ -41,7 +41,7 @@
 	display: block;
 	position: absolute;
 	background-color: $white;
-	top: 47px;
+	bottom: 30px;
 	right: 0;
 	box-shadow: 0 0 20px rgba(89, 102, 122, 0.1);
 
@@ -71,6 +71,9 @@
 		z-index: 1;
 	}
 }
+.translate_wrapper {
+	position: relative;
+}
 
 .more_lang {
 	&.active {
@@ -95,6 +98,11 @@
 
 .translate_wrapper {
 	&.active {
+		.current_lang {
+			i {
+				transform: rotate(180deg);
+			}
+		}
 		.more_lang {
 			.lang {
 				border-bottom: 1px solid #eaeaea;

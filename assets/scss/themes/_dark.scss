@@ -173,23 +173,6 @@ body {
 			}
 		}
 
-		.schedule-list {
-			>li {
-				box-shadow: 4px 7px 17px 5px rgba($dark-body-background, 0.2);
-			}
-		}
-
-		.upcoming-event-wrap {
-			.apexcharts-canvas {
-				.apexcharts-data-labels {
-					rect {
-						fill: none;
-						stroke: none;
-					}
-				}
-			}
-		}
-
 		// online course dashboard  css end
 		.page-wrapper {
 			&.advance-layout {

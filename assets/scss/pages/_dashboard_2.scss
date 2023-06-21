@@ -621,13 +621,22 @@ $activity-dot-color in (primary, $primary-color),
 (dark, $dark-color),
 (warning, $warning-color) {
   .activity-dot-#{$activity-dot-name} {
-    min-width: 6px;
-    height: 6px;
+    min-width: 8px;
+    height: 8px;
     background-color: $activity-dot-color;
     border-radius: 100%;
-    outline: 5px solid rgba($activity-dot-color, 0.25);
+    outline: 3px solid rgba($activity-dot-color, 0.25);
     position: relative;
     z-index: 2;
+    &::after {
+      position: absolute;
+      content: '';
+      width: 13px;
+      height: 1px;
+      background-color: $activity-dot-color;
+      top: 50%;
+      right: -14px;
+    }
   }
 
   // timeline
