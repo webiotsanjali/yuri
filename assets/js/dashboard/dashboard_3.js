@@ -381,6 +381,25 @@ const datatable = new simpleDatatables.DataTable("#project-status", {
       nextEl: '.next',
       prevEl: '.prev',
     },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1200: {
+        slidesPerView: 1,
+        grid: {
+          rows: 2,
+        },
+      },
+      1735: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        grid: {
+          rows: 2,
+        },
+      },
+    }
   });
   
   // earning chart

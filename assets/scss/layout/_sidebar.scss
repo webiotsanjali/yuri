@@ -3094,14 +3094,6 @@
 
   // modern css
   &.modern-type {
-    .progress-chart-wrap {
-      margin-left: -22px;
-
-      [dir="rtl"] & {
-        margin-left: unset;
-        margin-right: -22px;
-      }
-    }
 
     .ecommerce-widget {
       border: 1px solid lighten($primary-color, 22%) !important;

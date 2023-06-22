@@ -1032,11 +1032,6 @@
   .page-wrapper .card {
     margin-bottom: 30px;
   }
-  .page-wrapper .card .card-header,
-  .page-wrapper .card .card-body,
-  .page-wrapper .card .card-footer {
-    padding: 20px;
-  }
   .page-wrapper .card .card-header .tab-content .m-t-30,
   .page-wrapper .card .card-body .tab-content .m-t-30,
   .page-wrapper .card .card-footer .tab-content .m-t-30 {
@@ -3185,12 +3180,6 @@
   }
   .translate_wrapper.active .more_lang:before, .translate_wrapper.active .more_lang:after {
     display: none;
-  }
-  .translate_wrapper.active .more_lang.active {
-    position: fixed;
-    width: calc(100vw - 30px);
-    left: 15px;
-    top: 60px;
   }
   .onhover-dropdown:hover .onhover-show-div {
     opacity: 0;

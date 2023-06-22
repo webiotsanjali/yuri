@@ -9,11 +9,19 @@
   left: 0;
   margin-left: $sidebar-compact-width;
   transition: 0.5s;
-
+  @media (max-width: 576px) {
+    padding: 15px 10px;
+  }
   .d-flex {
     align-items: center;
     gap: 16px;
     justify-content: flex-end;
+    @media (max-width:767px) {
+      justify-content: center;
+    }
+    @media (max-width: 360px) {
+      font-size: 12px;
+    }
   }
   .lang-title {
     svg{

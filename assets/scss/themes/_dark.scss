@@ -160,20 +160,10 @@ body {
 				}
 			}
 		}
-
-		// online course dashboard css start
 		svg.f-light {
 			fill: rgba($white, 0.6);
 			opacity: 1;
 		}
-
-		.course-widget {
-			.btn-light {
-				background-color: $dark-body-background !important;
-			}
-		}
-
-		// online course dashboard  css end
 		.page-wrapper {
 			&.advance-layout {
 				.page-header {

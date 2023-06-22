@@ -2017,7 +2017,6 @@
       .card-header,
       .card-body,
       .card-footer {
-        padding: 20px;
 
         .tab-content {
           .m-t-30 {
@@ -6078,13 +6077,6 @@
       &:before,
       &:after {
         display: none;
-      }
-
-      &.active {
-        position: fixed;
-        width: calc(100vw - 30px);
-        left: 15px;
-        top: 60px;
       }
     }
   }
