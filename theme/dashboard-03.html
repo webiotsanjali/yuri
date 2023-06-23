@@ -1566,6 +1566,130 @@
                   </div>
                 </div>
               </div>
+              <div class="col-xl-4 col-md-6"> 
+                <div class="card title-line">
+                  <div class="card-header card-no-border">
+                    <div class="header-top">
+                      <div> 
+                        <h2>Avg. Earnings</h2>
+                      </div>
+                      <div class="card-header-right-icon">
+                        <div class="dropdown icon-dropdown">
+                          <button class="btn dropdown-toggle" id="earning-avg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg>
+                              <use href="../assets/svg/icon-sprite.svg#more-horizontal"></use>
+                            </svg>
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="earning-avg"><a class="dropdown-item" href="#">Today</a><a class="dropdown-item" href="#">Tomorrow</a><a class="dropdown-item" href="#">Yesterday</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body pt-0"> 
+                    <div class="row gy-2">
+                      <div class="col-xxl-6 col-md-12 col-sm-6">
+                        <div class="earning-left-content">
+                          <h2>$342,091.56</h2>
+                          <div><span class="f-12 f-w-500 txt-warning"> <i class="me-1" data-feather="trending-up"></i>+20%</span><span class="f-12 f-w-500 f-light ms-2">Than Last Week</span></div>
+                        </div>
+                      </div>
+                      <div class="col-xxl-6 d-xxl-block d-xl-none col-md-12 col-sm-6">
+                        <ul class="earning-right-content"> 
+                          <li> <span class="f-12 f-w-500 f-light">10:45 PM</span><span class="f-12 f-w-500 txt-success">+732.67</span></li>
+                          <li> <span class="f-12 f-w-500 f-light">03:20 AM</span><span class="f-12 f-w-500 txt-danger">-108.09</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <ul class="earning-buttons">
+                      <li> 
+                        <button class="btn btn-light" type="button">1d</button>
+                      </li>
+                      <li> 
+                        <button class="btn btn-light" type="button">10d</button>
+                      </li>
+                      <li> 
+                        <button class="btn btn-light" type="button">1m</button>
+                      </li>
+                      <li> 
+                        <button class="btn btn-light" type="button">6m</button>
+                      </li>
+                      <li> 
+                        <button class="btn btn-light" type="button">1y</button>
+                      </li>
+                    </ul>
+                    <div class="avg-earning-chart-container">
+                      <div id="earning-average"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6"> 
+                <div class="card title-line">
+                  <div class="card-header card-no-border">
+                    <div class="header-top">
+                      <div> 
+                        <h2>Daily Task</h2>
+                      </div>
+                      <div class="card-header-right-icon">
+                        <div class="dropdown icon-dropdown">
+                          <button class="btn dropdown-toggle" id="daily-task" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg>
+                              <use href="../assets/svg/icon-sprite.svg#more-horizontal"></use>
+                            </svg>
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="daily-task"><a class="dropdown-item" href="#">Today</a><a class="dropdown-item" href="#">Tomorrow</a><a class="dropdown-item" href="#">Yesterday</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body notification daily-task pt-0">
+                    <ul> 
+                      <li class="d-flex align-items-center">
+                        <div class="activity-dot-primary"></div>
+                        <div class="task-content ms-2">
+                          <div class="d-flex align-items-center"> 
+                            <div> 
+                              <h6>iOS App UI/UX Meet..</h6><span class="f-light f-w-500 f-12"> 
+                                <svg>
+                                  <use href="../assets/svg/icon-sprite.svg#clock-2"></use>
+                                </svg><span>9:00 am</span></span>
+                            </div>
+                            <button class="btn badge-light-primary" type="button">Remind Me</button>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="d-flex align-items-center"> 
+                        <div class="activity-dot-warning"></div>
+                        <div class="task-content ms-2">
+                          <div class="d-flex align-items-center"> 
+                            <div> 
+                              <h6>Start Web developing..</h6><span class="f-light f-w-500 f-12"> 
+                                <svg>
+                                  <use href="../assets/svg/icon-sprite.svg#clock-2"></use>
+                                </svg><span>10:00 am</span></span>
+                            </div>
+                            <button class="btn badge-light-primary" type="button">Remind Me</button>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="d-flex align-items-center"> 
+                        <div class="activity-dot-success"></div>
+                        <div class="task-content ms-2">
+                          <div class="d-flex align-items-center"> 
+                            <div> 
+                              <h6>IOS App ui</h6><span class="f-light f-w-500 f-12"> 
+                                <svg>
+                                  <use href="../assets/svg/icon-sprite.svg#clock-2"></use>
+                                </svg><span>10:00 am</span></span>
+                            </div>
+                            <button class="btn badge-light-primary" type="button">Remind Me</button>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <!-- Container-fluid Ends-->
@@ -1624,6 +1748,7 @@
     <script src="../assets/js/datepicker/date-picker/datepicker.js"></script>
     <script src="../assets/js/datepicker/date-picker/datepicker.en.js"></script>
     <script src="../assets/js/datepicker/date-picker/datepicker.custom.js"></script>
+    <script src="../assets/js/touchspin_2/custom_touchspin.js"></script>
     <script src="../assets/js/datatable/simple-datatable.js"></script>
     <script src="../assets/js/swiper/swiper-bundle.min.js"></script>
     <script src="../assets/js/dashboard/dashboard_3.js"></script>

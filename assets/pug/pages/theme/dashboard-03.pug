@@ -8,6 +8,7 @@
 - var apex                  = true;
 - var dashboard_3           = true;
 - var date_picker           = true;
+- var touchspin_2           = true;
 
 //- Breadcrumbs
 -var pageTitle="Project"; 
@@ -647,102 +648,102 @@ html(lang='en')
                         .next
                           svg
                             use(href='../assets/svg/icon-sprite.svg#swiper-next-arrow')
-              //- .col-xl-4 
-              //-   .card.title-line
-              //-     .card-header.card-no-border
-              //-       .header-top
-              //-         div 
-              //-           h2 Avg. Earnings
-              //-         .card-header-right-icon
-              //-           .dropdown.icon-dropdown
-              //-             button#earning-avg.btn.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
-              //-               svg
-              //-                 use(href='../assets/svg/icon-sprite.svg#more-horizontal')
-              //-             .dropdown-menu.dropdown-menu-end(aria-labelledby='earning-avg')
-              //-               a.dropdown-item(href='#') Today
-              //-               a.dropdown-item(href='#') Tomorrow
-              //-               a.dropdown-item(href='#') Yesterday
-              //-     .card-body.pt-0 
-              //-       .row 
-              //-         .col-lg-6 
-              //-           .earning-left-content
-              //-             h2 $342,091.56
-              //-             div
-              //-               span.f-12.f-w-500.txt-warning 
-              //-                 i.me-1(data-feather="trending-up")
-              //-                 | +20%
-              //-               span.f-12.f-w-500.f-light.ms-2 Than Last Week
-              //-         .col-lg-6
-              //-           ul.earning-right-content 
-              //-             li 
-              //-               span.f-12.f-w-500.f-light 10:45 PM
-              //-               span.f-12.f-w-500.txt-success +732.67
-              //-             li 
-              //-               span.f-12.f-w-500.f-light 03:20 AM
-              //-               span.f-12.f-w-500.txt-danger -108.09
-              //-       ul.earning-buttons
-              //-         li 
-              //-           button.btn.btn-light(type="button") 1d
-              //-         li 
-              //-           button.btn.btn-light(type="button") 10d
-              //-         li 
-              //-           button.btn.btn-light(type="button") 1m
-              //-         li 
-              //-           button.btn.btn-light(type="button") 6m
-              //-         li 
-              //-           button.btn.btn-light(type="button") 1y
-              //-       .avg-earning-chart-container
-              //-         #earning-average
-              //- .col-xl-3
-              //-   .card.title-line
-              //-     .card-header.card-no-border
-              //-       .header-top
-              //-         div 
-              //-           h2 Daily Task
-              //-         .card-header-right-icon
-              //-           .dropdown.icon-dropdown
-              //-             button#daily-task.btn.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
-              //-               svg
-              //-                 use(href='../assets/svg/icon-sprite.svg#more-horizontal')
-              //-             .dropdown-menu.dropdown-menu-end(aria-labelledby='daily-task')
-              //-               a.dropdown-item(href='#') Today
-              //-               a.dropdown-item(href='#') Tomorrow
-              //-               a.dropdown-item(href='#') Yesterday
-              //-     .card-body.notification.daily-task.pt-0
-              //-       ul 
-              //-         li.d-flex.align-items-center
-              //-           .activity-dot-primary
-              //-           .task-content.ms-2
-              //-             .d-flex.align-items-center 
-              //-               div 
-              //-                 h6 iOS App UI/UX Meet..
-              //-                 span.f-light.f-w-500.f-12 
-              //-                   svg
-              //-                     use(href='../assets/svg/icon-sprite.svg#clock-2')
-              //-                   span 9:00 am
-              //-               button.btn.badge-light-primary(type="button") Remind Me
-              //-         li.d-flex.align-items-center 
-              //-           .activity-dot-warning
-              //-           .task-content.ms-2
-              //-             .d-flex.align-items-center 
-              //-               div 
-              //-                 h6 Start Web developing..
-              //-                 span.f-light.f-w-500.f-12 
-              //-                   svg
-              //-                     use(href='../assets/svg/icon-sprite.svg#clock-2')
-              //-                   span 10:00 am
-              //-               button.btn.badge-light-primary(type="button") Remind Me
-              //-         li.d-flex.align-items-center 
-              //-           .activity-dot-success
-              //-           .task-content.ms-2
-              //-             .d-flex.align-items-center 
-              //-               div 
-              //-                 h6 IOS App ui
-              //-                 span.f-light.f-w-500.f-12 
-              //-                   svg
-              //-                     use(href='../assets/svg/icon-sprite.svg#clock-2')
-              //-                   span 10:00 am
-              //-               button.btn.badge-light-primary(type="button") Remind Me
+              .col-xl-4.col-md-6 
+                .card.title-line
+                  .card-header.card-no-border
+                    .header-top
+                      div 
+                        h2 Avg. Earnings
+                      .card-header-right-icon
+                        .dropdown.icon-dropdown
+                          button#earning-avg.btn.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                            svg
+                              use(href='../assets/svg/icon-sprite.svg#more-horizontal')
+                          .dropdown-menu.dropdown-menu-end(aria-labelledby='earning-avg')
+                            a.dropdown-item(href='#') Today
+                            a.dropdown-item(href='#') Tomorrow
+                            a.dropdown-item(href='#') Yesterday
+                  .card-body.pt-0 
+                    .row.gy-2
+                      .col-xxl-6.col-md-12.col-sm-6
+                        .earning-left-content
+                          h2 $342,091.56
+                          div
+                            span.f-12.f-w-500.txt-warning 
+                              i.me-1(data-feather="trending-up")
+                              | +20%
+                            span.f-12.f-w-500.f-light.ms-2 Than Last Week
+                      .col-xxl-6.d-xxl-block.d-xl-none.col-md-12.col-sm-6
+                        ul.earning-right-content 
+                          li 
+                            span.f-12.f-w-500.f-light 10:45 PM
+                            span.f-12.f-w-500.txt-success +732.67
+                          li 
+                            span.f-12.f-w-500.f-light 03:20 AM
+                            span.f-12.f-w-500.txt-danger -108.09
+                    ul.earning-buttons
+                      li 
+                        button.btn.btn-light(type="button") 1d
+                      li 
+                        button.btn.btn-light(type="button") 10d
+                      li 
+                        button.btn.btn-light(type="button") 1m
+                      li 
+                        button.btn.btn-light(type="button") 6m
+                      li 
+                        button.btn.btn-light(type="button") 1y
+                    .avg-earning-chart-container
+                      #earning-average
+              .col-xl-3.col-md-6 
+                .card.title-line
+                  .card-header.card-no-border
+                    .header-top
+                      div 
+                        h2 Daily Task
+                      .card-header-right-icon
+                        .dropdown.icon-dropdown
+                          button#daily-task.btn.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                            svg
+                              use(href='../assets/svg/icon-sprite.svg#more-horizontal')
+                          .dropdown-menu.dropdown-menu-end(aria-labelledby='daily-task')
+                            a.dropdown-item(href='#') Today
+                            a.dropdown-item(href='#') Tomorrow
+                            a.dropdown-item(href='#') Yesterday
+                  .card-body.notification.daily-task.pt-0
+                    ul 
+                      li.d-flex.align-items-center
+                        .activity-dot-primary
+                        .task-content.ms-2
+                          .d-flex.align-items-center 
+                            div 
+                              h6 iOS App UI/UX Meet..
+                              span.f-light.f-w-500.f-12 
+                                svg
+                                  use(href='../assets/svg/icon-sprite.svg#clock-2')
+                                span 9:00 am
+                            button.btn.badge-light-primary(type="button") Remind Me
+                      li.d-flex.align-items-center 
+                        .activity-dot-warning
+                        .task-content.ms-2
+                          .d-flex.align-items-center 
+                            div 
+                              h6 Start Web developing..
+                              span.f-light.f-w-500.f-12 
+                                svg
+                                  use(href='../assets/svg/icon-sprite.svg#clock-2')
+                                span 10:00 am
+                            button.btn.badge-light-primary(type="button") Remind Me
+                      li.d-flex.align-items-center 
+                        .activity-dot-success
+                        .task-content.ms-2
+                          .d-flex.align-items-center 
+                            div 
+                              h6 IOS App ui
+                              span.f-light.f-w-500.f-12 
+                                svg
+                                  use(href='../assets/svg/icon-sprite.svg#clock-2')
+                                span 10:00 am
+                            button.btn.badge-light-primary(type="button") Remind Me
           // Container-fluid Ends
         include ../../components/footer
     include ../../components/footer-files

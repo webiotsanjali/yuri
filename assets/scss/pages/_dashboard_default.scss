@@ -626,10 +626,9 @@ $badge-light-color in (primary, $primary-color),
 
   li {
     margin-bottom: 20px;
-  }
-
-  div[class*="activity-dot-"] {
-    margin-top: 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .card {
@@ -2081,30 +2080,6 @@ footer {
 
 // index responsive css
 
-@media only screen and (max-width: 991px) {
-  .notification {
-    li {
-      padding-bottom: 20px;
-    }
-
-    .card {
-      .card-body {
-        .d-flex {
-          .w-100 {
-            p {
-              margin: 0;
-            }
-
-            h6 {
-              margin-top: 10px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 @media only screen and (max-width: 767px) {
 
   .footer-fix {
@@ -2116,12 +2091,6 @@ footer {
 }
 
 @media only screen and (max-width: 575px) {
-  .notification {
-    li {
-      padding-bottom: 15px;
-    }
-  }
-
   .media-dropdown {
     display: block;
 

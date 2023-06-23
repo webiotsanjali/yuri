@@ -755,6 +755,11 @@
             }
           }
 
+          .cart-product {
+            &.product-remove {
+              display: none;
+            }
+          }
           p {
             line-height: 1.3;
             margin-top: 3px;
@@ -960,6 +965,9 @@
         .form-control {
           padding: 10px 12px  10px 0;
           color: $white;
+          &::placeholder {
+            color: rgba($white, 0.6);
+          }
         }
         svg {
           width: 18px;
@@ -1877,10 +1885,6 @@
                             &.show {
                               display: block;
                             }
-                          }
-
-                          [dir="rtl"] & {
-                            padding: 25px 20px 6px 0;
                           }
 
                           &::before {

@@ -382,9 +382,19 @@ const datatable = new simpleDatatables.DataTable("#project-status", {
       prevEl: '.prev',
     },
     breakpoints: {
-      640: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+        grid: {
+          rows: 2,
+        },
+      },
+      500: {
         slidesPerView: 2,
         spaceBetween: 20,
+        grid: {
+          rows: 2,
+        },
       },
       1200: {
         slidesPerView: 1,

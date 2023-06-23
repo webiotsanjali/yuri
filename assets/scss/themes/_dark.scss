@@ -7,11 +7,26 @@ body {
 		color: $dark-all-font-color;
 		background-color: $dark-body-background;
 
+		.table {
+			--bs-table-bg: #262932;
+		}
+
+		.btn-light {
+			background-color: $dark-body-background !important;
+			border-color: $dark-body-background !important;
+		}
+
 		.page-body {
 			.bg-light {
 				background-color: $dark-body-background !important;
 			}
 		}
+
+		// project dashboard css start
+		.welcome-card {
+			background-blend-mode: overlay;
+		}
+		// project dashboard css end
 
 		.wizard-4 {
 			.step-container {
@@ -194,7 +209,7 @@ body {
 		}
 
 		.f-light {
-			color: $dark-all-font-color;
+			color: $dark-small-font-color;
 		}
 
 		.apexcharts-tooltip.light {
@@ -2019,20 +2034,6 @@ body {
 									}
 								}
 
-								.notification-dropdown.onhover-show-div {
-									li {
-										background-color: $dark-card-background;
-
-										span {
-											color: $dark-small-font-color;
-										}
-									}
-
-									.bg-light {
-										background-color: #282e38 !important;
-										color: $dark-all-font-color !important;
-									}
-								}
 							}
 
 						}
@@ -2062,7 +2063,6 @@ body {
 
 								.notification-dropdown.onhover-show-div {
 									li {
-										border-color: $dark-card-background;
 
 										span {
 											color: $dark-small-font-color;
@@ -2393,7 +2393,7 @@ body {
 						}
 
 						// cypto dashboard css end
-
+						
 						.chart-block {
 							#bar-chart2 {
 								svg {

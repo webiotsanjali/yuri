@@ -24,6 +24,10 @@
       right: 4px;
       bottom: 0;
       animation: bounce-effect 5s infinite ease-in;
+      [dir="rtl"] & {
+        right: unset;
+        left: 4px;
+      }
       @media (max-width: 1700px) {
         width: 37%;
       }
@@ -45,6 +49,10 @@
     h2 {
       font-size: 26px;
       margin-right: 10px;
+      [dir="rtl"] & {
+        margin-right: unset;
+        margin-left: 10px;
+      }
     }
     .txt-warning {
       display: flex;
@@ -159,9 +167,17 @@
         }
         + li {
           border-left: 1px solid var(--light-border);
+          [dir="rtl"] & {
+            border-left: unset;
+            border-right: 1px solid var(--light-border);
+          }
         }
         &:first-child {
           padding-left: 0;
+          [dir="rtl"] & {
+            padding-left: 8px;
+            padding-right: unset;
+          }
           @media (max-width: 1660px) {
             display: none !important;
           }
@@ -174,6 +190,10 @@
         }
         &:last-child {
           padding-right: 0;
+          [dir="rtl"] & {
+            padding-right: 8px;
+            padding-left: unset;
+          }
         }
         svg {
           width: 18px;
@@ -189,6 +209,9 @@
         &:last-child {
           text-align: right;
           padding-right: 0;
+          [dir="rtl"] & {
+            text-align: left;
+          }
         }
         &:first-child {
           width: 62px;
@@ -238,6 +261,10 @@
   .chat-app-wrapper {
     &.card-body {
       padding-right: 0;
+      [dir="rtl"] & {
+        padding-right: 20px;
+        padding-left: 0;
+      }
       @media (max-width: 1399px) and (min-width: 1200px) {
         padding-right: 20px;
       }
@@ -249,6 +276,10 @@
   .project-banner {
     &.card-body {
       padding-left: 0;
+      [dir="rtl"] & {
+        padding-left: 20px;
+        padding-right: 0;
+      }
     }
     img {
       height: 350px;
@@ -270,6 +301,10 @@
           .progress {
             min-width: 73px;
             margin-right: 12px;
+            [dir="rtl"] & {
+              margin-right: unset;
+              margin-left: 12px;
+            }
           }
           .customers {
             .light-card {
@@ -364,6 +399,10 @@
       padding: 20px 10px;
       +li {
         border-left: 1px dashed var(--light-border);
+        [dir="rtl"] & {
+          border-left: unset;
+          border-right: 1px dashed var(--light-border);
+        }
       }
     }
   }
@@ -390,6 +429,9 @@
 }
 .recent-update {
   height: 280px;
+  @media (max-width: 360px) {
+    height: 330px;
+  }
   .swiper {
     width: 100%;
     height: 100%;
@@ -405,6 +447,17 @@
     position: absolute;
     right: 20px;
     top: 15px;
+    [dir="rtl"] & {
+      right: unset;
+      left: 20px;
+    }
+    @media (max-width: 360px) {
+      top: unset;
+      bottom: 20px;
+      right: unset;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
   .next, .prev {
     background-color: var(--light-background);
@@ -449,6 +502,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width:630px) {
+      display: none;
+    }
     svg {
       width: 25px;
       height: 25px;
@@ -496,8 +552,18 @@
     }
     ul {
       li {
+        margin-right: -12%;
         + li {
           margin-left: -12%;
+          [dir="rtl"] & {
+            margin-left: unset;
+            margin-right: -12%;
+          }
+          &:last-child {
+            [dir="rtl"] & {
+               margin-right: 0;
+            }
+          }
         }
       }
     }
@@ -528,6 +594,10 @@
   display: flex;
   gap: 5px;
   margin-top: 10px;
+  @media (max-width: 360px) {
+    flex-wrap: nowrap;
+    overflow: auto;
+  }
   li {
     width: 100%;
     button {
@@ -556,10 +626,24 @@
     padding: 12px;
     button {
       margin-left: auto;
+      [dir="rtl"] & {
+        margin-left: unset;
+        margin-right: auto;
+      }
+      @media (max-width: 1835px) and (min-width: 1200px) {
+        display: none;
+      }
+      @media (max-width: 1065px) and (min-width:992px) {
+        display: none;
+      }
+      @media (max-width: 420px) {
+        display: none;
+      }
     }
     .f-light {
       display: flex;
       align-items: center;
+      gap: 5px;
       span {
         margin-bottom: -2px;
       }
