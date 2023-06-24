@@ -614,12 +614,12 @@ $badge-light-color in (primary, $primary-color),
       border: 1px dashed $theme-body-sub-title-color;
       opacity: 0.3;
       top: 12px;
-      left: 2px;
+      left: 3px;
       height: calc(100% - 12px);
 
       [dir="rtl"] & {
         left: unset;
-        right: 2px;
+        right: 3px;
       }
     }
   }

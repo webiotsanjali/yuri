@@ -636,6 +636,10 @@ $activity-dot-color in (primary, $primary-color),
       background-color: $activity-dot-color;
       top: 50%;
       right: -14px;
+      [dir="rtl"] & {
+        right: unset;
+        left: -14px;
+      }
     }
   }
 

@@ -4665,19 +4665,6 @@ html[dir="rtl"] {
             }
           }
         }
-
-        .page-header {
-          .header-wrapper {
-            .toggle-sidebar {
-              margin-right: 0;
-              border-right: none;
-              padding-right: 0;
-              border-left: 1px solid #ddd;
-              margin-left: 15px;
-              padding-left: 15px;
-            }
-          }
-        }
       }
 
       &.compact-sidebar {
@@ -4972,22 +4959,6 @@ html[dir="rtl"] {
               .close-search {
                 left: 0;
               }
-            }
-          }
-        }
-      }
-
-      &.compact-wrapper,
-      &.compact-sidebar {
-        .page-header {
-          .header-wrapper {
-            .toggle-sidebar {
-              margin-left: 8px;
-              padding-left: 8px;
-              margin-right: unset;
-              padding-right: unset;
-              border-right: unset;
-              border-left: 1px solid #ddd;
             }
           }
         }
