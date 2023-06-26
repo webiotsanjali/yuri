@@ -12,17 +12,11 @@
       order: -1;
     }
 
-    .artist-table {
-      .appointment-table.customer-table {
-            table {
-                tr {
-                      td {
-                          &:last-child {
-                                min-width: 100px;
-                          }
-                      }
-                }
-            }
+    .card {
+      .chat-app-wrapper {
+        &.card-body {
+          padding-right: 20px;
+        }
       }
     }
 
@@ -52,12 +46,6 @@
       padding: 20px;
     }
 
-    .widget-1 {
-      &.mb-xl-0 {
-        margin-bottom: 25px !important;
-      }
-    }
-
     .radial-progress-card {
       .radial-chart-wrap {
         margin-right: -10px;
@@ -76,36 +64,12 @@
       }
     }
 
-    .activity-card {
-      .appointment-table {
-        &.customer-table {
-          height: 187px;
-        }
-      }
-    }
-
     .transaction-table {
       tr {
         td {
           &:first-child {
             min-width: 150px;
           }
-        }
-      }
-    }
-
-    .purchase-card {
-      img {
-        margin: -210px auto 0;
-        width: 80%;
-      }
-
-      &.discover {
-        margin-top: 90px;
-
-        img {
-          margin-top: -90px;
-          width: 64%;
         }
       }
     }

@@ -36,14 +36,6 @@ html[dir="rtl"] {
     float: left;
   }
 
-  .papernote-wrap {
-    .note-labels {
-      ul {
-        gap: 9px;
-      }
-    }
-  }
-
   .form-check-inline {
     margin-right: unset;
     margin-left: 1rem;
@@ -825,18 +817,6 @@ html[dir="rtl"] {
   }
 
   // index page css start
-  .appointment-table {
-    table {
-      tr {
-        td {
-          .status-circle {
-            left: unset;
-            right: 35px;
-          }
-        }
-      }
-    }
-  }
 
   .notification {
     .card {
@@ -1598,10 +1578,6 @@ html[dir="rtl"] {
   }
 
   .balance-box {
-    text-align: center;
-  }
-
-  .purchase-card {
     text-align: center;
   }
 
@@ -4114,23 +4090,6 @@ html[dir="rtl"] {
     #myDoughnutGraph,
     #myPolarGraph {
       width: auto !important;
-    }
-  }
-
-  .crm-activity {
-    ul {
-      &.dates {
-        li {
-          +li {
-            border-right: 1px solid #ddd;
-            padding-right: 10px;
-            margin-right: 5px;
-            border-left: unset;
-            padding-left: unset;
-            margin-left: unset;
-          }
-        }
-      }
     }
   }
 

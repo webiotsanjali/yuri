@@ -256,55 +256,10 @@
   }
 }
 
-.overview-card {
-  .balance-data {
-    right: 12px;
-
-    [dir="rtl"] & {
-      right: unset;
-      left: 12px;
-    }
-
-    @media (max-width: 767px) {
-      right: -40%;
-
-      [dir="rtl"] & {
-        left: -40%;
-      }
-    }
-  }
-}
-
 .order-container {
   .apexcharts-canvas {
     .apexcharts-marker {
       stroke-width: 4;
-    }
-  }
-}
-
-.purchase-card.discover {
-  margin-top: 102px;
-
-  img {
-    width: 224px;
-    margin: 0 auto;
-    margin-top: -90px;
-
-    @media (max-width: 1550px) {
-      margin-top: -110px;
-    }
-
-    @media (max-width: 1399px) {
-      margin-top: -90px;
-    }
-
-    @media (max-width: 991px) {
-      margin-top: -110px;
-    }
-
-    @media (max-width: 618px) {
-      width: 200px;
     }
   }
 }

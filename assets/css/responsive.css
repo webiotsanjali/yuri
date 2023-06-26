@@ -171,13 +171,6 @@
   .custom-card .card-footer > div h3 {
     font-size: 18px;
   }
-  .crm-activity {
-    height: 291px;
-    overflow-y: auto;
-  }
-  .crm-activity .media .media-body .dates {
-    display: flex;
-  }
   .chat-body {
     padding: 10px;
   }
@@ -1143,10 +1136,6 @@
   }
   .faq-wrap .faq-accordion.default-according .card .faq-header {
     padding: 20px 20px 0 !important;
-  }
-  .crm-activity > li + li {
-    margin-top: 10px;
-    padding-top: 10px;
   }
   .add-post .dropzone {
     margin-bottom: 20px;

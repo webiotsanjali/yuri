@@ -360,17 +360,6 @@
     }
 }
 
-.market-card {
-    .balance-card {
-        padding: 10px;
-    }
-
-    .custom-tab {
-        @media (max-width:575px) {
-            display: none;
-        }
-    }
-}
 
 .currency-icon {
     width: 34px;
@@ -596,26 +585,6 @@ select {
                             right: -16px;
                         }
                     }
-                }
-            }
-        }
-    }
-}
-
-.activity-card {
-    .appointment-table {
-        @media (max-width:1399px) {
-            height: 180px;
-        }
-
-        @media (max-width:575px) {
-            height: unset;
-        }
-
-        tr {
-            td {
-                &:nth-child(2) {
-                    min-width: 130px;
                 }
             }
         }

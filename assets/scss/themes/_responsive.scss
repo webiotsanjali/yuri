@@ -330,19 +330,6 @@
     }
   }
 
-  .crm-activity {
-    height: 291px;
-    overflow-y: auto;
-
-    .media {
-      .media-body {
-        .dates {
-          display: flex;
-        }
-      }
-    }
-  }
-
   // chat
   .chat-body {
     padding: 10px;
@@ -2212,18 +2199,6 @@
           .faq-header {
             padding: 20px 20px 0 !important;
           }
-        }
-      }
-    }
-  }
-
-  // general widget page
-  .crm-activity {
-    > {
-      li {
-        +li {
-          margin-top: 10px;
-          padding-top: 10px;
         }
       }
     }
