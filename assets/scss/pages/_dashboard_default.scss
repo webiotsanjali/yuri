@@ -33,11 +33,13 @@
   gap: 15px;
   .widget-icon {
     width: 50px;
+    min-width: 50px;
     height: 48px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--white);
     svg {
       width: 24px;
       height: 24px;
@@ -69,8 +71,85 @@
   }
 }
 
+.satisfaction-box {
+  padding: 14px;
+}
+
+.revenue-slider-wrapper {
+  .swiper {
+    padding-bottom: 20px;
+    .swiper-pagination {
+      bottom: 0;
+    }
+    .swiper-pagination-bullet {
+      width: 5px;
+      height: 4px;
+      &.swiper-pagination-bullet-active {
+        width: 11px;
+        background: var(--theme-deafult);
+      }
+    }
+  }
+}
+
+.report-chart-container {
+  margin: -29px 0px -27px -10px;
+}
+
 .revenue-chart-container {
   margin: -23px -10px -26px -16px;
+}
+
+.report-list {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .badge {
+      svg {
+        width: 14px;
+        height: 14px;
+        vertical-align: middle;
+      }
+    }
+    .report-icon {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      svg {
+        width: 21px;
+        height: 21px;
+        stroke: var(--body-light-font-color);
+      }
+    }
+  }
+}
+
+.transaction-list {
+  .transaction-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .transaction-icon {
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
 }
 
 .pipeline-chart-container {

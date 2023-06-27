@@ -30,7 +30,12 @@
       },
       axisTicks: {
         show: false
-      }
+      },
+      labels: {
+          style: {
+            colors: ["var(--body-light-font-color)"],
+          },
+        }
     },
     grid: {
       show: true,
@@ -106,5 +111,262 @@
 
   var chart_pipeline = new ApexCharts(document.querySelector("#pipeline-chart"), options_pipeline);
   chart_pipeline.render();
+
+  var swiper = new Swiper(".revenue-swiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+  });
+
+  // profit chart
+  var options_profit = {
+    series: [{
+        name: "Income",
+        type: "line",
+        data: [60, 80, 30, 60, 30, 90],
+      },
+      {
+        name: "Earnings",
+        type: "line",
+        data: [55, 65, 55, 80, 40, 65],
+      },
+      {
+        name: "Profit",
+        type: "line",
+        data: [50, 40, 70, 40, 100, 70],
+      },
+    ],
+    chart: {
+      height: 265,
+      type: "line",
+      toolbar: {
+        show: false,
+      },
+      dropShadow: {
+        enabled: true,
+        top: 4,
+        left: 0,
+        blur: 2,
+        colors: ["#7366FF", "#54BA4A", "#FFAA05"],
+        opacity: 0.02,
+      },
+    },
+    grid: {
+      show: true,
+      borderColor: "var(--chart-border)",
+      strokeDashArray: 6,
+      position: "back",
+      xaxis: {
+        lines: {
+          show: false,
+        },
+      },
+      padding: {
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0,
+      },
+    },
+    colors: ["#7366FF", "#54BA4A", "#FFAA05"],
+    stroke: {
+      width: 3,
+      curve: "smooth",
+      opacity: 1,
+    },
+    markers: {
+      discrete: [{
+        seriesIndex: 1,
+        dataPointIndex: 3,
+        fillColor: "#54BA4A",
+        strokeColor: "var(--white)",
+        size: 6,
+      }, ],
+    },
+    tooltip: {
+      shared: false,
+      intersect: false,
+      marker: {
+        width: 5,
+        height: 5,
+      },
+    },
+    xaxis: {
+      type: "category",
+      categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+      tickAmount: 12,
+      crosshairs: {
+        show: false,
+      },
+      labels: {
+        style: {
+          colors: "var(--chart-text-color)",
+          fontSize: "12px",
+          fontFamily: "Rubik, sans-serif",
+          fontWeight: 400,
+        },
+      },
+      axisTicks: {
+        show: false,
+      },
+      axisBorder: {
+        show: false,
+      },
+      tooltip: {
+        enabled: false,
+      },
+    },
+    fill: {
+      opacity: 1,
+      type: "gradient",
+      gradient: {
+        shade: "light",
+        type: "horizontal",
+        shadeIntensity: 1,
+        opacityFrom: 0.95,
+        opacityTo: 1,
+        stops: [0, 90, 100],
+      },
+    },
+    yaxis: {
+      tickAmount: 5,
+      labels: {
+        show: false,
+      },
+    },
+    legend: {
+      show: false,
+    },
+    responsive: [{
+        breakpoint: 1736,
+        options: {
+          chart: {
+            height: 230,
+            offsetX: 0,
+          },
+        },
+      },
+      {
+        breakpoint: 1401,
+        options: {
+          chart: {
+            height: 250,
+            offsetX: 0,
+          },
+        },
+      },
+      {
+        breakpoint: 1200,
+        options: {
+          chart: {
+            height: 250,
+          },
+        },
+      },
+      {
+        breakpoint: 651,
+        options: {
+          chart: {
+            height: 210,
+          },
+        },
+      },
+    ],
+  };
+
+  var chart_profit = new ApexCharts(
+    document.querySelector("#profit_chart"),
+    options_profit
+  );
+  chart_profit.render();
+
+  // earning reports
+  var options_earning = {
+    series: [{
+      name: 'Net Profit',
+      data: [90, 40, 114, 56, 90, 80, 90]
+    }, {
+      name: 'Revenue',
+      data: [60, 75, 90, 80, 61, 30, 70]
+    }],
+    chart: {
+      type: 'bar',
+      height: 200,
+      toolbar: {
+        show: false
+      }
+    },
+    plotOptions: {
+      bar: {
+        borderRadius: 4,
+        horizontal: false,
+        columnWidth: '40%',
+        endingShape: 'rounded'
+      },
+    },
+    grid: {
+      show: true,
+      borderColor: "var(--chart-border)",
+      position: "back",
+      xaxis: {
+        lines: {
+          show: true,
+        },
+      },
+      padding: {
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0,
+      },
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      show: false,
+      width: 0,
+    },
+    xaxis: {
+      categories: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
+      axisTicks: {
+        show: false
+      },
+      axisBorder: {
+        show: false
+      }
+    },
+    yaxis: {
+      labels: {
+        show: false
+      }
+    },
+    colors: ["#009DB5", "#F99B0D"],
+    fill: {
+      type: ['solid','gradient'],
+      opacity: 1,
+      image: {
+        src: ['../assets/images/dashboard/bar-img.png'],
+        width: 466,
+        height: 406
+      }
+    },
+    // fill: {
+    //   type: ['solid', 'pattern'],
+    //   opacity: 1,
+    //   pattern: {
+    //     style: ['circles', 'slantedLines'],
+    //     width: 6,
+    //     height: 6
+    //   }
+    // },
+    legend: {
+        show: false,
+    },
+  };
+
+  var chart_earning = new ApexCharts(document.querySelector("#earning-chart"), options_earning);
+  chart_earning.render();
 
 })();
