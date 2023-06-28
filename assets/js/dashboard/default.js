@@ -1,4 +1,10 @@
 (function () {
+
+  const datatable = new simpleDatatables.DataTable("#member-table", {
+    paging: false,
+    tabIndex: 1,
+  });
+
   // revenue chart js
   var options_revenue = {
     series: [{
@@ -292,7 +298,7 @@
     }],
     chart: {
       type: 'bar',
-      height: 200,
+      height: 240,
       toolbar: {
         show: false
       }
@@ -344,23 +350,9 @@
     },
     colors: ["#009DB5", "#F99B0D"],
     fill: {
-      type: ['solid','gradient'],
+      type: ['solid','image'],
       opacity: 1,
-      image: {
-        src: ['../assets/images/dashboard/bar-img.png'],
-        width: 466,
-        height: 406
-      }
     },
-    // fill: {
-    //   type: ['solid', 'pattern'],
-    //   opacity: 1,
-    //   pattern: {
-    //     style: ['circles', 'slantedLines'],
-    //     width: 6,
-    //     height: 6
-    //   }
-    // },
     legend: {
         show: false,
     },

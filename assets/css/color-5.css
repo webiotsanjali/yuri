@@ -15139,49 +15139,6 @@ p.data-attributes svg {
   transform: translateY(-50%);
 }
 
-.balance-widget {
-  background-image: url(../images/dashboard-2/balance-bg.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: right;
-}
-.balance-widget .mobile-right-img {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-}
-.balance-widget .mobile-right-img .left-mobile-img {
-  margin-right: -20px;
-}
-.balance-widget .mobile-right-img .mobile-img {
-  height: 130px;
-}
-[dir=rtl] .balance-widget .mobile-right-img {
-  right: unset;
-  left: 15px;
-}
-@media (max-width: 480px) {
-  .balance-widget .mobile-right-img {
-    right: 0;
-  }
-  .balance-widget .mobile-right-img .mobile-img {
-    height: 100px;
-  }
-  [dir=rtl] .balance-widget .mobile-right-img {
-    right: unset;
-    left: 0;
-  }
-}
-[dir=rtl] .balance-widget {
-  text-align: right;
-}
-.balance-widget.card-body {
-  padding: 20px 15px;
-}
-.balance-widget .purchase-btn {
-  min-width: 170px;
-}
-
 .small-widget {
   overflow: hidden;
 }
@@ -18918,6 +18875,10 @@ select.crypto-select.primary {
   stroke: var(--body-light-font-color);
 }
 
+.transaction-list ul {
+  margin-top: -5px;
+  margin-bottom: -10px;
+}
 .transaction-list .transaction-content {
   display: flex;
   align-items: center;
@@ -18926,6 +18887,7 @@ select.crypto-select.primary {
 .transaction-list .transaction-content .transaction-icon {
   width: 46px;
   height: 46px;
+  min-width: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18934,6 +18896,218 @@ select.crypto-select.primary {
 .transaction-list .transaction-content .transaction-icon svg {
   width: 24px;
   height: 24px;
+}
+.transaction-list .transaction-content .transaction-right-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 0;
+}
+.transaction-list li:not(.transaction-title) + li .transaction-content .transaction-right-content {
+  border-top: 1px dashed var(--light-border);
+}
+.transaction-list li:not(.transaction-title):nth-of-type(2) .transaction-content .transaction-right-content {
+  border-bottom: 1px dashed var(--light-border);
+}
+.transaction-list .transaction-title {
+  padding-top: 5px;
+}
+.transaction-list li .bg-light-primary {
+  position: relative;
+}
+.transaction-list li .bg-light-primary::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: #009DB5;
+  left: -10px;
+  top: 0;
+}
+.transaction-list li:hover .bg-light-primary {
+  background: #009DB5 !important;
+}
+.transaction-list li:hover .bg-light-primary svg {
+  fill: #fff;
+}
+.transaction-list li .bg-light-secondary {
+  position: relative;
+}
+.transaction-list li .bg-light-secondary::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: #F94C8E;
+  left: -10px;
+  top: 0;
+}
+.transaction-list li:hover .bg-light-secondary {
+  background: #F94C8E !important;
+}
+.transaction-list li:hover .bg-light-secondary svg {
+  fill: #fff;
+}
+.transaction-list li .bg-light-success {
+  position: relative;
+}
+.transaction-list li .bg-light-success::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: #83BF6E;
+  left: -10px;
+  top: 0;
+}
+.transaction-list li:hover .bg-light-success {
+  background: #83BF6E !important;
+}
+.transaction-list li:hover .bg-light-success svg {
+  fill: #fff;
+}
+.transaction-list li .bg-light-danger {
+  position: relative;
+}
+.transaction-list li .bg-light-danger::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: #F6463A;
+  left: -10px;
+  top: 0;
+}
+.transaction-list li:hover .bg-light-danger {
+  background: #F6463A !important;
+}
+.transaction-list li:hover .bg-light-danger svg {
+  fill: #fff;
+}
+.transaction-list li .bg-light-info {
+  position: relative;
+}
+.transaction-list li .bg-light-info::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: #25C5F7;
+  left: -10px;
+  top: 0;
+}
+.transaction-list li:hover .bg-light-info {
+  background: #25C5F7 !important;
+}
+.transaction-list li:hover .bg-light-info svg {
+  fill: #fff;
+}
+.transaction-list li .bg-light-light {
+  position: relative;
+}
+.transaction-list li .bg-light-light::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: #F2F3F7;
+  left: -10px;
+  top: 0;
+}
+.transaction-list li:hover .bg-light-light {
+  background: #F2F3F7 !important;
+}
+.transaction-list li:hover .bg-light-light svg {
+  fill: #fff;
+}
+.transaction-list li .bg-light-dark {
+  position: relative;
+}
+.transaction-list li .bg-light-dark::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: #2c323f;
+  left: -10px;
+  top: 0;
+}
+.transaction-list li:hover .bg-light-dark {
+  background: #2c323f !important;
+}
+.transaction-list li:hover .bg-light-dark svg {
+  fill: #fff;
+}
+.transaction-list li .bg-light-warning {
+  position: relative;
+}
+.transaction-list li .bg-light-warning::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: #F99B0D;
+  left: -10px;
+  top: 0;
+}
+.transaction-list li:hover .bg-light-warning {
+  background: #F99B0D !important;
+}
+.transaction-list li:hover .bg-light-warning svg {
+  fill: #fff;
+}
+
+.member-datatable img {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+}
+.member-datatable .action-buttons {
+  gap: 3px;
+}
+.member-datatable .action-buttons .light-card {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.member-datatable .action-buttons .light-card svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--body-light-font-color);
+}
+.member-datatable tr td:first-child, .member-datatable tr th:first-child {
+  min-width: 14px;
+}
+.member-datatable tr td:first-child .checkbox-checked, .member-datatable tr th:first-child .checkbox-checked {
+  min-width: 14px;
+}
+.member-datatable tr td:first-child .datatable-sorter::before, .member-datatable tr td:first-child .datatable-sorter::after, .member-datatable tr th:first-child .datatable-sorter::before, .member-datatable tr th:first-child .datatable-sorter::after {
+  display: none;
+}
+.member-datatable tr td:nth-child(4), .member-datatable tr th:nth-child(4) {
+  min-width: 110px;
+}
+.member-datatable tr td:last-child, .member-datatable tr th:last-child {
+  min-width: 100px;
+}
+.member-datatable .datatable-bottom, .member-datatable .datatable-top {
+  display: none;
+}
+
+.referral-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.referral-content .d-flex {
+  align-items: center;
+}
+.referral-content .d-flex svg {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
 }
 
 .pipeline-chart-container {
@@ -30813,10 +30987,6 @@ body.dark-only .page-wrapper .default-according .bg-secondary .btn-link {
 }
 body.dark-only .page-wrapper .collapse .card-body {
   background-color: #262932;
-}
-body.dark-only .page-wrapper .balance-widget.card-body {
-  background-color: #262932;
-  background-blend-mode: overlay;
 }
 @media screen and (max-width: 1660px) {
   body.dark-only .page-wrapper .chat-box .chat-history .call-icons ul li {
