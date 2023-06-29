@@ -9,6 +9,7 @@
   transform: translateY(-50%);
 }
 
+
 .small-widget {
   overflow: hidden;
 
@@ -83,101 +84,8 @@
   }
 }
 
-.order-wrapper {
-  margin: 0 -24px -17px -17px;
-}
 
-.categories-list {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
 
-  @media (max-width: 767px) {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  li {
-    gap: 10px;
-
-    .bg-light {
-      min-width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      img {
-        width: 25px;
-        height: 25px;
-        object-fit: contain;
-        transition: 0.5s;
-      }
-    }
-
-    h6 {
-      a {
-        transition: 0.5s;
-        color: var(--body-font-color);
-      }
-    }
-
-    &:hover {
-      .bg-light {
-        img {
-          transition: 0.5s;
-          transform: scale(1.1);
-        }
-      }
-
-      h6 {
-        a {
-          transition: 0.5s;
-          color: var(--theme-deafult);
-        }
-      }
-    }
-  }
-}
-
-.monthly-profit {
-  margin-top: -10px;
-
-  @media (max-width: 1584px) {
-    margin: -10px -8px 0;
-  }
-
-  @media (max-width: 1520px) {
-    margin: -10px -16px 0;
-  }
-
-  @media (max-width:1500px) {
-    margin: -10px -14px 0;
-  }
-
-  @media (max-width:1472px) {
-    margin: -10px -20px 0;
-  }
-
-  @media (max-width:1424px) {
-    margin: -10px -25px 0;
-  }
-
-  .apexcharts-canvas {
-    .apexcharts-legend-marker {
-      margin-right: 6px;
-    }
-
-    .apexcharts-datalabels-group {
-      .apexcharts-datalabel-value {
-        font-size: 14px;
-        font-weight: 500;
-        font-family: $font-inter, $font-serif !important;
-        fill: var(--chart-text-color);
-      }
-    }
-  }
-}
 
 .overview-wrapper {
   position: relative;
@@ -219,24 +127,6 @@
       width: 18px;
       height: 18px;
       fill: var(--theme-deafult);
-    }
-  }
-}
-
-.visitors-container {
-  margin: 0 -12px -27px -17px;
-
-  svg {
-    .apexcharts-series {
-      path {
-        clip-path: inset(1% 0% 0% 0% round 3rem);
-      }
-    }
-
-    .apexcharts-legend.apexcharts-align-left {
-      .apexcharts-legend-series {
-        display: flex;
-      }
     }
   }
 }
@@ -373,22 +263,9 @@
     height: 20px;
   }
 
-  .recent-status {
-    display: flex;
-    align-items: center;
 
-    &.font-success {
-      svg {
-        fill: $success-color;
-      }
-    }
 
-    &.font-danger {
-      svg {
-        fill: $danger-color;
-      }
-    }
-  }
+
 }
 
 .recent-activity {
@@ -533,6 +410,7 @@ $activity-dot-color in (primary, $primary-color),
     outline: 3px solid rgba($activity-dot-color, 0.25);
     position: relative;
     z-index: 2;
+
     &::after {
       position: absolute;
       content: '';
@@ -541,6 +419,7 @@ $activity-dot-color in (primary, $primary-color),
       background-color: $activity-dot-color;
       top: 50%;
       right: -14px;
+
       [dir="rtl"] & {
         right: unset;
         left: -14px;
@@ -621,13 +500,94 @@ $activity-dot-color in (primary, $primary-color),
   }
 }
 
-@media only screen and (max-width: 420px) {
-  .size-column {
-    .col-6 {
-      width: 100%;
+
+
+// dashboard-2
+
+.sales-bg {
+  background-image: url(../images/dashboard-2/bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
+.question-icon {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background-color: var(--white);
+  text-align: center;
+  margin-left: auto;
+
+  svg {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.sales-overview {
+  background-image: url(../images/dashboard-2/bg-shape.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 10px;
+
+  .widget-1 {
+    gap: 18px;
+  }
+
+  .rounded-circle1 {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: var(--white);
+  }
+
+  .rounded-circle2 {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $warning-color;
+
+    &.warning {
+      box-shadow: 0px 29.012067794799805px 23.20965576171875px 0px rgba($warning-color, 0.12);
+    }
+
+    &.success {
+      box-shadow: 0px 29.012067794799805px 23.20965576171875px 0px rgba($success-color, 0.12);
+    }
+
+    &.primary {
+      box-shadow: 0px 29.012067794799805px 23.20965576171875px 0px rgba($primary-color, 0.12);
+    }
+
+    &.danger {
+      box-shadow: 0px 29.012067794799805px 23.20965576171875px 0px rgba($danger-color, 0.12);
+    }
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .sale-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+      width: 14px;
+      height: 14px;
     }
   }
 }
+
+
 
 /**=====================
     3.9 Dashboard_2 CSS End
