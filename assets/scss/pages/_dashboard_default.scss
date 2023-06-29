@@ -276,6 +276,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
   .d-flex {
     align-items: center;
     svg {
@@ -283,6 +284,141 @@
       height: 14px;
       vertical-align: middle;
     }
+  }
+}
+
+.referral-progress {
+  >.progress {
+    margin: 0 1px;
+  }
+}
+
+.referral-list {
+  padding-top: 20px;
+  li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    + li {
+      margin-top: 20px;
+    }
+    div[class^="activity-dot-"] {
+      &::after {
+        display: none;
+      }
+    }
+    span {
+      margin-left: auto;
+    }
+  }
+}
+
+.total-transaction-wrapper {
+  margin: -18px 0 -25px;
+  .apexcharts-series {
+    path {
+      clip-path: inset(0% 0% 0% 0% round 0.6rem);
+    }
+  }
+}
+.report-content {
+  padding-bottom: 15px;
+  ul {
+    display: flex;
+    padding-top: 15px;
+    li {
+      width: 100%;
+      padding: 0 20px; 
+      text-align: center;
+      h6 {
+        margin-bottom: 10px;
+      }
+      + li {
+        border-left: 1px solid var(--light-border);
+      }
+    }
+  }
+}
+.report-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-top: 1px dashed var(--light-border);
+  border-bottom: 1px solid var(--light-border);
+}
+
+.order-list {
+  li {
+    display: flex;
+    gap: 10px;
+    .order-content {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 10px 0;
+      .icon-dropdown {
+        margin-bottom: -8px;
+      }
+    }
+    .light-card {
+      min-width: 46px;
+      width: 46px;
+      height: 46px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    + li {
+      .order-content {
+        border-top: 1px dashed var(--light-border);
+      }
+    }
+  }
+}
+
+.to-do-list {
+  ul {
+    li {
+      .d-flex {
+        margin-left: 20px;
+        gap: 6px;
+      }
+    }
+  }
+}
+
+.btn-primary {
+  .svg-sprite {
+    width: 20px;
+    height: 20px;
+    fill: $white;
+    vertical-align: middle;
+  }
+}
+
+.offer-banner {
+  background-image: url(../images/dashboard/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  padding: 25px 20px;
+  border-radius: 8px;
+  color: $white;
+  position: relative;
+  h2 {
+    color: $white;
+  }
+  .offer-content {
+    width: 73%;
+  }
+  img {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    width: 28%;
   }
 }
 
