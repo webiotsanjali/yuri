@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/vendors/feather-icon.css">
     <!-- Plugins css start-->
     <link rel="stylesheet" type="text/css" href="../assets/css/vendors/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/datatable-css/style.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/vendors/scrollbar.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/vendors/animate.css">
     <!-- Plugins css Ends-->
@@ -994,11 +995,15 @@
                       <div class="card-header card-no-border">
                         <div class="header-top">
                           <h2>Revenue vs Order</h2>
-                          <div class="square-legend">
-                            <div class="bg-primary"><span>Revenue</span></div>
-                            <div class="bg-success"><span>Order</span></div>
-                          </div>
-                          <div class="card-header-right-icon">
+                          <div class="card-header-right-icon square-legend">
+                            <div>
+                              <div class="legend-box">
+                                <div class="bg-primary"></div><span class="f-light f-12 f-w-500">Revenue</span>
+                              </div>
+                              <div class="legend-box">
+                                <div class="bg-success"></div><span class="f-light f-12 f-w-500">Order</span>
+                              </div>
+                            </div>
                             <div class="dropdown">
                               <button class="btn dropdown-toggle" id="overviewButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">Monthly</button>
                               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="overviewButton"><a class="dropdown-item" href="#">Monthly</a><a class="dropdown-item" href="#">weekly</a><a class="dropdown-item" href="#">yearly</a></div>
@@ -1069,9 +1074,231 @@
                       </div>
                     </div>
                   </div>
+                  <div class="col-9"> 
+                    <div class="card height-equal title-line">
+                      <div class="card-header card-no-border">
+                        <div class="header-top">
+                          <h2>Recent Orders</h2>
+                          <div class="card-header-right-icon recent-order-header">
+                            <div class="dropdown">
+                              <button class="btn dropdown-toggle" id="orderButtons" type="button" data-bs-toggle="dropdown" aria-expanded="false">Generate Report</button>
+                              <div class="dropdown-menu dropdown-menu-start" aria-labelledby="orderButtons"><a class="dropdown-item" href="#">Web designer</a><a class="dropdown-item" href="#">Development</a><a class="dropdown-item" href="#">Marketing</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-body project-datatable p-0"> 
+                        <table class="table" id="order-status">
+                          <thead> 
+                            <tr> 
+                              <th> <span class="f-light f-w-600">Order ID</span></th>
+                              <th> <span class="f-light f-w-600">Customer</span></th>
+                              <th> <span class="f-light f-w-600">Product</span></th>
+                              <th> <span class="f-light f-w-600">Amount</span></th>
+                              <th> <span class="f-light f-w-600">Vendor</span></th>
+                              <th> <span class="f-light f-w-600">Status</span></th>
+                              <th> <span class="f-light f-w-600">Rating</span></th>
+                            </tr>
+                          </thead>
+                          <tbody> 
+                            <tr> 
+                              <td> <a class="f-w-500" href="#!">#0918765</a></td>
+                              <td>
+                                <div class="recent-profile"><img class="img-30 rounded-circle img-fluid" src="../assets/images/dashboard/user/1.jpg" alt="user"><span class="f-light f-w-500">Alex Smith</span></div>
+                              </td>
+                              <td> <span class="f-light">Jacket</span></td>
+                              <td> <span class="txt-success f-w-500">$109.00          </span></td>
+                              <td> <span class="f-light">Zoshmetic Fashion</span></td>
+                              <td><span class="badge badge-light-primary">In Progress      </span></td>
+                              <td><span class="f-light f-w-600">4.9 <span class="f-12 f-w-400">(34 votes)</span></span></td>
+                            </tr>
+                            <tr> 
+                              <td> <a class="f-w-500" href="#!">#109346</a></td>
+                              <td>
+                                <div class="recent-profile"><img class="img-30 rounded-circle img-fluid" src="../assets/images/dashboard-3/user/4.png" alt="user"><span class="f-light f-w-500">Jansh Brown</span></div>
+                              </td>
+                              <td> <span class="f-light">Clothes</span></td>
+                              <td> <span class="txt-success f-w-500">$178.00     </span></td>
+                              <td> <span class="f-light">iTech Factory</span></td>
+                              <td><span class="badge badge-light-warning">Pending</span></td>
+                              <td><span class="f-light f-w-600">5.0  <span class="f-12 f-w-400">(90 votes)</span></span></td>
+                            </tr>
+                            <tr> 
+                              <td> <a class="f-w-500" href="#!">#209813</a></td>
+                              <td>
+                                <div class="recent-profile"><img class="img-30 rounded-circle img-fluid" src="../assets/images/dashboard-3/user/7.png" alt="user"><span class="f-light f-w-500">Prezy Mark</span></div>
+                              </td>
+                              <td> <span class="f-light">Wallets & Bag</span></td>
+                              <td> <span class="txt-success f-w-500">$210.00        </span></td>
+                              <td> <span class="f-light">Micro Design</span></td>
+                              <td><span class="badge badge-light-success">Paid</span></td>
+                              <td><span class="f-light f-w-600">4.5 <span class="f-12 f-w-400">(43 votes)</span></span></td>
+                            </tr>
+                            <tr> 
+                              <td> <a class="f-w-500" href="#!">#306754</a></td>
+                              <td>
+                                <div class="recent-profile"><img class="img-30 rounded-circle img-fluid" src="../assets/images/dashboard/user/2.jpg" alt="user"><span class="f-light f-w-500">Vihan Hudda</span></div>
+                              </td>
+                              <td> <span class="f-light">Furniture</span></td>
+                              <td> <span class="txt-success f-w-500">$330.00</span></td>
+                              <td> <span class="f-light">Nesta Technology</span></td>
+                              <td><span class="badge badge-light-warning">Pending</span></td>
+                              <td><span class="f-light f-w-600">4.6<span class="f-12 f-w-400">(30 votes)</span></span></td>
+                            </tr>
+                            <tr> 
+                              <td> <a class="f-w-500" href="#!">#509823</a></td>
+                              <td>
+                                <div class="recent-profile"><img class="img-30 rounded-circle img-fluid" src="../assets/images/dashboard/user/4.jpg" alt="user"><span class="f-light f-w-500">Prite Jasion</span></div>
+                              </td>
+                              <td> <span class="f-light">Bike Accessories</span></td>
+                              <td> <span class="txt-success f-w-500">$401.00      </span></td>
+                              <td> <span class="f-light">Bike Accessories</span></td>
+                              <td><span class="badge badge-light-warning">Pending</span></td>
+                              <td><span class="f-light f-w-600">4.8<span class="f-12 f-w-400">(70 votes)</span></span></td>
+                            </tr>
+                            <tr> 
+                              <td> <a class="f-w-500" href="#!">#107654</a></td>
+                              <td>
+                                <div class="recent-profile"><img class="img-30 rounded-circle img-fluid" src="../assets/images/avtar/7.jpg" alt="user"><span class="f-light f-w-500">Biraj Shah</span></div>
+                              </td>
+                              <td> <span class="f-light">Kitchen Storage</span></td>
+                              <td> <span class="txt-success f-w-500">$187.00</span></td>
+                              <td> <span class="f-light">Syntcy solutions</span></td>
+                              <td><span class="badge badge-light-primary">In Progress</span></td>
+                              <td><span class="f-light f-w-600">4.3<span class="f-12 f-w-400">(87 votes)</span></span></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card height-equal title-line">
+                      <div class="card-header card-no-border">
+                        <div class="header-top">
+                          <h2>Stock Report</h2>
+                          <div class="card-header-right-icon recent-order-header">
+                            <div class="dropdown">
+                              <button class="btn dropdown-toggle" id="orderButtons" type="button" data-bs-toggle="dropdown" aria-expanded="false">Generate Report</button>
+                              <div class="dropdown-menu dropdown-menu-start" aria-labelledby="orderButtons"><a class="dropdown-item" href="#">Web designer</a><a class="dropdown-item" href="#">Development</a><a class="dropdown-item" href="#">Marketing</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-body project-datatable p-0"> 
+                        <table class="table" id="order-status">
+                          <thead> 
+                            <tr> 
+                              <th> <span class="f-light f-w-600">Order ID</span></th>
+                              <th> <span class="f-light f-w-600">Customer</span></th>
+                              <th> <span class="f-light f-w-600">Product</span></th>
+                              <th> <span class="f-light f-w-600">Amount</span></th>
+                              <th> <span class="f-light f-w-600">Vendor</span></th>
+                              <th> <span class="f-light f-w-600">Status</span></th>
+                              <th> <span class="f-light f-w-600">Rating</span></th>
+                            </tr>
+                          </thead>
+                          <tbody> 
+                            <tr> 
+                              <td> <a class="f-w-500" href="#!">#0918765</a></td>
+                              <td>
+                                <div class="recent-profile"><img class="img-30 rounded-circle img-fluid" src="../assets/images/dashboard/user/1.jpg" alt="user"><span class="f-light f-w-500">Alex Smith</span></div>
+                              </td>
+                              <td> <span class="f-light">Jacket</span></td>
+                              <td> <span class="txt-success f-w-500">$109.00          </span></td>
+                              <td> <span class="f-light">Zoshmetic Fashion</span></td>
+                              <td><span class="badge badge-light-primary">In Progress      </span></td>
+                              <td><span class="f-light f-w-600">4.9 <span class="f-12 f-w-400">(34 votes)</span></span></td>
+                            </tr>
+                            <tr> 
+                              <td> <a class="f-w-500" href="#!">#109346</a></td>
+                              <td>
+                                <div class="recent-profile"><img class="img-30 rounded-circle img-fluid" src="../assets/images/dashboard-3/user/4.png" alt="user"><span class="f-light f-w-500">Jansh Brown</span></div>
+                              </td>
+                              <td> <span class="f-light">Clothes</span></td>
+                              <td> <span class="txt-success f-w-500">$178.00     </span></td>
+                              <td> <span class="f-light">iTech Factory</span></td>
+                              <td><span class="badge badge-light-warning">Pending</span></td>
+                              <td><span class="f-light f-w-600">5.0  <span class="f-12 f-w-400">(90 votes)</span></span></td>
+                            </tr>
+                            <tr> 
+                              <td> <a class="f-w-500" href="#!">#209813</a></td>
+                              <td>
+                                <div class="recent-profile"><img class="img-30 rounded-circle img-fluid" src="../assets/images/dashboard-3/user/7.png" alt="user"><span class="f-light f-w-500">Prezy Mark</span></div>
+                              </td>
+                              <td> <span class="f-light">Wallets & Bag</span></td>
+                              <td> <span class="txt-success f-w-500">$210.00        </span></td>
+                              <td> <span class="f-light">Micro Design</span></td>
+                              <td><span class="badge badge-light-success">Paid</span></td>
+                              <td><span class="f-light f-w-600">4.5 <span class="f-12 f-w-400">(43 votes)</span></span></td>
+                            </tr>
+                            <tr> 
+                              <td> <a class="f-w-500" href="#!">#306754</a></td>
+                              <td>
+                                <div class="recent-profile"><img class="img-30 rounded-circle img-fluid" src="../assets/images/dashboard/user/2.jpg" alt="user"><span class="f-light f-w-500">Vihan Hudda</span></div>
+                              </td>
+                              <td> <span class="f-light">Furniture</span></td>
+                              <td> <span class="txt-success f-w-500">$330.00</span></td>
+                              <td> <span class="f-light">Nesta Technology</span></td>
+                              <td><span class="badge badge-light-warning">Pending</span></td>
+                              <td><span class="f-light f-w-600">4.6<span class="f-12 f-w-400">(30 votes)</span></span></td>
+                            </tr>
+                            <tr> 
+                              <td> <a class="f-w-500" href="#!">#509823</a></td>
+                              <td>
+                                <div class="recent-profile"><img class="img-30 rounded-circle img-fluid" src="../assets/images/dashboard/user/4.jpg" alt="user"><span class="f-light f-w-500">Prite Jasion</span></div>
+                              </td>
+                              <td> <span class="f-light">Bike Accessories</span></td>
+                              <td> <span class="txt-success f-w-500">$401.00      </span></td>
+                              <td> <span class="f-light">Bike Accessories</span></td>
+                              <td><span class="badge badge-light-warning">Pending</span></td>
+                              <td><span class="f-light f-w-600">4.8<span class="f-12 f-w-400">(70 votes)</span></span></td>
+                            </tr>
+                            <tr> 
+                              <td> <a class="f-w-500" href="#!">#107654</a></td>
+                              <td>
+                                <div class="recent-profile"><img class="img-30 rounded-circle img-fluid" src="../assets/images/avtar/7.jpg" alt="user"><span class="f-light f-w-500">Biraj Shah</span></div>
+                              </td>
+                              <td> <span class="f-light">Kitchen Storage</span></td>
+                              <td> <span class="txt-success f-w-500">$187.00</span></td>
+                              <td> <span class="f-light">Syntcy solutions</span></td>
+                              <td><span class="badge badge-light-primary">In Progress</span></td>
+                              <td><span class="f-light f-w-600">4.3<span class="f-12 f-w-400">(87 votes)    </span></span></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="col-xxl-3"></div>
+              <div class="col-xxl-3">
+                <div class="card title-line deal-card">
+                  <div class="card-body">
+                    <div class="row"> 
+                      <div class="col-8"> 
+                        <h2>Deal of the day</h2><span class="f-light f-12 f-w-500">Special Discount <span class="txt-primary f-12 f-w-500">60% OFF</span></span>
+                        <ul class="deal-timer">
+                          <li> </li>
+                          <li> </li>
+                          <li> </li>
+                        </ul>
+                      </div>
+                      <div class="col-4">
+                        <div class="deal-slider">
+                          <div class="swiper deal-swiper"> 
+                            <div class="swiper-wrapper"> 
+                              <div class="swiper-slide"> <img class="img-fluid" src="../assets/images/dashboard-8/product-categories/phone.png" alt="phone"></div>
+                              <div class="swiper-slide"> <img class="img-fluid" src="../assets/images/dashboard-2/headphone.png" alt="headphone"></div>
+                              <div class="swiper-slide"> <img class="img-fluid" src="../assets/images/dashboard-8/product-categories/phone.png" alt="phone"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <!-- Container-fluid Ends-->
@@ -1130,6 +1357,7 @@
     <script src="../assets/js/counter/jquery.waypoints.min.js"></script>
     <script src="../assets/js/counter/jquery.counterup.min.js"></script>
     <script src="../assets/js/counter/counter-custom.js"></script>
+    <script src="../assets/js/datatable/simple-datatable.js"></script>
     <script src="../assets/js/dashboard/dashboard_2.js"></script>
     <!-- Plugins JS Ends-->
     <!-- Theme js-->

@@ -1,3 +1,9 @@
+// tables
+const datatable = new simpleDatatables.DataTable("#order-status", {
+  paging: false,
+  tabIndex: 1,
+});
+
 (function () {
   // var options = {
   //   series: [
@@ -794,7 +800,6 @@
   //   optionsvisitor
   // );
   // chartvisitor.render();
-
   //  yuri theme charts
 
   var options_revenue_order = {
@@ -883,25 +888,24 @@
         show: false,
       },
     },
+
     markers: {
-      size: 4,
-      colors: ["#009DB5", "#83BF6E"],
-      strokeColors: "#fff",
-      strokeWidth: 2,
-      fillOpacity: 1,
-      discrete: [],
-      shape: "circle",
-      radius: 2,
-      offsetX: 0,
-      offsetY: 0,
-      onClick: undefined,
-      onDblClick: undefined,
-      showNullDataPoints: true,
+      discrete: [
+        {
+          seriesIndex: 0,
+          dataPointIndex: 3,
+          fillColor: "#009DB5",
+          strokeColor: "var(--white)",
+          size: 6,
+          sizeOffset: 2,
+        },
+      ],
       hover: {
-        size: undefined,
-        sizeOffset: 3,
+        size: 6,
+        sizeOffset: 0,
       },
     },
+
     legend: {
       show: false,
     },

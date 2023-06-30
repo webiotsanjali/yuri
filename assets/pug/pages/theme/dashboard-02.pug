@@ -1,11 +1,12 @@
-- var apex                  = true;
 - var theme_customizer      = true;
+- var sidebar               = true;
 - var dashboard_2           = true;
 - var animate               = true;
-- var swiper                = true;
-- var counter               = true;
-- var sidebar               = true;
+- var datatable_2           = true;
 - var scrollbar             = true;
+- var swiper                = true;
+- var apex                  = true;
+- var counter               = true;
 
 //- Breadcrumbs
 -var pageTitle="E-commerce"; 
@@ -152,12 +153,14 @@ html(lang='en')
                       .card-header.card-no-border
                         .header-top
                           h2 Revenue vs Order
-                          .square-legend
-                              div.bg-primary
-                                span Revenue
-                              div.bg-success
-                                span Order
-                          .card-header-right-icon
+                          .card-header-right-icon.square-legend
+                            div
+                              .legend-box
+                                div.bg-primary
+                                span.f-light.f-12.f-w-500 Revenue
+                              .legend-box
+                                div.bg-success
+                                span.f-light.f-12.f-w-500 Order
                             .dropdown
                               button#overviewButton.btn.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
                                 | Monthly
@@ -228,15 +231,316 @@ html(lang='en')
                                 li.d-inline-block
                                   .light-card.profile-letter
                                     span.f-w-600.f-light.f-12 +8
-                           
-
-
-
-
-
+                  .col-9  
+                    .card.height-equal.title-line
+                      .card-header.card-no-border
+                        .header-top
+                          h2 Recent Orders
+                          .card-header-right-icon.recent-order-header
+                            .dropdown
+                              button#orderButtons.btn.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                | Generate Report
+                              .dropdown-menu.dropdown-menu-start(aria-labelledby='orderButtons')
+                                a.dropdown-item(href='#') Web designer
+                                a.dropdown-item(href='#') Development
+                                a.dropdown-item(href='#') Marketing
+                      .card-body.project-datatable.p-0 
+                        table#order-status.table
+                          thead 
+                            tr 
+                              th 
+                                span.f-light.f-w-600 Order ID
+                              th 
+                                span.f-light.f-w-600 Customer
+                              th 
+                                span.f-light.f-w-600 Product
+                              th 
+                                span.f-light.f-w-600 Amount
+                              th 
+                                span.f-light.f-w-600 Vendor
+                              th 
+                                span.f-light.f-w-600 Status
+                              th 
+                                span.f-light.f-w-600 Rating
+                          tbody 
+                            tr 
+                              td 
+                                a(href="#!").f-w-500 #0918765
+                              td
+                                .recent-profile
+                                  img.img-30.rounded-circle.img-fluid(src="../assets/images/dashboard/user/1.jpg", alt="user")
+                                  span.f-light.f-w-500 Alex Smith
+                                 
+                              td  
+                                span.f-light Jacket
+                              td  
+                                span.txt-success.f-w-500 $109.00          
+                              td 
+                                span.f-light Zoshmetic Fashion
+                              td
+                                span.badge.badge-light-primary In Progress      
+                              td
+                                span.f-light.f-w-600 4.9 
+                                  span.f-12.f-w-400 (34 votes)
+                            tr 
+                              td 
+                                 a(href="#!").f-w-500 #109346
+                              td
+                                .recent-profile
+                                  img.img-30.rounded-circle.img-fluid(src="../assets/images/dashboard-3/user/4.png", alt="user")
+                                  span.f-light.f-w-500 Jansh Brown
+                              td  
+                                span.f-light Clothes
+                              td  
+                                span.txt-success.f-w-500 $178.00     
+                              td 
+                                span.f-light iTech Factory
+                              td
+                                span.badge.badge-light-warning Pending
+                              td
+                                span.f-light.f-w-600 5.0  
+                                  span.f-12.f-w-400 (90 votes)
+                            tr 
+                              td 
+                                 a(href="#!").f-w-500 #209813
+                              td
+                                .recent-profile
+                                  img.img-30.rounded-circle.img-fluid(src="../assets/images/dashboard-3/user/7.png", alt="user")
+                                  span.f-light.f-w-500 Prezy Mark
+                              td  
+                                span.f-light Wallets & Bag
+                              td  
+                                span.txt-success.f-w-500 $210.00        
+                              td 
+                                span.f-light Micro Design
+                              td
+                                span.badge.badge-light-success Paid
+                              td
+                                span.f-light.f-w-600 4.5 
+                                  span.f-12.f-w-400 (43 votes)
+                            tr 
+                              td 
+                                 a(href="#!").f-w-500 #306754
+                              td
+                                .recent-profile
+                                  img.img-30.rounded-circle.img-fluid(src="../assets/images/dashboard/user/2.jpg", alt="user")
+                                  span.f-light.f-w-500 Vihan Hudda
+                              td  
+                                span.f-light Furniture
+                              td  
+                                span.txt-success.f-w-500 $330.00
+                              td 
+                                span.f-light Nesta Technology
+                              td
+                                span.badge.badge-light-warning Pending
+                              td
+                                span.f-light.f-w-600 4.6
+                                  span.f-12.f-w-400 (30 votes)
+                            tr 
+                              td 
+                                 a(href="#!").f-w-500 #509823
+                              td
+                                .recent-profile
+                                  img.img-30.rounded-circle.img-fluid(src="../assets/images/dashboard/user/4.jpg", alt="user")
+                                  span.f-light.f-w-500 Prite Jasion
+                              td  
+                                span.f-light Bike Accessories
+                              td  
+                                span.txt-success.f-w-500 $401.00      
+                              td 
+                                span.f-light Bike Accessories
+                              td
+                                span.badge.badge-light-warning Pending
+                              td
+                                span.f-light.f-w-600 4.8
+                                  span.f-12.f-w-400 (70 votes)
+                            tr 
+                              td 
+                                 a(href="#!").f-w-500 #107654
+                              td
+                                .recent-profile
+                                  img.img-30.rounded-circle.img-fluid(src="../assets/images/avtar/7.jpg", alt="user")
+                                  span.f-light.f-w-500 Biraj Shah
+                              td  
+                                span.f-light Kitchen Storage
+                              td  
+                                span.txt-success.f-w-500 $187.00
+                              td 
+                                span.f-light Syntcy solutions
+                              td
+                                span.badge.badge-light-primary In Progress
+                              td
+                                span.f-light.f-w-600 4.3
+                                  span.f-12.f-w-400 (87 votes)
+                  .col-6
+                    .card.height-equal.title-line
+                      .card-header.card-no-border
+                        .header-top
+                          h2 Stock Report
+                          .card-header-right-icon.recent-order-header
+                            .dropdown
+                              button#orderButtons.btn.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                | Generate Report
+                              .dropdown-menu.dropdown-menu-start(aria-labelledby='orderButtons')
+                                a.dropdown-item(href='#') Web designer
+                                a.dropdown-item(href='#') Development
+                                a.dropdown-item(href='#') Marketing
+                      .card-body.project-datatable.p-0 
+                        table#order-status.table
+                          thead 
+                            tr 
+                              th 
+                                span.f-light.f-w-600 Order ID
+                              th 
+                                span.f-light.f-w-600 Customer
+                              th 
+                                span.f-light.f-w-600 Product
+                              th 
+                                span.f-light.f-w-600 Amount
+                              th 
+                                span.f-light.f-w-600 Vendor
+                              th 
+                                span.f-light.f-w-600 Status
+                              th 
+                                span.f-light.f-w-600 Rating
+                          tbody 
+                            tr 
+                              td 
+                                a(href="#!").f-w-500 #0918765
+                              td
+                                .recent-profile
+                                  img.img-30.rounded-circle.img-fluid(src="../assets/images/dashboard/user/1.jpg", alt="user")
+                                  span.f-light.f-w-500 Alex Smith
+                                 
+                              td  
+                                span.f-light Jacket
+                              td  
+                                span.txt-success.f-w-500 $109.00          
+                              td 
+                                span.f-light Zoshmetic Fashion
+                              td
+                                span.badge.badge-light-primary In Progress      
+                              td
+                                span.f-light.f-w-600 4.9 
+                                  span.f-12.f-w-400 (34 votes)
+                            tr 
+                              td 
+                                 a(href="#!").f-w-500 #109346
+                              td
+                                .recent-profile
+                                  img.img-30.rounded-circle.img-fluid(src="../assets/images/dashboard-3/user/4.png", alt="user")
+                                  span.f-light.f-w-500 Jansh Brown
+                              td  
+                                span.f-light Clothes
+                              td  
+                                span.txt-success.f-w-500 $178.00     
+                              td 
+                                span.f-light iTech Factory
+                              td
+                                span.badge.badge-light-warning Pending
+                              td
+                                span.f-light.f-w-600 5.0  
+                                  span.f-12.f-w-400 (90 votes)
+                            tr 
+                              td 
+                                 a(href="#!").f-w-500 #209813
+                              td
+                                .recent-profile
+                                  img.img-30.rounded-circle.img-fluid(src="../assets/images/dashboard-3/user/7.png", alt="user")
+                                  span.f-light.f-w-500 Prezy Mark
+                              td  
+                                span.f-light Wallets & Bag
+                              td  
+                                span.txt-success.f-w-500 $210.00        
+                              td 
+                                span.f-light Micro Design
+                              td
+                                span.badge.badge-light-success Paid
+                              td
+                                span.f-light.f-w-600 4.5 
+                                  span.f-12.f-w-400 (43 votes)
+                            tr 
+                              td 
+                                 a(href="#!").f-w-500 #306754
+                              td
+                                .recent-profile
+                                  img.img-30.rounded-circle.img-fluid(src="../assets/images/dashboard/user/2.jpg", alt="user")
+                                  span.f-light.f-w-500 Vihan Hudda
+                              td  
+                                span.f-light Furniture
+                              td  
+                                span.txt-success.f-w-500 $330.00
+                              td 
+                                span.f-light Nesta Technology
+                              td
+                                span.badge.badge-light-warning Pending
+                              td
+                                span.f-light.f-w-600 4.6
+                                  span.f-12.f-w-400 (30 votes)
+                            tr 
+                              td 
+                                 a(href="#!").f-w-500 #509823
+                              td
+                                .recent-profile
+                                  img.img-30.rounded-circle.img-fluid(src="../assets/images/dashboard/user/4.jpg", alt="user")
+                                  span.f-light.f-w-500 Prite Jasion
+                              td  
+                                span.f-light Bike Accessories
+                              td  
+                                span.txt-success.f-w-500 $401.00      
+                              td 
+                                span.f-light Bike Accessories
+                              td
+                                span.badge.badge-light-warning Pending
+                              td
+                                span.f-light.f-w-600 4.8
+                                  span.f-12.f-w-400 (70 votes)
+                            tr 
+                              td 
+                                 a(href="#!").f-w-500 #107654
+                              td
+                                .recent-profile
+                                  img.img-30.rounded-circle.img-fluid(src="../assets/images/avtar/7.jpg", alt="user")
+                                  span.f-light.f-w-500 Biraj Shah
+                              td  
+                                span.f-light Kitchen Storage
+                              td  
+                                span.txt-success.f-w-500 $187.00
+                              td 
+                                span.f-light Syntcy solutions
+                              td
+                                span.badge.badge-light-primary In Progress
+                              td
+                                span.f-light.f-w-600 4.3
+                                  span.f-12.f-w-400 (87 votes)    
+                          
 
 
               .col-xxl-3
+                .card.title-line.deal-card
+                  .card-body
+                    .row 
+                      .col-8 
+                        h2 Deal of the day
+                        span.f-light.f-12.f-w-500 Special Discount 
+                          span.txt-primary.f-12.f-w-500 60% OFF
+                        ul.deal-timer
+                          li 
+                          li 
+                          li 
+                      
+                      .col-4
+                        .deal-slider
+                          .swiper.deal-swiper 
+                            .swiper-wrapper 
+                              .swiper-slide 
+                                img.img-fluid(src="../assets/images/dashboard-8/product-categories/phone.png", alt="phone")
+                              .swiper-slide 
+                                img.img-fluid(src="../assets/images/dashboard-2/headphone.png", alt="headphone")
+                              .swiper-slide 
+                                img.img-fluid(src="../assets/images/dashboard-8/product-categories/phone.png", alt="phone")
+
+
 
 
                    

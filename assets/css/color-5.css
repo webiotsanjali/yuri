@@ -15842,11 +15842,25 @@ p.data-attributes svg {
 
 .square-legend {
   display: flex;
+  gap: 23px;
 }
 .square-legend > div {
+  display: flex;
+  gap: 22px;
+}
+.square-legend > div .legend-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.square-legend > div .legend-box > div {
   width: 12px;
   height: 12px;
   border-radius: 2px;
+}
+
+.recent-order-header .dropdown .dropdown-toggle {
+  min-width: 150px;
 }
 
 .store-card img {
@@ -15920,6 +15934,31 @@ p.data-attributes svg {
 .customer-profile ul li .profile-letter.light-card:hover, .customer-profile ul li .profile-letter.bg-success:hover {
   transition: 0.5s;
   transform: translateY(-4px) scale(1.02);
+}
+
+.recent-profile {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.deal-card {
+  background-image: url(../images/dashboard-2/deal-bg.png);
+  background-size: cover;
+}
+.deal-card .deal-timer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 15px;
+}
+.deal-card .deal-timer li {
+  width: 50px;
+  height: 73px;
+  background: var(--white);
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.04);
+  padding: 12px;
 }
 
 /**=====================

@@ -632,14 +632,38 @@ $activity-dot-color in (primary, $primary-color),
 
 .square-legend {
   display: flex;
-
+  gap: 23px;
 
   >div {
-    width: 12px;
-    height: 12px;
-    border-radius: 2px;
+    display: flex;
+    gap: 22px;
+
+    .legend-box {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      >div {
+        width: 12px;
+        height: 12px;
+        border-radius: 2px;
+      }
+
+    }
+
+  }
+
+}
+
+.recent-order-header {
+  .dropdown {
+    .dropdown-toggle {
+      min-width: 150px;
+    }
   }
 }
+
+
 
 .store-card {
   img {
@@ -735,7 +759,34 @@ $activity-dot-color in (primary, $primary-color),
   }
 }
 
+// tables
+.recent-profile {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
 
+// deal card
+.deal-card {
+  background-image: url(../images/dashboard-2/deal-bg.png);
+  background-size: cover;
+
+  .deal-timer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-top: 15px;
+
+    li {
+      width: 50px;
+      height: 73px;
+      background: var(--white);
+      border-radius: 5px;
+      box-shadow: 4px 4px 4px 0px rgb(0 0 0 / 4%);
+      padding: 12px;
+    }
+  }
+}
 
 
 /**=====================
