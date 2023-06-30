@@ -15762,6 +15762,7 @@ p.data-attributes svg {
   background-color: var(--white);
   text-align: center;
   margin-left: auto;
+  margin-right: 14px;
 }
 .question-icon svg {
   width: 10px;
@@ -15772,6 +15773,7 @@ p.data-attributes svg {
   position: relative;
   z-index: 0;
   height: 96px;
+  margin-bottom: -12px;
 }
 .sales-overview::after {
   content: "";
@@ -15787,6 +15789,7 @@ p.data-attributes svg {
 }
 .sales-overview .widget-1 {
   gap: 18px;
+  padding: 2px 0px 0px 8px;
 }
 .sales-overview .rounded-circle1 {
   width: 23px;
@@ -15835,6 +15838,15 @@ p.data-attributes svg {
 .sales-overview .sale-content svg {
   width: 14px;
   height: 14px;
+}
+
+.square-legend {
+  display: flex;
+}
+.square-legend > div {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
 }
 
 .store-card img {
@@ -15902,10 +15914,10 @@ p.data-attributes svg {
   transition: 0.5s;
   transform: translateY(-4px) scale(1.02);
 }
-.customer-profile ul li .profile-letter.light-card {
+.customer-profile ul li .profile-letter.light-card, .customer-profile ul li .profile-letter.bg-success {
   transition: 0.5s;
 }
-.customer-profile ul li .profile-letter.light-card:hover {
+.customer-profile ul li .profile-letter.light-card:hover, .customer-profile ul li .profile-letter.bg-success:hover {
   transition: 0.5s;
   transform: translateY(-4px) scale(1.02);
 }

@@ -519,6 +519,7 @@ $activity-dot-color in (primary, $primary-color),
   background-color: var(--white);
   text-align: center;
   margin-left: auto;
+  margin-right: 14px;
 
   svg {
     width: 10px;
@@ -530,6 +531,8 @@ $activity-dot-color in (primary, $primary-color),
   position: relative;
   z-index: 0;
   height: 96px;
+  margin-bottom: -12px;
+
 
   &::after {
     content: '';
@@ -549,6 +552,7 @@ $activity-dot-color in (primary, $primary-color),
 
   .widget-1 {
     gap: 18px;
+    padding: 2px 0px 0px 8px;
   }
 
   .rounded-circle1 {
@@ -626,16 +630,16 @@ $activity-dot-color in (primary, $primary-color),
   }
 }
 
-// .square-legend {
-//   display: flex;
+.square-legend {
+  display: flex;
 
 
-//   >div {
-//     width: 12px;
-//     height: 12px;
-//     border-radius: 2px;
-//   }
-// }
+  >div {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+  }
+}
 
 .store-card {
   img {
@@ -717,7 +721,8 @@ $activity-dot-color in (primary, $primary-color),
           }
         }
 
-        &.light-card {
+        &.light-card,
+        &.bg-success {
           transition: 0.5s;
 
           &:hover {
