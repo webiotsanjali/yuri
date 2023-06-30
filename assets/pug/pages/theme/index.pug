@@ -12,8 +12,6 @@
 - var sidebar               = true;
 - var scrollbar             = true;
 - var wow                   = true;
-- var clock                 = true;
-- var height_equal          = true; 
 
 //- Breadcrumbs
 -var pageTitle="Default"; 
@@ -37,13 +35,13 @@ html(lang='en')
         .page-body
           // Container-fluid starts
           .container-fluid
-            .row
+            .row.size-column
               .col-xxl-9
                 .row 
                   .col-xl-6 
                     .card.title-line.upgrade-card.overflow-hidden
                       .row.align-items-end 
-                        .col-md-8 
+                        .col-sm-8.col-11 
                           .card-header 
                             h2 Hi, Welcome back 
                               span.txt-primary Wade! 
@@ -56,7 +54,7 @@ html(lang='en')
                       img.img-fluid.pattern-image(src="../assets/images/dashboard/bg-1.png", alt="vector pattern")
                   .col-xl-6
                     .row 
-                      .col-xl-6 
+                      .col-xl-6.col-sm-6 
                         .card
                           .card-body.widget-1
                             .widget-icon.primary 
@@ -65,7 +63,7 @@ html(lang='en')
                             div 
                               h3 User Profile
                               span.f-w-500.f-light.f-12 Consectetur adipiscing 
-                      .col-xl-6 
+                      .col-xl-6.col-sm-6  
                         .card
                           .card-body.widget-1
                             .widget-icon.success
@@ -74,7 +72,7 @@ html(lang='en')
                             div 
                               h3 Latest Trends
                               span.f-w-500.f-light.f-12 Minim veniam
-                      .col-xl-6 
+                      .col-xl-6.col-sm-6 
                         .card
                           .card-body.widget-1
                             .widget-icon.warning
@@ -83,7 +81,7 @@ html(lang='en')
                             div 
                               h3 New Arrivals
                               span.f-w-500.f-light.f-12 Excepteur sint
-                      .col-xl-6 
+                      .col-xl-6.col-sm-6 
                         .card
                           .card-body.widget-1
                             .widget-icon.secondary
@@ -94,7 +92,7 @@ html(lang='en')
                               span.f-w-500.f-light.f-12 Quis nostrud exercitation
                   .col-xl-6 
                     .row 
-                      .col-xl-6 
+                      .col-xl-6.col-sm-6 
                         .card.title-line 
                           .card-header.card-no-border 
                             h2 Revenue
@@ -103,7 +101,7 @@ html(lang='en')
                           .card-body.pt-0
                             .revenue-chart-container 
                               #revenue-chart
-                      .col-xl-6 
+                      .col-xl-6.col-sm-6
                         .card.title-line 
                           .card-header.card-no-border 
                             h2 Sales Pipeline
@@ -112,7 +110,7 @@ html(lang='en')
                           .card-body.pt-0
                             .pipeline-chart-container 
                               #pipeline-chart
-                      .col-xl-6 
+                      .col-xl-6.col-sm-6.rate-column 
                         .card.title-line 
                           .card-header.card-no-border 
                             h2 Satisfaction Rate
@@ -124,7 +122,7 @@ html(lang='en')
                               div 
                                 h2 89,786(82%)
                                 span.f-light.f-w-500.f-12 Vote by Consumer
-                      .col-xl-6 
+                      .col-xl-6.col-sm-6.revenue-column
                         .card.title-line 
                           .card-header.card-no-border 
                             h2 Revenue by Industry
@@ -183,7 +181,7 @@ html(lang='en')
                               | to Goal) 
                         .profit-chart-container 
                           #profit_chart 
-                  .col-xl-6 
+                  .col-md-6 
                     .card.title-line
                       .card-header.card-no-border
                         .header-top
@@ -223,7 +221,7 @@ html(lang='en')
                                 span.badge.badge-light-primary.ms-1
                                   i.me-1(data-feather="trending-up")
                                   | 13.5%
-                  .col-xl-6 
+                  .col-md-6 
                     .card.title-line
                       .card-header.card-no-border
                         .header-top
@@ -285,7 +283,7 @@ html(lang='en')
                                   span.f-light.f-12.f-w-500 Successfully
                                 span.f-w-500 +$540
                   .col-xl-6 
-                    .card.title-line
+                    .card.title-line.overflow-hidden.member-wrapper
                       .card-header.card-no-border
                         .header-top
                           h2 Members Statistics
@@ -468,7 +466,7 @@ html(lang='en')
                             .activity-dot-secondary
                             h6.f-light www.pixelstrap.com
                             span.f-12.f-w-500 18.98%
-              .col-xxl-3
+              .col-xxl-3.d-xxl-block.d-md-none
                 .card.title-line
                   .card-header.card-no-border
                     .header-top
@@ -521,7 +519,7 @@ html(lang='en')
                             a.dropdown-item(href='#') Pending
                             a.dropdown-item(href='#') Success
                             a.dropdown-item(href='#') Deliver
-                  .card-body.pt-0.transaction-list
+                  .card-body.pt-0.pb-0.transaction-list
                     ul.order-list.mb-0
                       li
                         .light-card 
@@ -623,7 +621,7 @@ html(lang='en')
                       h2 To do List
                         span.f-light.f-12.d-block.f-w-500 80 Orders in a December
                       .card-header-right-icon
-                        a.link-with-icon(href='#') + Create Task
+                        a.link-with-icon(href='#') + Create
                   .card-body.pt-0.notification.to-do-list
                     ul 
                       li.d-flex.align-items-center
@@ -643,7 +641,7 @@ html(lang='en')
                             .form-check
                               input#list-2.form-check-input(type='checkbox' value='')
                           div 
-                            h6 Start Webdevloping..
+                            h6 Start Web developing..
                             span.f-w-500.f-12.f-light Due in 4 Days
                           span.badge.badge-light-warning.ms-auto Pending
                       li.d-flex.align-items-center
@@ -675,6 +673,26 @@ html(lang='en')
                           div 
                             h6 Wed layout page 
                             span.f-w-500.f-12.f-light Due in 10 Days
+                          span.badge.badge-light-success.ms-auto Completed
+                      li.d-flex.align-items-center
+                        .activity-dot-warning
+                        .d-flex.w-100.align-items-center 
+                          .checkbox-checked
+                            .form-check
+                              input#list-6.form-check-input(type='checkbox' value='')
+                          div 
+                            h6 Start Web developing..
+                            span.f-w-500.f-12.f-light Due in 4 Days
+                          span.badge.badge-light-warning.ms-auto Pending
+                      li.d-flex.align-items-center
+                        .activity-dot-success
+                        .d-flex.w-100.align-items-center 
+                          .checkbox-checked
+                            .form-check
+                              input#list-7.form-check-input(type='checkbox' value='')
+                          div 
+                            h6 UI/UX Design learning
+                            span.f-w-500.f-12.f-light Due in 3 Days
                           span.badge.badge-light-success.ms-auto Completed
           // Container-fluid Ends
         include ../../components/footer        

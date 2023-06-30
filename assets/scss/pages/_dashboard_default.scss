@@ -122,7 +122,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-
+  @media (max-width: 1399px) {
+    gap: 10px;
+  }
   li {
     display: flex;
     align-items: center;
@@ -166,7 +168,7 @@
       align-items: center;
       justify-content: center;
       border-radius: 5px;
-
+      min-width: 46px;
       svg {
         width: 24px;
         height: 24px;
@@ -283,10 +285,40 @@
       &:last-child {
         min-width: 100px;
       }
+      &:nth-child(3) {
+        @media (max-width: 1700px) and (min-width: 1200px) {
+          display: none;
+        }
+        @media (max-width: 767px) {
+          min-width: 160px;
+        }
+      }
+      &:nth-child(2) {
+        @media (max-width: 767px) {
+          min-width: 200px;
+        }
+      }
+    }
+    &:last-child {
+      td {
+        border-bottom: none;
+      }
     }
   }
   .datatable-bottom, .datatable-top {
     display: none;
+  }
+}
+
+.rate-column  {
+  @media (max-width: 1799px) and (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.revenue-column {
+  @media (max-width: 1799px) and (min-width: 1200px) {
+    width: 100%;
   }
 }
 
@@ -437,12 +469,47 @@
     right: 10px;
     bottom: 0;
     width: 28%;
+    @media (max-width: 767px) {
+      width: 14%;
+    }
+    @media (max-width: 575px) {
+      width: 21%;
+    }
+    @media (max-width: 420px) {
+      width: 28%;
+    }
+  }
+}
+
+.member-wrapper {
+  .link-with-icon {
+    @media (max-width: 480px) {
+      display: none;
+    }
   }
 }
 
 .pipeline-chart-container {
   margin-left: -30px;
   margin-bottom: -6px;
+  .apexcharts-canvas  {
+    @media (max-width: 1749px) {
+      margin: 0 auto;
+    }
+  }
+}
+
+.size-column {
+  .col-xxl-9 {
+    @media (max-width: 1660px) and (min-width: 1200px) {
+      width: 100%;
+    }
+  }
+  .col-xxl-3 {
+    @media (max-width: 1660px) and (min-width: 1200px) {
+      display: none;
+    }
+  }
 }
 
 .form-control-plaintext {
