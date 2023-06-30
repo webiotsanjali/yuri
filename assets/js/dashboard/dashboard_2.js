@@ -802,16 +802,16 @@
       {
         name: "Earning",
         type: "line",
-        data: [100, 250, 70, 330, 140, 230, 90, 280, 40, 150, 350, 150, 350],
+        data: [330, 60, 370, 240, 250, 70, 280, 60, 185, 60],
       },
       {
         name: "Order",
         type: "line",
-        data: [80, 200, 150, 200, 100, 150, 110, 200, 110, 200, 150, 80, 30],
+        data: [70, 330, 60, 200, 100, 250, 100, 350, 110, 300],
       },
     ],
     chart: {
-      height: 240,
+      height: 225,
       type: "line",
       stacked: false,
       toolbar: {
@@ -831,15 +831,15 @@
       curve: "smooth",
     },
     grid: {
-      show: true,
-      borderColor: "var(--chart-border)",
-      strokeDashArray: 0,
-      position: "back",
-      xaxis: {
-        lines: {
-          show: true,
-        },
-      },
+      show: false,
+      // borderColor: "var(--chart-border)",
+      // strokeDashArray: 0,
+      // position: "back",
+      // xaxis: {
+      //   lines: {
+      //     show: true,
+      //   },
+      // },
       padding: {
         top: 0,
         right: 0,
@@ -849,7 +849,7 @@
     },
     plotOptions: {
       bar: {
-        columnWidth: "50%",
+        columnWidth: "20%",
       },
     },
     colors: ["#009DB5", "#83BF6E"],
@@ -868,11 +868,10 @@
       "Aug",
       "Sep",
       "Oct",
-      "Nov",
     ],
     xaxis: {
       type: "category",
-      tickAmount: 4,
+      tickAmount: 8,
       tickPlacement: "between",
       tooltip: {
         enabled: false,
@@ -882,6 +881,25 @@
       },
       axisTicks: {
         show: false,
+      },
+    },
+    markers: {
+      size: 4,
+      colors: ["#009DB5", "#83BF6E"],
+      strokeColors: "#fff",
+      strokeWidth: 2,
+      fillOpacity: 1,
+      discrete: [],
+      shape: "circle",
+      radius: 2,
+      offsetX: 0,
+      offsetY: 0,
+      onClick: undefined,
+      onDblClick: undefined,
+      showNullDataPoints: true,
+      hover: {
+        size: undefined,
+        sizeOffset: 3,
       },
     },
     legend: {
