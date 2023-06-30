@@ -1,4 +1,4 @@
-//- - var apex                  = true;
+- var apex                  = true;
 - var theme_customizer      = true;
 - var dashboard_2           = true;
 - var animate               = true;
@@ -37,7 +37,7 @@ html(lang='en')
                       .card-header.card-no-border.sales-bg
                         .header-top
                           div 
-                            h2 Daily Task
+                            h2 Sales Overview 
                           .card-header-right-icon
                             .dropdown.icon-dropdown
                               button#daily-task.btn.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
@@ -48,7 +48,7 @@ html(lang='en')
                                 a.dropdown-item(href='#') Tomorrow
                                 a.dropdown-item(href='#') Yesterday
                       .card-body
-                        .row.row-cols-5 
+                        .row.row-cols-5.gx-3
                           .col
                             div.sales-overview
                               .question-icon
@@ -57,16 +57,16 @@ html(lang='en')
                                 .rounded-circle-1
                               .widget-1
                                 .rounded-circle2.warning
-                                  .sales-icon.warning   
+                                  .sales-icon
                                     svg
                                       use(href='../assets/svg/icon-sprite.svg#sales')
                                 div 
-                                  h3 24k USD
+                                  h3.f-w-600 24k USD
                                   .sale-content
                                     span.f-w-500.f-light.f-12 Total Sales
-                                    div
-                                      i.me-1(data-feather="trending-up")
-                                      span.txt-warning +34%
+                                    .d-flex.align-items-center.gap-1
+                                      i.stroke-warning(data-feather="trending-up")
+                                      span.txt-warning.f-w-600.f-12 +34%
                           .col
                             div.sales-overview
                               .question-icon
@@ -75,16 +75,16 @@ html(lang='en')
                                 .rounded-circle-1
                               .widget-1
                                 .rounded-circle2.success
-                                  .sales-icon.warning   
+                                  .sales-icon
                                     svg
                                       use(href='../assets/svg/icon-sprite.svg#customer')
                                 div 
-                                  h3 9.453k 
+                                  h3.f-w-600 9.453k 
                                   .sale-content
                                     span.f-w-500.f-light.f-12 Customer
-                                    div
-                                      i.me-1(data-feather="trending-up")
-                                      span.txt-warning +27%
+                                    .d-flex.align-items-center.gap-1
+                                      i.stroke-success(data-feather="trending-up")
+                                      span.txt-success.f-w-600.f-12 +27%
                           .col
                             div.sales-overview
                               .question-icon
@@ -93,16 +93,16 @@ html(lang='en')
                                 .rounded-circle-1
                               .widget-1
                                 .rounded-circle2.primary
-                                  .sales-icon.warning   
-                                    svg
-                                      use(href='../assets/svg/icon-sprite.svg#sales')
+                                  .sales-icon
+                                    svg.fill-primary
+                                      use(href='../assets/svg/icon-sprite.svg#orders')
                                 div 
-                                  h3 1.786k 
+                                  h3.f-w-600 1.786k 
                                   .sale-content
                                     span.f-w-500.f-light.f-12 Orders
-                                    div
-                                      i.me-1(data-feather="trending-up")
-                                      span.txt-warning +45%
+                                    .d-flex.align-items-center.gap-1
+                                      i.stroke-primary(data-feather="trending-up")
+                                      span.txt-primary.f-w-600.f-12 +45%
                           .col
                             div.sales-overview
                               .question-icon
@@ -110,17 +110,17 @@ html(lang='en')
                                   use(href='../assets/svg/icon-sprite.svg#question-mark')
                                 .rounded-circle-1
                               .widget-1
-                                .rounded-circle2.danger
-                                  .sales-icon.warning   
+                                .rounded-circle2.secondary
+                                  .sales-icon
                                     svg
-                                      use(href='../assets/svg/icon-sprite.svg#sales')
+                                      use(href='../assets/svg/icon-sprite.svg#transaction')
                                 div 
-                                  h3 24k USD
+                                  h3.f-w-600 24k USD
                                   .sale-content
                                     span.f-w-500.f-light.f-12 Transaction
-                                    div
-                                      i.me-1(data-feather="trending-up")
-                                      span.txt-warning +27%
+                                    .d-flex.align-items-center.gap-1
+                                      i.stroke-secondary.reverse-icon(data-feather="trending-up")
+                                      span.txt-secondary.f-w-600.f-12 +27%
                           .col
                             div.sales-overview
                               .question-icon
@@ -129,18 +129,106 @@ html(lang='en')
                                 .rounded-circle-1
                               .widget-1
                                 .rounded-circle2.info
-                                  .sales-icon.warning   
+                                  .sales-icon
                                     svg
-                                      use(href='../assets/svg/icon-sprite.svg#sales')
-                                div 
-                                  h3 12k USD
+                                      use(href='../assets/svg/icon-sprite.svg#dollar-sign')
+                                div
+                                  h3.f-w-600 12k USD
                                   .sale-content
                                     span.f-w-500.f-light.f-12 Revenue
-                                    div
-                                      i.me-1(data-feather="trending-up")
-                                      span.txt-warning +29%
+                                    .d-flex.align-items-center.gap-1
+                                      i.stroke-info(data-feather="trending-up")
+                                      span.txt-info.f-w-600.f-12 +29%
+                  .col-3
+                    .card.store-card
+                      .card-header.card-no-border
+                        h3.f-w-600 We are working to boost lovely mood
+                        span.f-light.f-w-500.mt-2 Projects this month
+                        a.btn.btn-primary.btn-hover-effect(href="#!") Create a Store
+                      .card-body.pb-1.text-center
+                        img.img-fluid(src="../assets/images/dashboard-2/vector.png", alt="store")
+                  .col-9
+                    .card
+                      .card-header.card-no-border
+                        .header-top
+                          h2 Revenue vs Order
+                          //- .square-legend
+                          //-     div.bg-primary
+                          //-       span Revenue
+                          //-     div.bg-success
+                          //-       span Order
+                          .card-header-right-icon
+                            .dropdown
+                              button#overviewButton.btn.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                | Monthly
+                              .dropdown-menu.dropdown-menu-end(aria-labelledby='overviewButton')
+                                a.dropdown-item(href='#') Monthly
+                                a.dropdown-item(href='#') weekly
+                                a.dropdown-item(href='#') yearly
+                      .card-body 
+                        #revenue-order
 
-
+                  .col-3 
+                    .row 
+                      .col-12 
+                        .card.widget-hover 
+                          .card-body.common-space.order-card 
+                            div 
+                              span.f-w-500.f-light Today Orders
+                              h2 120k Orders
+                              .order-content
+                                span.f-light.f-12.f-w-500 Last week 
+                                div
+                                  span.txt-danger.f-12.f-w-600
+                                    i.stroke-danger.reverse-icon(data-feather="trending-up")
+                                    | -10%
+                            .delivery-image
+                              img.img-fluid(src="../assets/images/dashboard-2/orders/1.png", alt="order")
+                      .col-12 
+                        .card.widget-hover 
+                          .card-body.common-space.order-card 
+                            div 
+                              span.f-w-500.f-light Delivery Successful
+                              h2 390k
+                              .order-content
+                                span.f-light.f-12.f-w-500 Last week 
+                                div
+                                  span.txt-success.f-12.f-w-600
+                                    i.stroke-success(data-feather="trending-up")
+                                    | -27%
+                            .delivery-image
+                              img.img-fluid(src="../assets/images/dashboard-2/orders/2.png", alt="order")
+                      .col-12 
+                        .card.widget-hover 
+                          .card-body.order-card 
+                            div 
+                              span.f-w-500.f-light New Customers this month
+                              h2 10,987
+                              .order-content
+                                span.f-light.f-12.f-w-500 Last week 
+                                div
+                                  span.txt-danger.f-12.f-w-600
+                                    i.stroke-success.reverse-icon(data-feather="trending-up")
+                                    | -10%
+                            .customer-profile
+                              span.f-w-500 Today's Heroes
+                              ul.d-inline-block
+                                li.d-inline-block
+                                  .profile-letter.bg-warning
+                                    span.f-w-600.txt-white.f-12 A
+                                li.d-inline-block
+                                  img.img-fluid.img-30.rounded-circle(src="../assets/images/dashboard/user/2.jpg", alt="user") 
+                                li.d-inline-block
+                                  img.img-fluid.img-30.rounded-circle(src="../assets/images/dashboard/user/3.jpg", alt="user") 
+                                li.d-inline-block
+                                  .profile-letter.bg-success
+                                    span.f-w-600.txt-white.f-12 R
+                                li.d-inline-block
+                                  img.img-fluid.img-30.rounded-circle(src="../assets/images/dashboard/user/6.jpg", alt="user") 
+                                li.d-inline-block
+                                  .light-card.profile-letter
+                                    span.f-w-600.f-light.f-12 +8
+                           
 
 
 

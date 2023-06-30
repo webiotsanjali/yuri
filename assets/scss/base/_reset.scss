@@ -9,6 +9,10 @@
   background-color: var(--light-background);
 }
 
+.reverse-icon {
+  transform: scaleY(-1);
+}
+
 .light-background {
   background-color: var(--light-bg);
 }
@@ -25,12 +29,14 @@
   padding: 9px 10px;
   background-color: var(--light-bg);
   border-radius: 5px;
+
   svg {
     width: 13px;
     height: 13px;
     stroke: var(--body-light-font-color);
     vertical-align: -2px;
   }
+
   &:hover {
     color: var(--body-light-font-color);
   }
@@ -497,6 +503,7 @@ $background-color: $primary-color,
   .bg-light-#{$var} {
     background-color: rgba(nth($background-color, $i), 0.1) !important;
     color: $white;
+
     svg {
       fill: nth($background-color, $i);
     }
@@ -1301,22 +1308,22 @@ button {
 /* Override the default tooltip arrow color */
 .bs-tooltip-top .tooltip-arrow::before,
 .bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
- border-top-color: $light-primary;
+  border-top-color: $light-primary;
 }
 
 .bs-tooltip-end .tooltip-arrow::before,
 .bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before {
- border-right-color: $light-primary;
+  border-right-color: $light-primary;
 }
 
 .bs-tooltip-bottom .tooltip-arrow::before,
 .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before {
- border-bottom-color: $light-primary;
+  border-bottom-color: $light-primary;
 }
 
 .bs-tooltip-start .tooltip-arrow::before,
 .bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
- border-left-color: $light-primary;
+  border-left-color: $light-primary;
 }
 
 
