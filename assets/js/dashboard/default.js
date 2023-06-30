@@ -1,4 +1,9 @@
 (function () {
+  const datatable = new simpleDatatables.DataTable("#member-table", {
+    paging: false,
+    tabIndex: 1,
+  });
+
   // revenue chart js
   var options_revenue = {
     series: [{
@@ -106,6 +111,17 @@
           position: 'bottom'
         }
       }
+    },{
+      breakpoint: 1750,
+      options: {
+        chart: {
+          width: 140,
+          height: 140,
+        },
+        legend: {
+          show: false
+        }
+      }
     }]
   };
 
@@ -148,7 +164,7 @@
         top: 4,
         left: 0,
         blur: 2,
-        colors: ["#7366FF", "#54BA4A", "#FFAA05"],
+        colors: ["#009DB5", "#83BF6E", "#F99B0D"],
         opacity: 0.02,
       },
     },
@@ -169,7 +185,7 @@
         left: 0,
       },
     },
-    colors: ["#7366FF", "#54BA4A", "#FFAA05"],
+    colors: ["#009DB5", "#83BF6E", "#F99B0D"],
     stroke: {
       width: 3,
       curve: "smooth",
@@ -238,32 +254,7 @@
     legend: {
       show: false,
     },
-    responsive: [{
-        breakpoint: 1736,
-        options: {
-          chart: {
-            height: 230,
-            offsetX: 0,
-          },
-        },
-      },
-      {
-        breakpoint: 1401,
-        options: {
-          chart: {
-            height: 250,
-            offsetX: 0,
-          },
-        },
-      },
-      {
-        breakpoint: 1200,
-        options: {
-          chart: {
-            height: 250,
-          },
-        },
-      },
+    responsive: [
       {
         breakpoint: 651,
         options: {
@@ -292,7 +283,7 @@
     }],
     chart: {
       type: 'bar',
-      height: 200,
+      height: 255,
       toolbar: {
         show: false
       }
@@ -346,21 +337,7 @@
     fill: {
       type: ['solid','gradient'],
       opacity: 1,
-      image: {
-        src: ['../assets/images/dashboard/bar-img.png'],
-        width: 466,
-        height: 406
-      }
     },
-    // fill: {
-    //   type: ['solid', 'pattern'],
-    //   opacity: 1,
-    //   pattern: {
-    //     style: ['circles', 'slantedLines'],
-    //     width: 6,
-    //     height: 6
-    //   }
-    // },
     legend: {
         show: false,
     },
