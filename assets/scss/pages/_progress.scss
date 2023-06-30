@@ -4,6 +4,9 @@
 .progress {
 	background: var(--progress-bg);
 }
+.progress-stacked {
+	--bs-progress-height: 9px;
+}
 .progress-showcase {
 	.progress {
 		margin-bottom: 10px;

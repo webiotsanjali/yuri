@@ -404,6 +404,7 @@ $activity-dot-color in (primary, $primary-color),
   .activity-dot-#{$activity-dot-name} {
     min-width: 8px;
     height: 8px;
+    width: 8px;
     background-color: $activity-dot-color;
     border-radius: 100%;
     outline: 3px solid rgba($activity-dot-color, 0.25);
