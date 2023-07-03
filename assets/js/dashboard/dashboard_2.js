@@ -4,6 +4,11 @@ const datatable = new simpleDatatables.DataTable("#order-status", {
   tabIndex: 1,
 });
 
+const stock_table = new simpleDatatables.DataTable("#stock-status", {
+  paging: false,
+  tabIndex: 1,
+});
+
 (function () {
   // var options = {
   //   series: [
@@ -941,4 +946,119 @@ const datatable = new simpleDatatables.DataTable("#order-status", {
     options_revenue_order
   );
   revenue_overview.render();
+
+  // 2 chart
+  var options_weekly_visitor = {
+    series: [
+      {
+        name: "Male",
+        type: "line",
+        data: [70, 90, 70, 90, 100],
+      },
+      {
+        name: "Female",
+        type: "line",
+        data: [90, 40, 100, 50, 40],
+      },
+    ],
+    chart: {
+      height: 110,
+      type: "line",
+      stacked: false,
+      toolbar: {
+        show: false,
+      },
+      dropShadow: {
+        enabled: true,
+        top: 2,
+        left: 0,
+        blur: 4,
+        color: "#000",
+        opacity: 0.08,
+      },
+    },
+    stroke: {
+      width: [2, 2],
+      curve: "smooth",
+    },
+    grid: {
+      show: false,
+      // borderColor: "var(--chart-border)",
+      // strokeDashArray: 0,
+      // position: "back",
+      // xaxis: {
+      //   lines: {
+      //     show: true,
+      //   },
+      // },
+      padding: {
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0,
+      },
+    },
+    plotOptions: {
+      bar: {
+        columnWidth: "20%",
+      },
+    },
+    colors: ["#009DB5", "#83BF6E"],
+    fill: {
+      opacity: 1,
+      type: "solid",
+    },
+    labels: ["1", "2", "3", "4", "5"],
+    xaxis: {
+      type: "category",
+      tickAmount: 8,
+      tickPlacement: "between",
+      tooltip: {
+        enabled: false,
+      },
+      axisBorder: {
+        color: "var(--chart-border)",
+      },
+      axisTicks: {
+        show: false,
+      },
+    },
+
+    yaxis: {
+      show: false,
+    },
+
+    legend: {
+      show: false,
+    },
+
+    tooltip: {
+      shared: false,
+      intersect: false,
+    },
+    responsive: [
+      {
+        breakpoint: 1200,
+        options: {
+          chart: {
+            height: 250,
+          },
+        },
+      },
+    ],
+  };
+
+  var weeklyVisitor_overview = new ApexCharts(
+    document.querySelector("#weekly-visitor"),
+    options_weekly_visitor
+  );
+  weeklyVisitor_overview.render();
 })();
+
+// swiper product
+var swiper = new Swiper(".deal-swiper", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
